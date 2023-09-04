@@ -3,7 +3,6 @@ import json
 import os
 
 from lxml.etree import Element, ElementTree, SubElement, fromstring, tostring
-import zstandard as zstd
 
 
 def build_subcomments(supercomment_element, subcomment):

@@ -111,6 +111,9 @@ def json2xml(file, tree_structure=True, output_dir='wohnen_xml', validate=False,
     with open(file, 'r', encoding='latin-1') as f:
         txt = f.read()
     comments = json.loads(txt)
+    if not comments:
+        print(f'Empty file: {file}')
+        return
     # extract post metadata information
     docmeta = dict()
     # use first comment entry to extract meta data information
@@ -203,11 +206,11 @@ def demo():
 
 def run(dir='wohnen_filtered_trees'):
     """Convert all json files in a directory to xml."""
-    for file in os.listdir(dir)[:100]:
+    for file in os.listdir(dir):
         json2xml(f'{dir}/{file}', output_dir='wohnen_filtered_xml')
 
 
 if __name__ == '__main__':
-    demo()
+    # demo()
     # print(validate_tei(lxml.etree.parse('example2.xml')))
-    # run()
+    run()

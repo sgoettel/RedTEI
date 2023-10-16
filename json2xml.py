@@ -3,7 +3,6 @@ import json
 import lzma
 import os
 from pickle import load as load_pickle
-import traceback
 
 import lxml
 from lxml import etree
@@ -16,10 +15,8 @@ from lxml.etree import (
     fromstring,
     tostring
 )
-from trafilatura.xml import validate_tei
 
 
-TEI_SCHEMA = '../tei-schema-pickle.lzma'
 blacklist_authors = []
 
 
@@ -204,10 +201,10 @@ def demo():
                    output_dir='wohnen_filtered_xml'))
 
 
-def run(dir='wohnen_filtered_trees'):
+def run(dir='wohnen_filtered_trees', output_dir='wohnen_filtered_xml'):
     """Convert all json files in a directory to xml."""
     for file in os.listdir(dir):
-        json2xml(f'{dir}/{file}', output_dir='wohnen_filtered_xml')
+        json2xml(f'{dir}/{file}', output_dir)
 
 
 if __name__ == '__main__':

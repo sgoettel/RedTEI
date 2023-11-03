@@ -4,6 +4,7 @@ Hilfsskripte zur Verarbeitung von Reddit-Daten und Umwandlung von json in TEI-XM
 
 ## Nutzung
 - [json2xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/json2xml.py): wandelt json-Dateien in Baumstruktur in TEI-valide xml-Dateien um
+- [validate.ipynb](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/validate.ipynb): validiere XML-Dateien, nach TEI-Schema (Pfad zu `tei-schema-pickle.lzma` im Skript ergänzen)
 
 ## Beispiele
 Einige Beispieldateien für den Subreddit "wohnen" sind im Ordner [examples/](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/examples):

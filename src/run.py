@@ -21,8 +21,8 @@ def pipeline(zstfile, subreddit, bots=["AutoModerator", "ClausKlebot", "RemindMe
     # filter removed comments and bots
     # python trim_username_comments.py -a "AutoModerator" -a "ClausKlebot" -a "RemindMeBot" -a "sneakpeekbot" -a "LimbRetrieval-Bot" -rd wohnen_comments.zst
     # filter_comments(zstfile, bots, True)
-    botstr = ' -a '.join(bots)
-    os.system(f'python trim_username_comments.py -a {botstr} -rd {zst_file}')
+    botstr = '" -a "'.join(bots)
+    os.system(f'python trim_username_comments.py -a "{botstr}" -rd {zst_file}')
     # extract flat json files
     # python comment_tree.py -a -f wohnen_comments_filtered.zst
     os.system(f'python comment_tree.py -a -f {zst_filtered} {dir_json}')

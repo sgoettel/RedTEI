@@ -15,6 +15,10 @@ def pipeline(zstfile, subreddit, bots=["AutoModerator", "ClausKlebot", "RemindMe
     zst_filtered = f"{zstfile.rsplit('.', 1)[0]}_filtered.zst"
     dir_json = f'../subreddits/{subreddit}/{subreddit}_json/'
     dir_xml = f'../subreddits/{subreddit}/{subreddit}_xml/'
+    if not os.path.exists(dir_json):
+        os.mkdir(dir_json)
+    if not os.path.exists(dir_xml):
+        os.mkdir(dir_xml)
     # filter removed comments and bots
     # python trim_username_comments.py -a "AutoModerator" -a "ClausKlebot" -a "RemindMeBot" -a "sneakpeekbot" -a "LimbRetrieval-Bot" -rd wohnen_comments.zst
     # filter_comments(zstfile, bots, True)

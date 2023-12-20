@@ -30,7 +30,7 @@ def validate_directory(directory, TEI_RELAXNG):
     pathlist = [f'{directory}/{path}' for path in
             os.listdir(directory)]
     for path in pathlist:
-        validate(path)
+        validate(path, TEI_RELAXNG)
 
 
 if __name__ == '__main__':

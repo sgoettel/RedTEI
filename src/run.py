@@ -2,7 +2,7 @@ import os
 import sys
 
 from json2xml import json2xml, run
-from validate import validate_directory
+from validate import load_schema, validate_directory
 
 
 def pipeline(zstfile, subreddit, bots=["AutoModerator", "ClausKlebot", "RemindMeBot", "sneakpeekbot", "LimbRetrieval-Bot"]):
@@ -32,7 +32,8 @@ def pipeline(zstfile, subreddit, bots=["AutoModerator", "ClausKlebot", "RemindMe
     run(dir_json, dir_xml)
     print('Validate XMl files.')
     # validate all XML files
-    validate_directory(dir_xml)
+    TEI_RELAXNG = load_schema()
+    validate_directory(dir_xml, TEI_RELAXNG)
 
 """
 def argparser():

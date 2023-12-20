@@ -21,3 +21,10 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt --no-cache-dir
 ```
+
+## TODO's
+Probleme:
+- []
+
+Optional:
+- [] original date aus zst und epoch_time

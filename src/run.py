@@ -1,10 +1,7 @@
-import argparse
 import os
 import sys
 
-from comment_tree import extract_comments
 from json2xml import json2xml, run
-from trim_user_comments import filter_comments
 from validate import validate_directory
 
 
@@ -65,5 +62,5 @@ def argparser():
 
 if __name__ == '__main__':
     zst_file = sys.argv[1]
-    subreddit = zst_file.replace('_comments.zst', '')
+    subreddit = zst_file.split('/')[-1].replace('_comments.zst', '')
     pipeline(zst_file, subreddit)

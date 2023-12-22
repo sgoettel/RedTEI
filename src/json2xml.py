@@ -205,9 +205,9 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
 
 def demo():
     """A short demo of the json2xml function."""
-    print(json2xml('../examples/wohnen_json/qqro38_tree.json', tree_structure=False,
+    print(json2xml('../examples/wohnen_json/qqro38_flat.json', tree_structure=False,
              output_dir='wohnen_xml'))
-    print(json2xml('../examples/wohnen_json/qlt4qy_tree.json', tree_structure=False,
+    print(json2xml('../examples/wohnen_json/qlt4qy_flat.json', tree_structure=False,
                    output_dir='../examples/wohnen_xml'))
 
 

@@ -214,7 +214,10 @@ def demo():
 def run(dir, output_dir):
     """Convert all json files in a directory to xml."""
     for file in os.listdir(dir):
-        json2xml(f'{dir}/{file}', output_dir=output_dir)
+        try:
+            json2xml(f'{dir}/{file}', output_dir=output_dir)
+        except Exception as e:
+            print(file, e)
 
 
 if __name__ == '__main__':

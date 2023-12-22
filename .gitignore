@@ -114,3 +114,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# tei schema file
+tei-schema-pickle.lzma
+
+# output directory
+subreddits/

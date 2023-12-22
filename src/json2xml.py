@@ -7,26 +7,17 @@ Author: Lydia Körber, 2023
 from datetime import datetime
 import json
 import html
-import lzma
 import os
-from pickle import load as load_pickle
-import traceback
 
-import lxml
 from lxml import etree
 from lxml.etree import (
     Element,
     ElementTree,
-    QName,
-    RelaxNG,
     SubElement,
-    fromstring,
     tostring
 )
-from trafilatura.xml import validate_tei
 
 
-TEI_SCHEMA = '../tei-schema-pickle.lzma'
 blacklist_authors = []
 
 
@@ -96,7 +87,7 @@ def build_subcomments(supercomment_element, subcomment, tree_structure=False, fi
                     build_subcomments(comment_list, r)
 
 
-def json2xml(file, tree_structure=False, output_dir='wohnen_xml', validate=False,
+def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
              filtered=True, subreddit_loc='title'):
     """
     Convert Reddit JSON data to TEI XML format.
@@ -107,8 +98,6 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml', validate=False
             structure. Defaults to False.
         output_dir (str, optional): The directory to save the generated XML
             file. Defaults to 'wohnen_xml'.
-        validate (bool, optional): Whether to validate the generated TEI XML.
-            Defaults to True.
         filtered (bool, optional): Whether deleted comments and authors are
             already removed. Defaults to True.
         subreddit_loc (str, optional): Location to include subreddit
@@ -204,7 +193,6 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml', validate=False
                 if comment['body'] == '[deleted]' or \
                     comment['author'] == '[deleted]':
                     continue
-            #print(comment)
             build_subcomments(responses, comment, tree_structure)
 
     tei_str = tostring(teidoc, pretty_print=True,
@@ -212,36 +200,22 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml', validate=False
     if output_dir:
         ElementTree(teidoc).write(f'{output_dir}/{post_id}.xml',
                                   pretty_print=True, encoding='utf-8')
-    if validate:
-        # https://github.com/adbar/trafilatura/blob/5ce31d9f6c8d4854ce169678499326355c8d1cee/trafilatura/xml.py#L190
-        print(validate_tei(teidoc))
     return tei_str
 
 
 def demo():
     """A short demo of the json2xml function."""
-    print(json2xml('wohnen_filtered_trees/qqro38_tree.json', tree_structure=True,
-             output_dir='wohnen_filtered_xml'))
-    print(json2xml('wohnen_filtered_trees/qlt4qy_tree.json', tree_structure=True,
-                   output_dir='wohnen_filtered_xml'))
+    print(json2xml('../examples/wohnen_json/qqro38_tree.json', tree_structure=False,
+             output_dir='wohnen_xml'))
+    print(json2xml('../examples/wohnen_json/qlt4qy_tree.json', tree_structure=False,
+                   output_dir='../examples/wohnen_xml'))
 
 
-def demo_flat():
-    """A short demo of the json2xml function with a flat comment structure."""
-    print(json2xml('wohnen_filtered_trees/qqro38_flat.json', tree_structure=False,
-             output_dir='wohnen_flat_xml'))
-    print(json2xml('wohnen_filtered_trees/qlt4qy_flat.json', tree_structure=False,
-                   output_dir='wohnen_flat_xml'))
-
-
-def run(dir='wohnen_filtered_trees', output_dir='wohnen_filtered_xml'):
+def run(dir, output_dir):
     """Convert all json files in a directory to xml."""
     for file in os.listdir(dir):
         json2xml(f'{dir}/{file}', output_dir=output_dir)
 
 
 if __name__ == '__main__':
-    # demo()
-    demo_flat()
-    # print(validate_tei(lxml.etree.parse('example2.xml')))
-    # run()
+    demo()

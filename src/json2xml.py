@@ -13,7 +13,10 @@ from lxml import etree
 from lxml.etree import (
     Element,
     ElementTree,
+    QName,
+    RelaxNG,
     SubElement,
+    fromstring,
     tostring
 )
 

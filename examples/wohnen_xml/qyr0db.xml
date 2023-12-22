@@ -1,0 +1,36 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/fußbodenheizung_und_lüften</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/fußbodenheizung_und_lüften</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-21</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qyr0db/fußbodenheizung_und_lüften/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hlhwkas">Wenn die Raumtemperatur unter die Einschaltdifferenz deiner FB-Heizungsregelung fällt fahren die Stellantriebe auf. Du wirst also mit hoher Wahrscheinlichkeit bei Temperaturen unter ~3°C im Raum heizen, sofern die Wärmeerzeugung nachts nicht komplett abgeschaltet ist. Das ist aber eher unwahrscheinlich.<lb/><lb/>&amp;amp;nbsp;<lb/><lb/>Die Mindesttemperatur von 3°C-5°C haben viele Regler zum Frostschutz, da ansonsten Wasserleitungen in dem Objekt einfrieren könnten.<date>2021-11-21</date><name>Janusdarke</name></item>
+          <item xml:id="hlhwu8v">Danke für die Antwort :)<date>2021-11-21</date><name>Geruchsverbot</name></item>
+          <item xml:id="hm35dxf">Bei angekipptem Fenster heizest du immer zum Fester raus ;)<lb/><lb/>Egal wie du die Heizung einschaltest, sie wird vermutlich immer auf min. 14-16 Grad heizen. <lb/><lb/>Lieber vor dem zu Bett gehen richtig stoßlüften und dann bei möglichst niedriger Heiztemperatur schlafen gehen.<date>2021-11-25</date><name>cosmic_jenny</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

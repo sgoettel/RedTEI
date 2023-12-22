@@ -1,0 +1,35 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/warum_sieht_paris_so_aus_wie_es_aussieht_auf</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/warum_sieht_paris_so_aus_wie_es_aussieht_auf</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-12</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qs66kh/warum_sieht_paris_so_aus_wie_es_aussieht_auf/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hkbjde2">So Fassaden haben schon was. Sieht man auch in London. Allerdings ist mir aufgefallen: wenn du mal eine Weile durch Stadtviertel läufst, die überall so aussehen, dann wirken (gute) moderne Fassaden plötzlich sehr erfrischend und angenehm anders. So müssen die wohl ursprünglich auch gewirkt haben.<date>2021-11-12</date><name>WolfThawra</name></item>
+          <item xml:id="hl97igy">Nachdem die Barrikaden in den engen Gassen von Paris eine wichtige Rolle in der französische Revolution gespielt hatten, wurden Teile der Innenstadt renoviert:<lb/><lb/>Haussmann himself did not deny the military value of the wider streets. In his memoires, he wrote that his new boulevard Sebastopol resulted in the "gutting of old Paris, of the quarter of riots and barricades."<lb/><lb/>[Haussmann's renovation of Paris - Wikipedia](https://en.m.wikipedia.org/wiki/Haussmann%27s_renovation_of_Paris)<date>2021-11-19</date><name>eKuh</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

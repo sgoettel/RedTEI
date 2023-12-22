@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/hatte_nachdem_ich_aus_dem_urlaub_zurück_kam</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/hatte_nachdem_ich_aus_dem_urlaub_zurück_kam</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-12</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qrwjki/hatte_nachdem_ich_aus_dem_urlaub_zurück_kam/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hkbosaj">Naja.<lb/>Willst du uns nicht noch sagen, welches es war?<lb/>Und in zwei Wochen updaten, ob es nur oberflächlich war?<date>2021-11-12</date><name>Rongrako</name></item>
+          <item xml:id="hkcyc2e">Wie heißt das Mittel?<date>2021-11-12</date><name>LuckySu42</name></item>
+          <item xml:id="hkditsn">/u/stixx15 hier sind Fragen für dich :)<date>2021-11-12</date><name>MarktpLatz</name></item>
+          <item xml:id="hkesmeb">Danke für die Info :)<date>2021-11-13</date><name>Stixx15</name></item>
+          <item xml:id="hkesrfi">Moin, das Mittel heißt Pufas Schimmelspray. Kam am 09. Oktober aus dem Urlaub zurück, hatte das Zeug direjt bestellt und als es ankam (ca 12. Oktober) direkt angewendet. Schimmel kam seitdem noch nicht zurück<date>2021-11-13</date><name>Stixx15</name></item>
+          <item xml:id="hkesrzr">Pufas Schimmelspray:)<date>2021-11-13</date><name>Stixx15</name></item>
+          <item xml:id="hkfzdmg">Danke :)<date>2021-11-13</date><name>LuckySu42</name></item>
+          <item xml:id="hkprdnq">Schonmal die Fussleisten/die Tapete etwas abgemacht um zu schauen wie es drunter aussieht?<date>2021-11-15</date><name>Dramatic_Dig_6664</name></item>
+          <item xml:id="hm36wsa">Und jetzt kein Möbelstück mehr dranstellen! ;)<date>2021-11-25</date><name>cosmic_jenny</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

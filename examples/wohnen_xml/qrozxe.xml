@@ -1,0 +1,40 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/die_betten_im_zimmer_unserer_kinder_selbstgebaut</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/die_betten_im_zimmer_unserer_kinder_selbstgebaut</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-11</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qrozxe/die_betten_im_zimmer_unserer_kinder_selbstgebaut/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hk809ku">Wow sehr cool. Echte Abenteuer-Kuschel-Höhlen-Betten :D<lb/><lb/>Wie lange habt ihr dafür gebraucht? Und darf ich fragen, wieviel ihr für das Material ausgegeben habt?<date>2021-11-11</date><name>potatoes__everywhere</name></item>
+          <item xml:id="hk8bven">&amp;gt; Echte Abenteuer-Kuschel-Höhlen-Betten :D<lb/><lb/>Ja so ein bisschen neidisch bin ich schon irgendwie, ich hatte immer einfach nur... ein Bett. Voll langweilig.<date>2021-11-11</date><name>WolfThawra</name></item>
+          <item xml:id="hk8ogfm">Danke! Die Kinder lieben es ebenfalls. Es ist auch jedes Mal ein Highlight, wenn Freunde da sind.<lb/><lb/>&amp;gt; Wie lange habt ihr dafür gebraucht?<lb/><lb/>Das war ein Projekt das sich über mehrere Wochenenden in Schwiegervaters Garage zog, plus ein weiteres für den Aufbau. Also definitiv lange, auch wenn ich keine klare Stundenzahl festlegen kann.<lb/><lb/>&amp;gt; Und darf ich fragen, wieviel ihr für das Material ausgegeben habt?<lb/><lb/>Das meiste waren Restbestände aus Schwiegervaters besagter Garage. Das, was wir hinzukaufen mussten, plus die Farbe kostete irgendwas im niedrigen dreistelligen Bereich.<date>2021-11-11</date><name>McWaffeleisen</name></item>
+          <item xml:id="hk8oy60">Ist natürlich praktisch wenn man noch Restbestände an Holz hat<date>2021-11-11</date><name>potatoes__everywhere</name></item>
+          <item xml:id="hl9318u">Sieht man auch, hattet ihr bei den Sprossen keine Wasserwaage? /s<lb/><lb/>Sieht super aus!<date>2021-11-19</date><name>randomiusername161</name></item>
+          <item xml:id="hl93ryf">Erwischt! Die oberen beiden Sprossen wurden nachträglich ergänzt, als.wir in der Tat keine mehr zur Hand hatten.<lb/><lb/>Aber danke!<date>2021-11-19</date><name>McWaffeleisen</name></item>
+          <item xml:id="hl97nc3">Ü<date>2021-11-19</date><name>randomiusername161</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

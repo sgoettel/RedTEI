@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/deleted_by_user</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/deleted_by_user</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-21</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qytiuh/deleted_by_user/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hli3gcl">&amp;gt; Vermieter möchte für Kleinreparaturen die Grenze von 250 EUR und 5% von Jahresnettokaltmiete setzen. Die 5% sind unproblematisch. Laut BGH, Urteil vom 06.05.1992 – VIII ZR 129/91 bzw. AG Braunschweig, Urteil vom 29.03.2005 – 116 C 196/05 sind hier maximal 100 EUR zulässig (ich würde gerne 140 vorschlagen). Meinungen dazu?<lb/><lb/>Wird etwas davon abhängen wie viel die Wohnung grundsätzlich kostet. Bei ner Kaltmiete von 250€ ist eine Kleinreparatur von 250€ sicher nicht angemessen. Grundsätzlich hab ich da schon lange keine Urteile mehr dazu gesehen. Aber weniger Vorschlagen kannst du immer. <lb/><lb/>&amp;gt; Mietvertrag beginnt am 31.01. statt 01.02. wie besprochen. Gibt es einen Grund dafür? Vorteile für Vermieter?<lb/><lb/>Nope - ich sehe keinen Grund. <lb/><lb/>&amp;gt; In dem Protokoll über den Vertragsabschluss wird eine Mieterhöhung am 01.03.2022 vereinbart. Laut § 558 BGB unzulässig?<lb/><lb/>Das könnte man als Staffelmiete verstehen. Schau mal ob es vor diesem Hintergrund nicht zulässig wäre.<date>2021-11-21</date><name>significantGecko</name></item>
+          <item xml:id="hli7xom">Gute Frage! Das Datum ist mir gar nicht so aufgefallen...<date>2021-11-21</date><name>significantGecko</name></item>
+          <item xml:id="hli8qn1">Egal wie die Rechtslage aussieht würde ich mich weigern, diesen Vertrag zu unterzeichnen, wenn doch der 01.02. besprochen wurde. Ich würde ihn gleich anrufen und ganz naiv fragen ob das ein Missverständnis ist.<date>2021-11-21</date><name>Cherrysandcake</name></item>
+          <item xml:id="hlid5zn">1. Eine fehlerhafte Kleinreparaturklausel ist insgesamt unwirksam - Dein Vorteil.<lb/>2. Ganz egal. Im Zweifelsfalle zahlst Du einen Tag mehr.<lb/>3. Sieht nach Staffelmiete aus, siehe § 557a. Allerdings muss die Miete ein Jahr unverändert bleiben. Das ist nicht der Fall, somit wäre die Klausel komplett ungültig. Dein Vorteil.<date>2021-11-21</date><name>RecumbentRacer</name></item>
+          <item xml:id="hljo9ns">Vll ein Versuch die Mietpreisbremse zu umgehen. Würde ich überprüfen.<lb/><lb/>Generell kannst du dich auch an den Mieterverein deiner Stadt wenden. Empfehle definitiv eine Mitgliedschaft.<date>2021-11-21</date><name>Krawutzki</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

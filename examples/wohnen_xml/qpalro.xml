@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/was_tun_vermieter_macht_nichts_bei_schimmel</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/was_tun_vermieter_macht_nichts_bei_schimmel</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-08</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qpalro/was_tun_vermieter_macht_nichts_bei_schimmel/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hjse9n4">Ich würd ihm das fast schon glauben, weil die Handwerkerlage wirklich so ist, dass man auf die Schnelle nicht einen bekommt. Gerade wenns nur um ein paar Schläuche und ne Armatur geht, winken dann viele ab wegen vollen Auftragsbüchern.  <lb/>Red doch mal mit ihm, ob er nicht eine neue beschaffen kann, du baust sie ein (falls du dich damit auskennst) und er bezahlt dich dafür. Sag, dass du skeptisch bist mit dem Schrank, ob der wieder wird und obs einen "contingency plan" für den Schrank hat, falls der nicht mehr wird.<date>2021-11-08</date><name>BelangloserUser</name></item>
+          <item xml:id="hjsem3a">Prinzipiell klingt es nicht danach, dass du besonders viel tun kannst, das die Situation jetzt sofort beheben würde - ausser du willst / kannst dich handwerklich selbst darauf einlassen. Gegenüber dem Vermieter würde ich nicht locker lassen - höflich aber bestimmt auf die schlimmer werdende Situation aufmerksam machen, und darauf, dass das mittelfristig grössere Wohnungsschäden verursachen kann. Auf jeden Fall gut mit Fotos dokumentieren, und den schriftlichen Emailverkehr ebenfalls. Falls es irgendwie zum Streit kommt oder so kann es auf jeden Fall nicht schaden, nachweisen zu können, dass der Vermieter "einfach mal abwarten" gesagt hat, aber um das genaue Ausmass der Sache gewusst hat.<date>2021-11-08</date><name>WolfThawra</name></item>
+          <item xml:id="hjsinjo">Danke dir! <lb/><lb/>Ja, haben gesprochen und sind zum Entschluss gekommen, dass wir sie selber einbauen werden (natürlich hilft Papa dabei mit haha). Diese wird auch bezahlt. <lb/>Bin tatsächlich skeptisch wegen dem Schrank. Jemand anderes hat vorgeschlagen einen Raumentfeuchter hinein zu stellen, müsste der Vermieter auch diese Kosten tragen? <lb/><lb/>Und was meinst du mit dem contingency plan? Etwas was Sache ist, wenn der dann doch (hoffentlich nicht) einstuerzt o. Ä.?<date>2021-11-08</date><name>Throwawaymisopaste</name></item>
+          <item xml:id="hjsitji">Danke sehr! <lb/><lb/>Wie bereits gesagt, werden wir selber die Armatur wechseln. Sollte kein hexen Werk sein. <lb/><lb/>Leider kommunizieren wir Auge zu Auge, ich schreibe höchstens das auf was gesagt wurde. Denke diese Art der Dokumentation ist eher nichts wert? <lb/><lb/>Bilder werden und wurden gemacht.<date>2021-11-08</date><name>Throwawaymisopaste</name></item>
+          <item xml:id="hjsj3tn">Ich bin kein Rechtsexperte, aber: ein Protokoll davon, was gesagt wurde, mit Daten etc. und jeweils nach einem Gespräch verfasst, sollte auf jeden Fall mehr wert sein als vier Monate später "ich glaube, das war in einem Telefonat irgendwann Anfang November" zu sagen.<date>2021-11-08</date><name>WolfThawra</name></item>
+          <item xml:id="hjsmvpx">Falls dann aber noch etwas ist, habt ihr dann aber ggf Probleme, weil eben nicht "vom Fach" (=Regress dort) eingebaut.<date>2021-11-08</date><name>Rongrako</name></item>
+          <item xml:id="hjsn4yy">Danke für die Antwort als "insider"! <lb/>Dachten eher an raumentfeuchter Granulat, da es sich doch nur um einen kleinen Bereich handelt, der betroffen ist. <lb/><lb/>Angesichts der Lage kann ich es kaum erwarten zukünftig Vermieter spielen zu dürfen haha.<date>2021-11-08</date><name>Throwawaymisopaste</name></item>
+          <item xml:id="hjsphk7">Krass, das ist ein Aspekt der wohl nicht als erstes aufkommt wenn man sich seine finanzielle Zukunft zurecht planen möchte. Solche moralischen Dilemma sind natürlich etwas was man vermeiden möchte... Danke für den Rat, zum Glück dauert es noch lange Zeit bis ich mich in dieser Rolle gesehen hätte. <lb/>Viel Glück<date>2021-11-08</date><name>Throwawaymisopaste</name></item>
+          <item xml:id="hjty50q">Schriftliche Mängelanzeige, Fristsetzung zur behebung, Miete mindern. <lb/><lb/>Ist doch nicht euer Bier wenn er nicht in pötte kommt. Eine Woche ist aber recht wenig zeit. Nur mal zum Vergleich, ich lasse grade einen kleinen Leitungsschaden beheben: Inkl Trocknung hatten die dann 4 Monate die wand offen.<lb/><lb/>Ich versteh auch nich, warum die noch nicht die miete gemindert haben, aber auch ist nicht mein problem..<date>2021-11-08</date><name>Levikus</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

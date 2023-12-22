@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/kunst_aus_zimbabwe_butterjade_von_farai_magenda</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/kunst_aus_zimbabwe_butterjade_von_farai_magenda</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-05</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qnbuos/kunst_aus_zimbabwe_butterjade_von_farai_magenda/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hjf028g">Unglaublich detailreiche Büste. Die Ohrringe sind beweglich, aber alles ist aus einem Stück Stein geschaffen. Macht sich sehr gut als Blickfang im Wohnzimmer :)<date>2021-11-05</date><name>WolfThawra</name></item>
+          <item xml:id="hjfaix5">Aber schmilzt sie nicht bei Zimmertemperatur? 😱<date>2021-11-05</date><name>BelangloserUser</name></item>
+          <item xml:id="hjfckoq">Bis jetzt lächelt sie immer noch gütig...<lb/><lb/>Übrigens ist es erstaunlich, wie sich der Gesichtsausdruck je nach Blickwinkel verändert. Von oben sieht sie eher ernst oder fast traurig aus. Von der Seite scheint sie leicht spöttisch zu schauen. Und von vorne sieht sie ganz freundlich aus. Ich glaube, die Details in den Augen und um die Mundwinkel machen da viel aus.<date>2021-11-05</date><name>WolfThawra</name></item>
+          <item xml:id="hjfe05c">So wie du sie beschreibst, fürchte ich, dass du die Nacht nicht überleben wirst...<lb/><lb/>Ich habe übrigens nichts gefunden zu Butterjade. Ist das jetzt nun Jade oder wieso noch das Butter?<date>2021-11-05</date><name>BelangloserUser</name></item>
+          <item xml:id="hjffdqu">Es ist nicht tatsächlich Jade, sieht aber so ähnlich aus - in Wirklichkeit einiges härter, darum einerseits viel schwieriger zu bearbeiten, andererseits erlaubt es auch einen höheren Detailgrad. [Hier wird der Stein erwähnt](https://www.thesculpturepark.com/shona-sculpture/); andere Namen sind offenbar auch "butter chete" und "butterstone". Die Linien sind offenbar fossile Algen.<date>2021-11-05</date><name>WolfThawra</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/unser_vermieter_legt_die_kosten_für_den</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/unser_vermieter_legt_die_kosten_für_den</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-18</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qwry60/unser_vermieter_legt_die_kosten_für_den/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hl4sez0">Hm, steht den im Mietvertrag, dass du das bezahlen musst bzw. war es bereits in den Nebenkosten enthalten (Wartung). Ich vermute mal nicht. Dann wäre das eine Modernisierungsmassnahme, die m.W. nicht komplett auf den Mieter umgelegt werden kann. Die Wartung  beträgt 1-3Euro im Jahr, also alles gut. Mein Halbwissen bei Modernisierung sagt, dass nicht alles auf den Mieter umgelegt werden kann, sondern nur ein geringer Teil (glaube 8%).<date>2021-11-18</date><name>deef4tw</name></item>
+          <item xml:id="hl591jk">Brandschutzkonformität sollte doch eigentlich nicht von den Mietern gezahlt werden ??? Halte uns gerne auf dem Laufenden<date>2021-11-18</date><name>ENFP_But_Shy</name></item>
+          <item xml:id="hl6lrt0">Also wir müssen die Wartung für Gas auch bezahlen und Brandschutz.<lb/><lb/>Habe jetzt vier Wörter in Google eingegeben und dadurch dass der Vermieter es angekündigt hat, musst Du das auch zahlen.<lb/><lb/>&amp;gt;Urteil Mieter müssen Wartung von Rauchmeldern nur nach Ankündigung zahlen. Wenn Vermieter nicht ausdrücklich darauf hinweisen, dass sie die Kosten für die Rauchmelderwartung umlegen, müssen Mieter sie nicht begleichen. Das hat das Landgericht München I nun entschieden.<date>2021-11-18</date><name>OneAttentionPlease</name></item>
+          <item xml:id="hl838kp">Die Wartung kann umgelegt werden, die Installation/Reparatur nicht (zählt zur Instandhaltung).<date>2021-11-19</date><name>artifex78</name></item>
+          <item xml:id="hlbtfi1">Google-Wissen:  <lb/><lb/>* Jährliche Wartung (also einmal Knöpfchen drücken lassen vom Schornsteinfeger oder so) kann in den NK auf dich umgelagert werden<lb/>* Die Installation ist eine Modernisierungsmaßnahme und der Vermieter kann da 8% (früher scheinbar 11%) der Anschaffungskosten auf die Kaltmiete umlagern.  <lb/>* Reparatur/Austausch kostet nichts. Gehört zur Instandhaltung.<date>2021-11-20</date><name>RoyalBingBong</name></item>
+          <item xml:id="hlf7yi0">Bin mir recht sicher dass das keine Modernisierungsmassnahme ist, da gesetzlich vorgeschrieben.<date>2021-11-20</date><name>Schafschlaf</name></item>
+          <item xml:id="hlfrv1h">Nur teilweise richtig, auch die Anschaffung und Instandhaltung kann umgelegt werden, sofern das im Mietvertrag oder in der Betriebskosten-VO explizit erwähnt wird.<date>2021-11-20</date><name>what____the____fuck</name></item>
+          <item xml:id="hm35wj9">Der Vermieter darf die Anschaffungskosten nicht umlegen, bei der Miete gibt es wohl bald ein Urteil.<lb/><lb/>Aber die Wartung und Funktionsprüfung - sofern er das extern beauftragt hat - darf er anteilig - nach der Anzahl der installierten Melder - an dich umlegen.<date>2021-11-25</date><name>cosmic_jenny</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

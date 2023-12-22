@@ -1,0 +1,37 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/fleck_auf_neuer_matratze</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/fleck_auf_neuer_matratze</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-20</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qyh9ae/fleck_auf_neuer_matratze/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hlfzr1e">mal Nasenbluten gehabt? Aber dafür ist der Fleck ein bisschen klein<date>2021-11-20</date><name>tay2000</name></item>
+          <item xml:id="hlg0w24">Ne, gerade ausgepackt :/<date>2021-11-20</date><name>igrowcabbage</name></item>
+          <item xml:id="hlg17cu">Riecht nach nichts, wie der Rest der Matratze.<date>2021-11-20</date><name>igrowcabbage</name></item>
+          <item xml:id="hlg6nr0">Ja. Aber wie *schmeckt* es?<date>2021-11-21</date><name>plomplomLP</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

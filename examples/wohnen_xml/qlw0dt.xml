@@ -1,0 +1,34 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/mietrecht_fuck_you_ist_kein_kündigungsgrund</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/mietrecht_fuck_you_ist_kein_kündigungsgrund</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <date>2021-11-03</date>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/qlw0dt/mietrecht_fuck_you_ist_kein_kündigungsgrund/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hj5m6fy">Persönlich finde ich es sowieso erstaunlich, dass so was überhaupt zu einer "fristlosen Kündigung" führen können soll. Kündigung ja, aber wieso fristlos? Ein Streit ist eine separate Angelegenheit, gerade da Mieter und Vermieter sich normalerweise auch nicht täglich sehen müssen, und Beleidigungen u.ä. sind auch separat anzeigbar.<date>2021-11-03</date><name>WolfThawra</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -13,10 +13,7 @@ from lxml import etree
 from lxml.etree import (
     Element,
     ElementTree,
-    QName,
-    RelaxNG,
     SubElement,
-    fromstring,
     tostring
 )
 
@@ -209,7 +206,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
 def demo():
     """A short demo of the json2xml function."""
     print(json2xml('../examples/wohnen_json/qqro38_flat.json', tree_structure=False,
-             output_dir='wohnen_xml'))
+             output_dir='../examples/wohnen_xml'))
     print(json2xml('../examples/wohnen_json/qlt4qy_flat.json', tree_structure=False,
                    output_dir='../examples/wohnen_xml'))
 

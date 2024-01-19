@@ -4,8 +4,17 @@ import sys
 from json2xml import run
 from validate import load_schema, validate_directory
 
+# read botlist from file
+def read_bot_list(file_path):
+    with open(file_path, 'r') as file:
+        # Add doublequotes around each bot name
+        bots = ['"' + line.strip() + '"' for line in file.readlines() if line.strip()]
+    return bots
 
-def pipeline(zstfile, subreddit, bots=["AutoModerator", "ClausKlebot", "RemindMeBot", "sneakpeekbot", "LimbRetrieval-Bot"]):
+def pipeline(zstfile, subreddit, config_dir='../src/config/'):
+    # path to botlist
+    bot_file_path = os.path.join(config_dir, 'botlist.txt')
+    bots = read_bot_list(bot_file_path)
     # create general subreddits directory
     if not os.path.exists(f'../subreddits/'):
         os.mkdir(f'../subreddits/')
@@ -20,16 +29,16 @@ def pipeline(zstfile, subreddit, bots=["AutoModerator", "ClausKlebot", "RemindMe
     if not os.path.exists(dir_xml):
         os.mkdir(dir_xml)
     # filter removed comments and bots
-    botstr = '" -a "'.join(bots)
+    botstr = ' -a '.join(bots)
     # TODO directly call function, not script
-    os.system(f'python trim_username_comments.py -a "{botstr}" -rd {zst_file}')
+    os.system(f'python trim_username_comments.py -a {botstr} -rd {zst_file}')
     # extract flat json files
     #  TODO directly call function, not script
     os.system(f'python comment_tree.py -a -f {zst_filtered} {dir_json}')
     print('Convert json to XML files.')
     # convert all json to XML
     run(dir_json, dir_xml)
-    print('Validate XMl files.')
+    print('Validate XML files.')
     # validate all XML files
     TEI_RELAXNG = load_schema()
     validate_directory(dir_xml, TEI_RELAXNG)

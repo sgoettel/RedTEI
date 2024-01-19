@@ -122,16 +122,21 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
         info = comments[0]
     time = datetime.utcfromtimestamp(int(info['created_utc']))
     docmeta["date"] = str(time.date())
-    # permalink example: /r/wohnen/comments/qqro38/wie_soll_ich_mit_meinen_überempfindlichen/hk1xuv3/
-    _, _, subreddit, _, post_id, title, comment_id, _ = \
-        info['permalink'].split('/')
-    # reconstruct title and URL from permalink
-    docmeta["title"] = title
-    docmeta["url"] = f'https://www.reddit.com/r/{subreddit}/comments/{post_id}/{title}/'
+    # process subreddit and link_id for URL and title
+    subreddit = info['subreddit']
+    post_id = info['link_id'][3:]  # remove 't3_'
+    # reconstruct URL
+    docmeta["url"] = f'https://www.reddit.com/r/{subreddit}/comments/{post_id}/'
     docmeta["subreddit"] = subreddit
-    if subreddit_loc == 'title':
-        docmeta["title"] = f'{subreddit}/{title}'
-
+    # create title
+    if 'permalink' in info:
+        _, _, subreddit, _, post_id, title, _, _ = info['permalink'].split('/')
+        docmeta["title"] = title
+        if subreddit_loc == 'title':
+            docmeta["title"] = f'{subreddit}/{title}'
+    else:
+        # use subreddit and link_id if no permalink
+        docmeta["title"] = f'{subreddit}/{post_id}'
     # build tei xml doc
     teidoc = Element("TEI", xmlns="http://www.tei-c.org/ns/1.0")
     header = SubElement(teidoc, 'teiHeader')

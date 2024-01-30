@@ -122,6 +122,8 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
         info = comments[0]
     time = datetime.utcfromtimestamp(int(info['created_utc']))
     docmeta["date"] = str(time.date())
+    # extract retrieved_on date from JSON
+    retrieved_on = str(datetime.utcfromtimestamp(int(info['retrieved_on'])).date())
     # process subreddit and link_id for URL and title
     subreddit = info['subreddit']
     post_id = info['link_id'][3:]  # remove 't3_'
@@ -157,6 +159,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
     sourcedesc = SubElement(filedesc, 'sourceDesc')
     source_bibl = SubElement(sourcedesc, 'bibl')
     biblfull = SubElement(sourcedesc, 'biblFull')
+
     # title statement once again
     bib_titlestmt2 = SubElement(biblfull, 'titleStmt')
     bib_titlemain2 = SubElement(bib_titlestmt2, 'title', type='main')
@@ -165,14 +168,16 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
     # publication statement
     publicationstmt = SubElement(biblfull, 'publicationStmt')
     publisher = SubElement(publicationstmt, 'publisher')
-    publication_date = SubElement(publicationstmt, 'date')
-    publication_url = SubElement(publicationstmt, 'ptr', type='URL',
-                                 target=docmeta['url'])
-    publication_date.text = docmeta['date']
+    publication_url = SubElement(publicationstmt, 'ptr', type='URL', target=docmeta['url'])
 
     # profile description
+    profiledesc = SubElement(header, 'profileDesc')
+    creation = SubElement(profiledesc, 'creation')
+    date_creation = SubElement(creation, 'date', type='download')
+    date_creation.text = str(datetime.utcfromtimestamp(int(info['retrieved_on'])).date()) # use date from retrieved_on
+
+    # additional profile description (if subreddit information is included in the profileDesc)
     if subreddit_loc == 'profiledesc':
-        profiledesc = SubElement(header, 'profileDesc')
         textclass = SubElement(profiledesc, 'textClass')
         subred = SubElement(textclass, 'subreddit')
         term = SubElement(subred, 'term')

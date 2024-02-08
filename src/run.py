@@ -31,7 +31,7 @@ def pipeline(zstfile, subreddit, config_dir='../src/config/'):
     # filter removed comments and bots
     botstr = ' -a '.join(bots)
     # TODO directly call function, not script
-    os.system(f'python trim_username_comments.py -a {botstr} -rd {zst_file}')
+    os.system(f'python trim_username_comments.py -a {botstr} -rd -rq -rr -ru {zst_file}')
     # extract flat json files
     #  TODO directly call function, not script
     os.system(f'python comment_tree.py -a -f {zst_filtered} {dir_json}')

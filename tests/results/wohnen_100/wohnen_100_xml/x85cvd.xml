@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/mieter_lasst_euch_nicht_verarschen_ihr_habt_ein</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/mieter_lasst_euch_nicht_verarschen_ihr_habt_ein</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/x85cvd/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-10-06</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ingv97x">Kannste dir nicht ausdenken<date>2022-09-07</date><name>cygned</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

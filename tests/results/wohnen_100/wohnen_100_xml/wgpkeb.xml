@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/gasaustritt_aus_leitung_seit_geraumer_zeit</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/gasaustritt_aus_leitung_seit_geraumer_zeit</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/wgpkeb/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-09-09</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ij850xw">Bei der Dichtigkeitsprüfung wird der **sechsfache des Normaldrucks** verwendet, entsprechend wird auch mehr Gas bei diesem Test rausgedrückt, die tatsächlich entwichene bzw entweichende Menge wird drastisch kleiner sein.<lb/><lb/>Hinter dem Druckminderer liegt maximal 30mBar an, normalerweise relativ exakt 25mbar, gemessen wird bei der Dichtigkeitsprüfung mit 150!<date>2022-08-06</date><name>Punishingmaverick</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/fachfrage_an_velux_dachfensterexperten_weiß</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/fachfrage_an_velux_dachfensterexperten_weiß</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/z2u5h4/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-12-15</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ixi79xk">Ich hab für Hebelarbeiten an Kunststoffteilen so ein Set: [URL] Kann man sich eh mal in die Werkzeugkiste legen, wird ja nicht schlecht. <lb/><lb/>Spielt jemand im Haushalt Gitarre? Zwei Plektren drunterfuckeln und dann dazwischen hebeln kann auch gehen.<date>2022-11-23</date><name>the_second</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

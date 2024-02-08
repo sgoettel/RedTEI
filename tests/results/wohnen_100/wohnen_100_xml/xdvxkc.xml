@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/praktische_anschaffungen_um_energie_zu_sparen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/praktische_anschaffungen_um_energie_zu_sparen</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/xdvxkc/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-10-06</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="iodd6j1">Man sollte nicht unterschätzen wieviel der Körper an Wärme abgibt. Gemeinsam in einem Raum aufhalten und ein romantisches Teelicht hat 30-40 Watt Heizleistung :) Gibts bei Ikea für 5,- pro 100 Stück.<lb/><lb/>Dicke Socken. Ich kann die Merinosocken von Strauss empfehlen.<lb/><lb/>Eine gute Überdecke für die normale Bettdecke am besten aus Wolle oder Kamelhaar. Die kann auch anderweitig tagsüber benutzt werden.<lb/><lb/>Mehr Tiefkühlpizza essen um die Restwärme des Ofens in die Wohnung abzuleiten :)<date>2022-09-14</date><name>Ratchet3141</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

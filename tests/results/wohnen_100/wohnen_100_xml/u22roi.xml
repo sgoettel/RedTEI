@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/namenummer_klingelschild</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/namenummer_klingelschild</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/u22roi/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-19</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="i4j46ru">Abgesehen von der Sinnhaftigkeit und so: kannst du deine Nummer als Zustellhinweis in der Adresse angeben? Quasi:<lb/><lb/><lb/>(oder "Klingel 13").<lb/><lb/> Manchmal hilft das und die meisten Formulare unterstützen es. Alternativ zur Hausnummer, falls die nicht validiert wird ("Musterstr. 1 (Nr. 13)")<date>2022-04-13</date><name>ico_</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/balkon_mit_wasser_reinigen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/balkon_mit_wasser_reinigen</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/xy3sm1/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-11-09</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="irf8rso">Naja, es so eine Art rohr, dass frei in der Luft hängt. Eine Armlänge soweit ich das Sehen konnte. Es läuft somit nicht auf einen Balkon sondern fällt mit einigen Abstand hinunter in die Betongrube. Das war schon so beim Vormieter und ist glaub ich seit Jahrzehnten so.<date>2022-10-07</date><name>Krapfenmann</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

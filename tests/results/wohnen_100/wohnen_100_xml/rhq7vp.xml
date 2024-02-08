@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/passiv_aggressives_alman_meme_zur</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/passiv_aggressives_alman_meme_zur</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/rhq7vp/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hour122">einfach mal so was als Aufkleber drucken: Affe mit Karton  vielleicht noch einen Spruch drunter „selbst ein Affe weis das hier was nicht stimmt“ und dann das daneben:Zerkleinern!<date>2021-12-17</date><name>Ok-Ad-9257</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

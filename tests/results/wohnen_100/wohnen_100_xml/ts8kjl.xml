@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/nebenkostenabrechnung_über_100_mehr</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/nebenkostenabrechnung_über_100_mehr</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/ts8kjl/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-19</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="i2quat8">Ja das ist mega merkwürdig. Das klingt einfach nach Abrechnungsfehler. Nächster Halt dokumentierte Zählerstände, wie du geschrieben hast.<date>2022-03-30</date><name>bawbster</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/heizung_funktioniert_nicht_was_tun</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/heizung_funktioniert_nicht_was_tun</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/z5w3tr/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-12-15</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ixz1egm">Klar, den Techniker kenne ich halt schon lang, bisher hatte ich nie einen Grund zur Beschwerde. Er hat auch früher die Anlage installiert. Aber gut, ich werde mich schlau machen.<lb/><lb/>Bilder sind hier:<lb/><lb/>[URL]<lb/>[URL]<lb/>[URL]<date>2022-11-27</date><name>deafhuman</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

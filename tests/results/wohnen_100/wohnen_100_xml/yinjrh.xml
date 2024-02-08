@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/pfeifende_heizung_was_kann_ich_tun</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/pfeifende_heizung_was_kann_ich_tun</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/yinjrh/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-11-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="iujl1ma">Ich verstehe zwar dein Bild nicht, aber unsere Heizung hatte damals musiziert, weil Vor- und Rücklauf vertauscht waren. <lb/><lb/>Da wurde dann der Hahnblock durch ein spezielles Exemplar ersetzt und alles war gut. Der neue Hahnblock hat praktisch Vor- und Rücklauf getauscht.<lb/><lb/>[URL]<date>2022-10-31</date><name>JuLiAn_Greger</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/mediamarkt_saturn_bieten_nur_noch_begrenzt_sehr</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/mediamarkt_saturn_bieten_nur_noch_begrenzt_sehr</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/u7qlb2/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-18</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="i5gqa0j">Das kann ich jetzt nicht direkt sagen, würde aber mal davon ausgehen, da dies ja eigentlich rechtlich bei jedem Vertrag der Fall ist.<date>2022-04-20</date><name>Marvolo90</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

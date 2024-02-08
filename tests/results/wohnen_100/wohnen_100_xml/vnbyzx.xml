@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/neue_küchengeräte_bosch_accent_line</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/neue_küchengeräte_bosch_accent_line</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/vnbyzx/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-07-03</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ie6fk8b">Keine sorge, da ist genug Platz für einen Finger zwischen Ring und Ende des Gerätes. Außerdem sind die ja auch wie auf dem bild zu sehen, ganz easy handelbar<date>2022-06-29</date><name>Fleecimton</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

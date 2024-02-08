@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/plädiere_für_ein_extra_unter_mit_dem_thema</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/plädiere_für_ein_extra_unter_mit_dem_thema</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/xs9huf/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-10-05</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="iqjcr2q">You have been permanently banned from participating in /r/PferdeSindKacke. You can still view and subscribe to /r/PferdeSindKacke, but you won't be able to post or comment.<lb/><lb/>Note from the moderators:<lb/><lb/><lb/>If you have a question regarding your ban, you can contact the moderator team for r/PferdeSindKacke by replying to this message.<lb/><lb/>**Reminder from the Reddit staff**: If you use another account to circumvent this subreddit ban, that will be considered a violation of the Content Policy and can result in your account being suspended from the site as a whole.<date>2022-09-30</date><name>PrincessOfZephyr</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

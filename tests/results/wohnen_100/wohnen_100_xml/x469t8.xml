@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/was_als_abschluss_zwischen_balkontür_und</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/was_als_abschluss_zwischen_balkontür_und</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/x469t8/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-10-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="imukr4p">Das wäre auch mein Weg. Schon benutzt und montiert, sieht gut aus und hält einwandfrei. <lb/><lb/>Ähnlich wie im Link (no affiliate):<lb/>[URL]<date>2022-09-02</date><name>LuckyLukeMuc</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

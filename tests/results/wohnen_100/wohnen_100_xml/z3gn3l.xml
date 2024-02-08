@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/rauchmelder_für_haus_mit_3_parteien_alarm</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/rauchmelder_für_haus_mit_3_parteien_alarm</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/z3gn3l/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-12-15</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ixlrzbk">Bei vielen Räumen ist man dann aber erstmal am suchen. Hätte gedacht, dass der Melder normal piept und die anderen vllt nur jedes 5. Mal.<date>2022-11-24</date><name>Stromkompressor</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

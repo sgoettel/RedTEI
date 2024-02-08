@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/machen_digitale_heizkörperthermostate_im_efh_mit</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/machen_digitale_heizkörperthermostate_im_efh_mit</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/ucyc1i/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-18</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="i6ejp2j">Thermischer und hydraulischer Abgleich sind dir kein Begriff, oder? Führt dann zum sogenannten "Selbstregelungseffekt" (falls dir das nichts sagt: [URL]. Einfach Vorlauftemperatur ins Maximum stellen und schon wird die Bude warm, so einfach kann man sichs natürlich machen, wenn einem die Verbrauchkosten egal sind. <lb/><lb/>Haustechnikdialog ist eine gute Quelle für Leute, denen bisher das Grundwissen fehlt, kannst potentiell also noch was lernen, wenn du die Seite mal durchliest.<date>2022-04-27</date><name>KownGaming</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

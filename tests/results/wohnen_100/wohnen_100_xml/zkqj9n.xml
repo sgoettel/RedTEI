@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/einstellungen_für_fußbodenheizung</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/einstellungen_für_fußbodenheizung</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/zkqj9n/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-01-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="j017ltk">Doch, unten im Vorlauf. Solange deine ganzen anderen Kreise alle zu sind siehst du im Vor- und Rücklauf auch keinen Durchfluss. Sobald du mal ein, zwei von den anderen Kreise aufdrehst sollten auch links die Durchflussanzeiger sich bewegen.<lb/><lb/>~~[URL]~~ War Unfug, OP hat ein Foto nachgereicht wo man den Zulauf von rechts sieht.<lb/><lb/>So vermute ich das. Man sieht auf dem Fotos aber nicht, ob links noch ein Anschluss von der Seite in den Verteiler geht.<date>2022-12-13</date><name>the_second</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

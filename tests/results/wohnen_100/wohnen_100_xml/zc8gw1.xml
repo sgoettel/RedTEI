@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/wärmestrom_2_zähler_aber_nur_einer_zählt</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/wärmestrom_2_zähler_aber_nur_einer_zählt</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/zc8gw1/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-01-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="iyvpndm">Ein Stromzähler muss ja irgendwoher wissen ob aktuell Hoch oder Niedertarif gilt. Damit man jetzt nicht zu jedem Zähler eine Telefonleitung legen muss oder sicherstellen will dass auch in jedem Keller das Funksignal empfangen wird (oder dessen Empfang in Hochtarifzeiten sabotiert wird), wird in der Regel diese Information über ein auf den Strom aufmoduliertes Funksignal übertragen, daher der Name "Rundsteuersystem" (siehe [URL]).<lb/><lb/>Jetzt gibt es hier verschiedene Fehlerszenarien:<lb/><lb/>1. zwischen dem Rundsteuersender und deinem Zähler sind Netzelemente, die das Signal rausfiltern ("Lowpass-Filter"), oder größere Industriebetriebe strahlen in diesem Frequenzbereich Störungen ins Netz zurück. Selten, aber kann passieren.<lb/><lb/>2. Der Zähler kann das Protokoll das in deinem Netzbereich verwendet wird nicht. Das *sollte* nicht passieren weil den Zähler nur ein zertifizierter Betrieb installieren darf, aber menschliches Versagen kann immer passieren.<lb/><lb/>3. die Leistung des Senders ist zu gering um in dem Neubaugebiet empfagen zu werden. Auch das sollte nicht passieren, aber... nun ja.<lb/><lb/>4. dein Zähler/Rundsteuerempfänger ist defekt oder die Verbindung zwischen Empfänger und Zähler (bei getrennten Geräten) ist defekt. Sollte bei einem neuen Zähler nicht der Fall sein, aber...<lb/><lb/>Alle diese Fehlerszenarien haben gemein dass du sie ohne Fachkenntnis und spezielles Equipment nicht diagnostizieren kannst bzw. ohne Zertifizierung nicht beheben darfst. Daher: Pfoten weg von dem System, Netzbetreiber (nicht deinen Energieversorger!) informieren. In der Regel sind das die kommunalen Stadtwerke, auf deiner Stromabrechnung müsste das bei "Messstellenbetreiber" vermerkt sein.<date>2022-12-04</date><name>mschuster91</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

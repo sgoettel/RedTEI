@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/eg_wohnung_sehr_dunkel_wie_aufhellen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/eg_wohnung_sehr_dunkel_wie_aufhellen</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/v6d06y/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-07-04</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ibgra6g">Da kann ich HomeAssistant als Lösung vorschlagen. Eine OpenSource Software die sich (zusammen mit der nötigen Hardware, i.e. Antennen &amp; Dongles) mit so ziemlich allen smart-devices verbinden kann. Von Hue über Lidl und IKEA Produkten, bis hin zu kleinst Firmen hatte ich bisher keine Probleme. Alle lassen sich dann über eine einzige App gesammelt ansteuern (oder auch über den PC)<lb/><lb/>[URL]<date>2022-06-07</date><name>GorgeousWalrus</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

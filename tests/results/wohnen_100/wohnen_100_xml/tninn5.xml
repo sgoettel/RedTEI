@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/schimmel_in_wohnung_nach_einzug_entdeckt_in_ecke</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/schimmel_in_wohnung_nach_einzug_entdeckt_in_ecke</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/tninn5/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-20</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="i22e63t">[URL]  <lb/><lb/><lb/>Ah..ich seh grad: Das ist wohl mit Vorsicht zu genießen. Kann man sich trotzdem mal anschauen.<date>2022-03-25</date><name>BelangloserUser</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

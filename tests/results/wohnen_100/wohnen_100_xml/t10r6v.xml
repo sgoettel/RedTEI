@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/wohnungsübergabe_wie_verhalten</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/wohnungsübergabe_wie_verhalten</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/t10r6v/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hyd53u1">Joa. Wichtig ist was im Mietvertrag wie geschrieben steht. <lb/><lb/>Klauseln mit starren Fristen sind zb ungültig. Auch zählt im Streitfall das Einzugsprotokoll gegenüber dme Auszugsprotokoll. Darüber hinaus<lb/><lb/>*Mieter müssen nur renovieren und die Kosten für Schönheitsreparaturen übernehmen, wenn sie in eine renovierte Wohnung gezogen sind, bzw. einen angemessen Geldausgleich für den unrenovierten Zustand vom Vermieter erhalten haben und im Mietvertrag eine wirksame Schönheitsreparaturklausel vereinbart ist. Allerdings sind hier unzählige Vertragsklauseln unwirksam mit der Folge, dass Mieter – trotz Einzugs in eine renovierte Wohnung – später nicht renovieren müssen.* quelle Ist aber nur ne pauschale Aussage, da ich den MV nicht gelesen habe.<date>2022-02-25</date><name>[deleted]</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

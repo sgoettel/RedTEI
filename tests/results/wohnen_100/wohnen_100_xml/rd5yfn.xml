@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/mehrwertsteuer_bei_beteiligung_von</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/mehrwertsteuer_bei_beteiligung_von</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/rd5yfn/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-02-24</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hnzlk0o">Wenn Du Dir ganz privat mit zwei Leuten etwas teilst, was 119 € gekostet hat, dann bezahlt eine Person den Kaufpreis von 119 €. Person 2 gibt Person 1 die Hälfte, also 59,50. In diesen 59,50 stecken 19 € Mehrwertsteuer, die in den 119 € stecken.<date>2021-12-10</date><name>RecumbentRacer</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

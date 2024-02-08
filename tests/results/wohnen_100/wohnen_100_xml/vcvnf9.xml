@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/nachbarschaftsstreits_sind_nur_nervig_tirade</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/nachbarschaftsstreits_sind_nur_nervig_tirade</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/vcvnf9/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-08-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ieuuq8g">Ist sie auch, die Regeln sind aus längst vergangenen Zeiten (das Abstellverbot für Gasfahrzeuge zB ist einfach bekloppt). Teils kommen sie aber nicht nur aus den Garagenverordnungen der Länder (der ADAC hat dazu auch n Artikel, sondern aus dem Baurecht - Garagen als reine Abstellkammern für Kraftfahrzeuge haben oftmals wesentliche Vereinfachungen in Sachen Baugenehmigung, statische Anforderungen, Brandschutz, und wasauchimmersonst, wer seine Garage also zweckfremd (Lager, Werkstatt, Partybunker, whatever) nutzt spart sich also die Aufwände die für einen solchen Raum regulär fällig werden und bescheißt damit rechtlich gesehen alle anderen die ihre Nicht-Garagenräume regulär anmelden und bauen.<date>2022-07-04</date><name>mschuster91</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/unterschiede_in_waschvorgängen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/unterschiede_in_waschvorgängen</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/y9c8fa/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-11-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="it6b8hq">All meine Baumwoll Pullover hat meine Frau letztens versaut (der Stoff ist sichtlich aufgerieben und pilling zeigt sich) weil sie die ins 30°C Schnellprogrmm gepackt und nicht linksrum gekrempelt hatte.<lb/><lb/>Die Waschmaschine geht bei vielen Programmen ruppig mit der Wäsche um. Schnelles schleudern wenig einweichen usw.<lb/><lb/>In der Regel sind die längsten Programme bei gleicher Temperatur die schonensten. Bei mir ist das "Fein-Seide"<date>2022-10-21</date><name>vghgvbh</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

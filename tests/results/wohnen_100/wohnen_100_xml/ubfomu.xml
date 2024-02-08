@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/extremer_heizungsverbrauch</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/extremer_heizungsverbrauch</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/ubfomu/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-18</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="i65uqxh">Das ist tatsächlich der Fall. Während der kühlen Heizphase kühlen sich auch sämtliche Gegenstände in der Wohnung langsam ab. Die müssen dann in der warmen Phase auch wieder erwärmt werden. Für so kurze Abwesenheiten wie einen halben Tag gibt es keine Ersparnis. Dann einfach konstant laufen lassen.<lb/><lb/>Anders sieht es natürlich bei längeren Abwesenheiten wie Urlaub / Wochenende aus. Da kann man alle Heizungen runter drehen.<date>2022-04-25</date><name>Aprilscherz85</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

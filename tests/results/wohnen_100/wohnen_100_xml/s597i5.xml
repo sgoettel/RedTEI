@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/wlan_mit_nachbarn_teilen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/wlan_mit_nachbarn_teilen</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/s597i5/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-02-21</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="hsw4uw4">ja, das meinte ich. ich habe zwei Links für dich.<lb/><lb/>Wlan teilen - das müssen Sie beachten (2018)<lb/><lb/>stoererhaftung-gericht-bestaetigt-seniorin-ohne-pc-wegen-filesharing-verurteilt (2021)<lb/><lb/>aktuelle Stand: Vertrag machen bzw. eigentliche Täter\*innen benennen können... mehr brauchst du nicht machen. Du bist nicht verpflichtet, sämtliche Vorgänge in Logfiles mit zu protokollieren<date>2022-01-16</date><name>KiloLimaMikeNovember</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

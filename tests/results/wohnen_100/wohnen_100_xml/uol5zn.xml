@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/was_muss_ich_bei_einem_warmwasserspeicher_in_der</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/was_muss_ich_bei_einem_warmwasserspeicher_in_der</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/uol5zn/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-17</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="i8firlb">1.einmal aufheizen von 15° auf 60° braucht 2,4kW. 90min bei 1,6KW<lb/><lb/>Bei einer Raumtemperatur von 20° verliert ein Speicher der auf 65° hochgeheizt ist ca. 0,7kW am Tag(24h), wenn er ungenutzt ist.<lb/>Wenn er auf 40° hochgeheizt ist ca 0,3kW am Tag<lb/><lb/>Also bei deiner Nutzung aufheizen, und dann Stecker ziehen<lb/><lb/>2.--<lb/><lb/>3.max ist 68°, 40 - 50 sollten ausreichen um zu duschen. Also auf 1/2 oder 2/3 stellen<lb/><lb/>[URL]<date>2022-05-13</date><name>mildmr</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/passt_hier_eine_spülmaschine_rein</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/passt_hier_eine_spülmaschine_rein</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/viy782/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-07-03</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="idh3pzn">[URL]<lb/><lb/>Hab die in einer kleinen Wohnung lange zu zweit benutzt.hatten die unter der Spüle und waren sehr zufrieden. Läuft halt praktisch jeden Tag. Hab mal Bilder zu der mini Küche gepostet. Musst evtl schauen ob sich das mit siphon usw unter der Spüle aus geht, evtl raumspar-siphon installieren.<lb/><lb/>Edit: Bilder [URL]<date>2022-06-23</date><name>stealz0ne</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

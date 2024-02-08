@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/welche_temperatur_in_der_nacht</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/welche_temperatur_in_der_nacht</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/yo25jn/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-12-16</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ivc81t9">Leider gibt es zu dem Thema erstaunlich wenig belastbare Quellen.<lb/><lb/>Deine laienhafte Vorstellung teile ich.<lb/><lb/>Meine laienhafte Vorstellung ist zusätzlich, dass es mehr Energie kostet, einen Raum innerhalb einer Stunde von 17 auf 20 Grad zu bringen als ihn eine Stunde auf konstant 20 Grad zu heizen.<lb/><lb/>Man kann das am Backofen sehen: Wenn ich den auf 200° bringe, dann sind die Heizwendel etwa 10 Minuten durchgehend eingeschaltet und danach werden sie immer abwechselnd ein- und ausgeschaltet, während die Temperatur ein wenig um die 200 ° pendelt. Es ist also offensichtlich, dass das Aufheizen mehr Energie braucht, obwohl der Wärmeverlust bei 30 ° im Ofen ja erstmal sehr gering ist.<lb/><lb/>Die Effizienz der Heizung in Abhängig von Vor- und Rücklauf erstmal außen vorgelassen.<date>2022-11-06</date><name>RecumbentRacer</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

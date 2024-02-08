@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/aufwärmen_des_zimmers_bei_wärmepumpentrockner</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/aufwärmen_des_zimmers_bei_wärmepumpentrockner</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/w7m9gm/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-08-06</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ihkgis0">Ja, da geb ich dir Recht. Ein (üblicher) Kondenstrockner kommt bei uns auch nicht in Frage, da haben wir selbst Erfahrungen aus der Vergangenheit bzgl. der Wärme.  <lb/>Die Frage ist nur, wieviel weniger Abwärme die WPT erzeugen ohne Heizstab und durch Wiederverwendung der Abwärme. Auf manchen Seiten steht z.B. "Gibt keine Wärme an die Umgebung ab" (was wir natürlich auch anzweifeln, deshalb die Frage hier).<lb/><lb/><lb/>Leider nicht :/<date>2022-07-25</date><name>zonq</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

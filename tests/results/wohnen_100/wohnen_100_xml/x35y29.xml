@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/eine_lampenfassung_für_zwei_stromkreise</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/eine_lampenfassung_für_zwei_stromkreise</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/x35y29/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-10-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="imokzze">Explizite Lampenmodelle wird es außer bei den Schienensystemen, glaube ich, nicht geben. Dieser Anwendungsfall ist doch recht speziell.<lb/><lb/>Viele Lampen sollten sich aber ohne große Probleme umrüsten lassen.<lb/><lb/>Bei Modellen wie diesen sollte das kein Problem sein:<lb/><lb/>[URL]<lb/><lb/>[URL]<lb/><lb/>[URL]<lb/><lb/>Bei Modellen mit nur einen Kabel geht das natürlich nicht (bzw. nur mit größeren Aufwand).<lb/><lb/>[URL]<date>2022-09-01</date><name>chriss79</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

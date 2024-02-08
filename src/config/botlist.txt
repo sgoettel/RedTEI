@@ -253,4 +253,5 @@ darthplagueisbot
 InsiderMemeBot
 Gif_Slowing_Bot
 WikipediaSummary
+LuckyNumber-Bot
 

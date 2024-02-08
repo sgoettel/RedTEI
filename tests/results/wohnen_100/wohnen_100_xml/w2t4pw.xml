@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/muss_ich_internet_anbieter_neuen_mietvertrag</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/muss_ich_internet_anbieter_neuen_mietvertrag</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/w2t4pw/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-08-06</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="igsi0yj">1. prüfen, ob Vodafone dich an der neuen Adresse versorgen kann<lb/>2. falls nein, Kündingung an den Anbieter mit Hinweis auf neue Adresse und Umzugsdatum (siehe [URL])<lb/>3. ggf. Ummeldebescheinigung nac hdem Umzug nachreichen<date>2022-07-19</date><name>niehle</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

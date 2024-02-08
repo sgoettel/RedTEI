@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/kann_der_vermieter_ohne_vertragsänderung_die</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/kann_der_vermieter_ohne_vertragsänderung_die</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/xotfp1/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-10-05</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="iq0xj9v">Das ist grundsätzlich richtig, aber die Rechtsprechung tendiert dazu, dass eine Anpassung der Vorauszahlungen auch dann möglich sein kann, wenn konkrete Anhaltspunkte die Anpassung rechtfertigen. Konkret genannt werden dabei etwa steigende Energiepreise. Wer es nachlesen will: BGH, Urteil vom 28.09.2011, Az. VIII ZR 294/10 (Link.<date>2022-09-26</date><name>joeblack1982</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

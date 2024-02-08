@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/mögliche_vermieter_wollen_mein_ausweis_für_ein</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/mögliche_vermieter_wollen_mein_ausweis_für_ein</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/vhpoi1/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-07-03</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ida9w4b">Wenn die auf dein Bike aus sind, dann haben die einen Perso dabei, der ist dann aber garantiert nicht echt, oder anderweitig entwendet.<date>2022-06-22</date><name>Kamikaze_Urmel</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

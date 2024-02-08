@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/waschmaschine_ist_im_schleudergang_extrem_laut</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/waschmaschine_ist_im_schleudergang_extrem_laut</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/v4wz5n/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-07-04</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ib6iatk">Grundsätzlich: Samsung-Waschmaschinen besitzen einen sehr dünnen glasfaserverstärkten Plastikbottich, der bei Unwuchten wie ein großer Lautsprecher agieren kann.<lb/><lb/>Bei deiner Waschmaschine könnten die Geräusche aber auch wie folgt entstehen:<lb/><lb/>1. Eines der Beton-Gegengewichte am Bottich kann sich gelöst haben.<lb/>2. Die Schwingungsdämpfer können verschlissen oder deren Ösen ausgeschlagen sein.<lb/>3. Die Montagezapfen für den Motor können ausgeschlagen sein (kommt öfter bei Samsung vor).<lb/>4. Das Trommelkreuz (die Verbindung zwischen Trommel und Antriebswelle) könnte gebrochen sein.<lb/><lb/>Möglich ist eine Kombination aus mehreren Möglichkeiten.<lb/><lb/>Bitte keine Antivibrationsmatte unters Gehäuse stellen: Damit schaukelt sich die ganze Maschine auf.<date>2022-06-04</date><name>ChewingSalad</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

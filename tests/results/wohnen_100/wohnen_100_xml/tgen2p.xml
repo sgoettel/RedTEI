@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/was_kann_ich_gegen_heizungsgeräusche_tuen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/was_kann_ich_gegen_heizungsgeräusche_tuen</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/tgen2p/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-20</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="i12qnl4">Entschuldige bitte, dann habe ich diesen Satz einfach nur falsch verstanden:<lb/><lb/>Es verwirrt mich allerdings trotzdem in welchem Zusammenhang das zu den Geräuschen stehen könnte. Luft im Heizkörper äußert sich primär durch ein permanentes Gluckern wie bei einer Teichpumpe und einem Heizkörper der im oberen Teil nicht oder nicht vollständig warm wird.<lb/><lb/><lb/>Das Fehlerbild hier passt dazu einfach nicht. <lb/><lb/><lb/><lb/>Wenn das Rohrnetz entsprechend konzipiert ist kannst du durchaus ohne Entlüftungsventile an den Heizkörpern arbeiten.<date>2022-03-17</date><name>Janusdarke</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

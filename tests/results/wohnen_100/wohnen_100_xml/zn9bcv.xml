@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/vermieter_zahlt_nur_teil_des_nebenkostenguthabens</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/vermieter_zahlt_nur_teil_des_nebenkostenguthabens</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/zn9bcv/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-01-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="j0fstps">Kurz vorab: Bin kein Anwalt, einfach nur jemand den die Themen interessieren und jemand der dann einfach selbst was sucht.  <lb/>Zu deiner Frage hier ein Link, was ich grad zusammengegooglet habe.<lb/>[URL].<lb/><lb/>Du kannst auch deine Nebenkostenvorauszahlung anpassen, laut folgendem Link:<lb/>[URL].<date>2022-12-16</date><name>Necrofridge</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

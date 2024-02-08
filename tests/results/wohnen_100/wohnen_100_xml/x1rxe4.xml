@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/besuch_der_hausverwaltung</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/besuch_der_hausverwaltung</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/x1rxe4/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-09-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="imh6b08">Ehe man einen Mieter mangels Sauberkeit rauswerfen kann, dauert das - und mangels Ordnung kann man vergessen. Solange es nicht stinkt, schimmelt oder Ungeziefer sich rumtreibt - keine Chance.<date>2022-08-31</date><name>AlexTMcgn</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

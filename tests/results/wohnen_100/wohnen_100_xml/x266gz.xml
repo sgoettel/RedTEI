@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/mieterhöhung_über_20_wenn_mieter_einverstanden</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/mieterhöhung_über_20_wenn_mieter_einverstanden</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/x266gz/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-09-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="imii6yy">Einen Mieter mit bestehendem Mietvertrag loszuwerden ist aber nicht so einfach. Man kann nicht einfach so nach Lust und Laune Eigenbedarf anmelden. Das muss alles schon Hand und Fuß haben.<date>2022-08-31</date><name>Roadrunner571</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

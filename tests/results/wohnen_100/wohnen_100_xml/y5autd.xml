@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/welche_wandfarbe</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/welche_wandfarbe</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/y5autd/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-11-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="isiooiv">Hallo zusammen, <lb/><lb/>Wir würden gerne die Wand hinter dem Fernseher streichen. Allerdings sind wir uns unsicher was hier für eine Farbe gut aussehen könnte. <lb/><lb/>Alles weiß ist uns nicht wohnlich genug.<lb/><lb/>Vielleicht würde auch ein anderer Teppich der sich von der Couch abhebt oder andere Deko den Raum ganz gut tun.<lb/><lb/>Würde mich über Vorschläge freuen.<date>2022-10-16</date><name>Over-Fox-769</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

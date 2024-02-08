@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/kann_mein_vermieter_eine_voll_vermietete_wohnung</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/kann_mein_vermieter_eine_voll_vermietete_wohnung</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/ykw89p/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-12-16</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="iuvfi29">Es kommt darauf an wo du wohnst. Wenn es ein reines Wohngebiet ist dann nein. Das kann richtig Ärger für deinen Vermieter geben.<lb/><lb/>Wir hatten mal einen Nachbarn der hat seine Hochzeitsfotografie "zu Hause" gehabt. War sogar so blöd und hat nen riesen Poster an seine Bodentiefen Fenster gemacht ....<lb/><lb/>Irgendwann ging den Nachbarn der Laufverkehr auf die Nerven und er wurde fristlos gekündigt. Wenn du die richtige Stelle bei der Stadt findest, fackeln die in Wohngebieten bei Gewerbe nicht lange.<lb/><lb/>Wenn es allerdings um ein Mischgebiet geht dann hast du keine Chance.<lb/><lb/>[URL].<lb/><lb/>[URL]<lb/><lb/><lb/>TLDR: Kommt drauf an, wo du wohnst.<date>2022-11-03</date><name>opaPac</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/beissenderstechender_geruch_in_der_wohnung_ursache</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/beissenderstechender_geruch_in_der_wohnung_ursache</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/vhuva5/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-07-03</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="id9ykwz">Ich weiß nicht ob das hilft aber es gibt Testkits für Raumluft, schau mal. [URL] <lb/><lb/>Ist allerdings auch nicht gerade günstig.<date>2022-06-22</date><name>Gnubsi90</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

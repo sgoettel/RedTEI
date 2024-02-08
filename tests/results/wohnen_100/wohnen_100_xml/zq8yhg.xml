@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/nebenkosten_erhöhung_nur_mündlich_was_bezweckt</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/nebenkosten_erhöhung_nur_mündlich_was_bezweckt</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/zq8yhg/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-01-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="j0zuxvx">Ich wurde auch vom Vermieter darauf angesprochen, dass es wohl größere Nachzahlungen geben wird, und ich freiwillig schon mal im Voraus mehr überweisen könne. Hab ich dann auch einfach gemacht, sind ja keine Kosten sondern nur Abschläge, wird doch eh am Ende verrechnet.<date>2022-12-20</date><name>janxb</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

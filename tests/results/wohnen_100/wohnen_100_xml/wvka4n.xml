@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/wie_nutze_ich_eine_solarthermieanlage_am_besten</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/wie_nutze_ich_eine_solarthermieanlage_am_besten</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/wvka4n/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-09-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ilfsecf">Das hängt von den Gegebenheiten ab, vor allem von der Sonneneinstrahlung, Größe der Solarthermie-Anlage und Größe des Speichers. Und wie er wärmegedämmt ist. Und ob es ein Schichtenspeicher ist.<lb/><lb/>Ist der Speicher mittags voll geladen, besser Mittags duschen, klar. Ist der Speicher erst am späten Nachmittag voll geladen und seine Wärmedämmung schlecht, besser am frühen abend duschen.<lb/><lb/>Wenn es geht, die Speichertemperatur oder Wärmefüllung des Speichers messen. Alles andere ist Spekulation.<date>2022-08-23</date><name>RecumbentRacer</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

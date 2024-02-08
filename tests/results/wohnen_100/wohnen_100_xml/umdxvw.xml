@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/ständerwandkloverkleidung_bauen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/ständerwandkloverkleidung_bauen</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/umdxvw/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-06-17</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="i81l20p">Tu dir den Gefallen und bau einen Layer OSB drunter, dann kann die Wand deutlich mehr ab (sieht bei mir so aus: [URL] ). Der Rigips wurde dann mit Tiefengrund gestrichen und da kamen dann der Fliesenkleber und die Fliesen drauf. Schraub von unten nach oben, nix ist dümmer, als wenn man bei den letzten Schrauben unten merkt, dass die aufgesetzte Platte ein bisschen gegen den Beton klemmt.<lb/><lb/>Willst du in die Laibung rein fliesen? Dann nutz die Chance und lass beide Flächen ohne Versprung fluchten.<lb/><lb/>Ob du dir eine Wartungsöffnung da reinbaust musst du wissen, zumindest ein kleiner Zugang für eine Endoskopkamera schadet vielleicht nicht, wenn man mal kucken will ob alles gut ist.<lb/><lb/><lb/>Genau.<lb/><lb/><lb/>Siehe Bild oben.<date>2022-05-10</date><name>the_second</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

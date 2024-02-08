@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/freie_innenarchitekten_für_menschen_mit_wenig</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/freie_innenarchitekten_für_menschen_mit_wenig</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/wpa812/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-09-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ikggg1p">Westwing hat ein interior design service, nicht super teuer. Musst am Ende auch keine Möbel von denen kaufen oder so. Die/der Berater/in schaut sich Fotos an, du beantwortest einige Fragen online, und dann ruft er/sie dich an und fragt dich nach deinen Wünschen etc. Danach kommt ein Designkonzept mit einer Liste von vorgeschlagenen Möbeln und Dekos.<date>2022-08-16</date><name>misslemon9</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

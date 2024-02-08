@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wohnen/geschirrspülmaschine_kompatibel_mit_ikea_metod</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">wohnen/geschirrspülmaschine_kompatibel_mit_ikea_metod</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/wohnen/comments/wu26ld/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2022-09-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="il8jflx">Ich habe diesen GSP eingebaut: [URL] auf den letzten Bildern findest du die Maße. Achte darauf, dass die Höhe der Tür die 800mm Höhe der Front von IKEA umfasst. Mit den Maßen kannst du dann auch bei anderen Herstellern gucken. Meist sind es die XXL Geräte die passen sollten. <lb/><lb/>Ich hatte diesen hier erst bestellt und musste den stornieren, weil die Front nur bis 775mm geht. [URL]<date>2022-08-21</date><name>funnyxXD</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

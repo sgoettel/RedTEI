@@ -114,6 +114,7 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                                 quote_changed = True
                                 body_changed = True
 
+                        # remove URLs
                         if remove_urls:
                             # count URLs in comments
                             original_plain_url_count = len(plain_url_regex.findall(obj["body"]))
@@ -137,12 +138,20 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                                 urls_removed = (original_plain_url_count - new_plain_url_count) + (original_markdown_url_count - new_markdown_url_count)
                                 url_removal_count += urls_removed
 
+                                cleaned_body = obj["body"].strip()
+                                if not cleaned_body or re.fullmatch(r'(\[URL\](\s|\n)*)+', cleaned_body):
+                                    # Logge den Kommentar und überspringe das Schreiben in die Ausgabedatei
+                                    lf.write("\n=========== body: only [URL] placeholders ==========\n")
+                                    lf.write(json.dumps({"original": original_body}) + "\n")
+                                    continue  # skip comment
+
                         # remove RemindMe bot invocations
                         if remove_remindme and remindme_regex.search(obj["body"]):
                             remindme_count += 1
-                            body_changed = True
+                            # Logge den entfernten Kommentar
                             lf.write("\n=========== body: !remindme ==========\n")
-                            lf.write(json.dumps({"original": original_body, "modified": obj["body"]}) + "\n")
+                            lf.write(json.dumps({"original": obj["body"]}) + "\n")
+                            continue
 
 
                         if body_changed: #this keeps me going..

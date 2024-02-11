@@ -1,13 +1,7 @@
-"""
-Filter comments from bots, quotations, URLs and deleted or removed comments
-
-Author: Sebastian Göttel, 2024
-https://github.com/sgoettel/zstsidescripts/blob/main/trim_username_comments.py
-"""
-
 import argparse
 import json
 import zstandard as zstd
+import os
 import re
 
 CHUNK_SIZE = 16384
@@ -140,7 +134,7 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
 
                                 cleaned_body = obj["body"].strip()
                                 if not cleaned_body or re.fullmatch(r'(\[URL\](\s|\n)*)+', cleaned_body):
-                                    # Logge den Kommentar und überspringe das Schreiben in die Ausgabedatei
+                                    # log comment and skip writing in output data
                                     lf.write("\n=========== body: only [URL] placeholders ==========\n")
                                     lf.write(json.dumps({"original": original_body}) + "\n")
                                     continue  # skip comment
@@ -148,7 +142,6 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                         # remove RemindMe bot invocations
                         if remove_remindme and remindme_regex.search(obj["body"]):
                             remindme_count += 1
-                            # Logge den entfernten Kommentar
                             lf.write("\n=========== body: !remindme ==========\n")
                             lf.write(json.dumps({"original": obj["body"]}) + "\n")
                             continue
@@ -180,13 +173,17 @@ if __name__ == '__main__':
     parser.add_argument('-rq', '--remove-quotes', action='store_true', help='Remove quotes from comment body.')
     parser.add_argument('-rr', '--remove-remindme', action='store_true', help='Remove comments asking for RemindMeBot (at the beginning of a comment).')
     parser.add_argument('-ru', '--remove-urls', action='store_true', help='Remove URLs from comment body.')
-    parser.add_argument('-log', '--log-file', default='removed_comments_log.txt', help='File to log removed comments and quotes.')
 
     args = parser.parse_args()
 
+    # extract file name and path
+    input_filename_without_path = os.path.basename(args.zst_file)
+    input_filename_without_extension = input_filename_without_path.rsplit('.', 1)[0]
+    log_filename = f"filtered_log_{input_filename_without_extension}.txt"
+
     authors_to_remove = [author.lower() for author in args.author] if args.author else []
 
-    excluded_counts, deleted_count, quote_removal_count, remindme_count, url_removal_count, removed_url_only_comments_count = filter_comments(args.zst_file, authors_to_remove, args.remove_deleted, args.remove_quotes, args.remove_remindme, args.remove_urls, args.log_file)
+    excluded_counts, deleted_count, quote_removal_count, remindme_count, url_removal_count, removed_url_only_comments_count = filter_comments(args.zst_file, authors_to_remove, args.remove_deleted, args.remove_quotes, args.remove_remindme, args.remove_urls, log_filename)
 
     for name, count in excluded_counts.items():
         if count > 0:

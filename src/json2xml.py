@@ -59,20 +59,25 @@ def build_subcomments(supercomment_element, subcomment, tree_structure=False, fi
         time = datetime.utcfromtimestamp(int(subcomment['created_utc']))
         date = SubElement(comment, 'date')
         date.text = str(time.date())
+        
         # convert html character references
-        comment.text = html.unescape(subcomment['body'])
-        # tranform line breaks to <lb>
-        if '\n' in subcomment['body']:
-            num_lb = subcomment['body'].count('\n')
+        comment_text = html.unescape(subcomment['body'])
+        # Replace &gt; with > manually to ensure correct display in XML
+        comment_text = comment_text.replace("&gt;", ">")
+
+        # transform line breaks to <lb>
+        if '\n' in comment_text:
+            num_lb = comment_text.count('\n')
             # text until first line break
-            comment.text = subcomment['body'].split('\n')[0]
+            comment.text = comment_text.split('\n')[0]
             for i in range(num_lb):
                 line_break = Element("lb")
                 # text after line break
-                line_break.tail = subcomment['body'].split('\n')[i + 1]
+                line_break.tail = comment_text.split('\n')[i + 1]
                 comment.append(line_break)
         else:
-            comment.text = subcomment['body']
+            comment.text = comment_text
+
         # display date and author after text
         comment.append(date)
         comment.append(author)
@@ -122,8 +127,15 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
         info = comments[0]
     time = datetime.utcfromtimestamp(int(info['created_utc']))
     docmeta["date"] = str(time.date())
-    # extract retrieved_on date from JSON
-    retrieved_on = str(datetime.utcfromtimestamp(int(info['retrieved_on'])).date())
+    # extract retrieved_on date, fallback to retrieved_utc if retrieved_on is not available
+    if 'retrieved_on' in info:
+        retrieved_date = datetime.utcfromtimestamp(int(info['retrieved_on']))
+    elif 'retrieved_utc' in info:
+        retrieved_date = datetime.utcfromtimestamp(int(info['retrieved_utc']))
+    else:  
+        pass
+    # Convert retrieved date to string representation
+    retrieved_on = str(retrieved_date.date())
     # process subreddit and link_id for URL and title
     subreddit = info['subreddit']
     post_id = info['link_id'][3:]  # remove 't3_'
@@ -174,7 +186,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
     profiledesc = SubElement(header, 'profileDesc')
     creation = SubElement(profiledesc, 'creation')
     date_creation = SubElement(creation, 'date', type='download')
-    date_creation.text = str(datetime.utcfromtimestamp(int(info['retrieved_on'])).date()) # use date from retrieved_on
+    date_creation.text = retrieved_on  # use retrieved_on variable (either retrieved_on or retrieved_utc)
 
     # additional profile description (if subreddit information is included in the profileDesc)
     if subreddit_loc == 'profiledesc':

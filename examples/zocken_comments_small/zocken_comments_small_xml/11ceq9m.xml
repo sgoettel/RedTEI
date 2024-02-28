@@ -1,0 +1,46 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">zocken/paar_leute_zum_regelmäßigen_zocken_gesucht</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">zocken/paar_leute_zum_regelmäßigen_zocken_gesucht</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/zocken/comments/11ceq9m/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-03-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ja2sz10">Gibt auch vernünftige Leute unter 25… genau so wie es genug dumme Leute ü25 gibt. Just saying (und ja ich bin selber ü30 find solche Vorurteile trotzdem immer mies)<lb/><lb/>Edit: OP hat seinen Beitrag editiert, vorher stand dort das er nur Leute sucht die über 25 sind. Darauf basiert mein Kommentar. 🤷‍♀️<date>2023-02-26</date><name>Scarlizz</name></item>
+          <item xml:id="ja2u6d3">Bitte nur zum Thema passende Kommentare,geht schließlich um das gemeinsame Zocken und den dadurch stattfindenden Spaß miteinander.<date>2023-02-26</date><name>weazyL33T</name></item>
+          <item xml:id="ja2vgrf">Hey, kleiner Tipp für cod gibts auf facebook, discord ne Gruppe die nennt sich the walking oldies ü30.<lb/>Ist ne super nette Gruppe und findet sich immer jemand zum Zocken gerade im discord. Wenns interessant ist kann ich dir einen Link raussuchen.<date>2023-02-26</date><name>eve-min3</name></item>
+          <item xml:id="ja2vjjv">nett gemeint,aber bin außer auf reddit nirgends in social media<date>2023-02-26</date><name>weazyL33T</name></item>
+          <item xml:id="ja3baco">Man, alles shooter. Nicht so meins :( Ich würd gern mal die Brutmutter in Grounded angehen.<date>2023-02-26</date><name>SpinachSpinosaurus</name></item>
+          <item xml:id="ja3bc7v">da wär ich auch dabei<date>2023-02-26</date><name>weazyL33T</name></item>
+          <item xml:id="ja3frgk">Sounds good 🤠🤙🏻 ich schicke dir später ne Anfrage sollte ich es ni ht vergessen<date>2023-02-26</date><name>Embarrassed_Chest_52</name></item>
+          <item xml:id="ja4ac8i">Bin zwar 15 aber trotzdem Halo Gamer allerdings ist online mäßig H3 eher mein Bereich…<date>2023-02-26</date><name>Background_Meat1738</name></item>
+          <item xml:id="ja708ch">Das stimmt nicht. Ab genau dem 25. Geburtstag ist jeder Erwachsen und verhält sich demensprechend. Unter 25 ist jeder ein Dulli, ist einfach so.<date>2023-02-27</date><name>kleinerstinker123</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

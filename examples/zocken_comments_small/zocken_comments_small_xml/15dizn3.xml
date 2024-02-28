@@ -1,0 +1,44 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">zocken/suche_spieler_für_baldurs_gate_3_ps5</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">zocken/suche_spieler_für_baldurs_gate_3_ps5</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/zocken/comments/15dizn3/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-07-30</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="ju2zpyk">Ich hätte Zeit und Lust, spiele am PC crossplay gibt es ja so viel ich weiß.<date>2023-07-30</date><name>Lederlapm</name></item>
+          <item xml:id="ju2zxsv">Hätte echt Bock, spiele leider am PC<date>2023-07-30</date><name>Lederlapm</name></item>
+          <item xml:id="ju3zsbq">Gibt's Crossplay?<date>2023-07-30</date><name>E38_LOVER</name></item>
+          <item xml:id="ju694si">Kein Crossplay geplant leider!<lb/>Soll nur möglich sein, Speicherstände zwischen Konsole und PC zu tauschen.<date>2023-07-31</date><name>Kuruy</name></item>
+          <item xml:id="ju699jm">Bin PC Spieler... freu mich MEGA auf BG3 aber bin selbst recht unerfahren bei solchen Spielen. Werde es am Mittwoch sicher ziemlich suchten (Hab schon eine Ausrede für ein langes Wochenende gefunden) und wünsche jedem Spieler auch viel Spaß bei diesem Koloss von einem Spiel!<date>2023-07-31</date><name>Kuruy</name></item>
+          <item xml:id="jub6kxx">Leider mag ich keine rundenbasierte Spiele.<date>2023-08-01</date><name>No-Movie-5519</name></item>
+          <item xml:id="k859my0">Leider zu spät gelesen, aber ich hätte definitiv Interesse daran, im Koop bg3 nochmal zu spielen. Bin mittlerweile beim zweiten Durchlauf und entdecke immer wieder Neues. Hätte also mega Lust, mal im Team auf der ps5 das komplette Spiel nochmal durchzuspielen :)<date>2023-11-07</date><name>Saphorm</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

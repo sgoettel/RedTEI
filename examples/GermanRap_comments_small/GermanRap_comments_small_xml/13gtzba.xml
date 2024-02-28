@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">GermanRap/crystal_f_x_tacka_77_kein_grund_prod_tacka77</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">GermanRap/crystal_f_x_tacka_77_kein_grund_prod_tacka77</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/13gtzba/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-06-26</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="jkelr2f">Bin/war immer ein Fan von Crystal F. <lb/>Feiere die neuen Sachen zwar nicht mehr so viel aber hoffe er kommt wieder klar…<date>2023-05-16</date><name>CrackClaus</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

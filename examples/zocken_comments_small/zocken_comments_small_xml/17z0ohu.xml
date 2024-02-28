@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">zocken/savegame_in_diablo_4</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">zocken/savegame_in_diablo_4</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/zocken/comments/17z0ohu/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-11-19</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="k9wqvv8">Keine Ahnung was du meinst - ja, der Progress in Dungeons wird nicht zwischengespeichert, aber dein Charakter (Erfahrungspunkte, Skillpunkte, Inventory) sollte jederzeit autogespeichert sein. Ich musste noch nie irgendwelche Skillpunkte neu verteilen. Da scheint ein Problem auf deiner Seite vorzuliegen.<date>2023-11-19</date><name>sicDaniel</name></item>
+          <item xml:id="k9wu5du">Jau, mir fiel eben auch auf, dass ich zwar die Gegner neu killen musste/konnte, aber nicht noch mal das lvl up bekam. Hast recht, das muss nicht. Ist also alles halb so wild. Eher n Vorteil. Gibt n paar extra XP :D Danke für dein Feedback.<date>2023-11-19</date><name>Much-Caterpillar-420</name></item>
+          <item xml:id="k9x8dpn">Was? Du weißt aber schon das es ein live Game ist? Und ja Monster spawen neu, dungeons spawen auch neu und weltbosse auch.<date>2023-11-19</date><name>saibot241</name></item>
+          <item xml:id="k9xhvi8">WAs hat das damit zu tun, wo das Spiel mich spawnen lässt nach nem reconnect?<date>2023-11-19</date><name>Much-Caterpillar-420</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,43 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Finanzen/aktien_depot_aufbauen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">Finanzen/aktien_depot_aufbauen</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/Finanzen/comments/13p2xlc/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-06-27</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="jl7hopx">Es gibt ungefähr 20 deutsche Broker, die gratis Sparpläne anbieten. Davon kannst du jeden nehmen.<lb/><lb/>Da machst du ein Konto auf, und dann kann's losgehen.<lb/><lb/>Du kaufst dann regelmäßig Anteile vom A2PKXG. Das ist zwar ein etf und keine Aktie. Aber unter der Haube sind 4000 verschiedene Aktien drin, im perfekten Verhältnis zueinander. Du musst nie rebalancen oder dir Gedanken um allokationen machen. Es ist einfach schon fertig.<date>2023-05-22</date><name>[deleted]</name></item>
+          <item xml:id="jl7rzsh">Trade Republic. Sofern Bock auf Einzeltitel hast, gibts die üblichen Klassiker, wie:<lb/>Amazon, Alphabet, Apple, Microsoft, Meta, Nvidia, Tesla, Nike, Visa/ Mastercard etc.<date>2023-05-22</date><name>Blaubert_Pusteblume</name></item>
+          <item xml:id="jl8irl4">Sparpläne funktionieren meistens so: Du sagst beim Broker "Ich möchte jeden Monat Titel X für Betrag Y besparen", z.B. den A2PKXG für 100€im Monat. Teilweise kann man dann noch den Termin auswählen, aber das ist egal.<lb/>An dem entsprechenden Termin kauft der Broker dann für dich entsprechend Anteile und bucht (meist per Lastschrift) das Geld von deinem Konto ab.<lb/>Ich persönlich halte von Sparplänen für Aktien nichts, aber ich kaufe allgemein quasi keine Aktien...<lb/>Ansonsten gibt es hier im Reddit ein Sticky und ein Wiki. Da stehen schonmal Basics drin. Außerhalb gibt's genug gute Quellen (Finanzfluss, Finanztipp &amp; Co).<date>2023-05-23</date><name>[deleted]</name></item>
+          <item xml:id="jl993i1">Es gibt nicht nur 20 Broker - sondern auch mindestens 100x so viele Websites, auf denen es genau um sowas geht. <lb/>Abgesehen davon gibt’s hier auch noch die FAQ, sowie eine Suchfunktion.<date>2023-05-23</date><name>OlegTheProphet</name></item>
+          <item xml:id="jl9mukx">Jeden zweiten Tag kommt diese Frage.. ist es so schwer Mal zu gucken was die letzten Tage zu diesem Thema geschrieben wurde? Oder auch das Wiki durchzulesen..<date>2023-05-23</date><name>TheRealSooMSooM</name></item>
+          <item xml:id="jlboud7">ok vielen Dank für die Info.<lb/>Wusste nicht, dass es sowas gibt.<date>2023-05-23</date><name>n3xus_32</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

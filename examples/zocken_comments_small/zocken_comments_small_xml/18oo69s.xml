@@ -1,0 +1,43 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">zocken/dota_2</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">zocken/dota_2</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/zocken/comments/18oo69s/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-12-24</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="kepre36">Wie viel MMR den?<date>2023-12-24</date><name>notwhatyouexpected27</name></item>
+          <item xml:id="kepsnfx">Das juckt doch kein im Normal. Queued doch einfach und habt Spaß.<date>2023-12-24</date><name>Founntain</name></item>
+          <item xml:id="kepsve9">Naja wenn er 2k ist und ich mit 5k wird er kein Land sehen, da im unranked auch der Skill berücksichtigt wird und wir auch 4k ins Gegnerteam bekommen<date>2023-12-24</date><name>notwhatyouexpected27</name></item>
+          <item xml:id="kept1jw">Ja klar das stimmt natürlich. Dann kann man aber auch Turbo spielen da sind die runden ehh sehr kurz und da juckt mich auch sowas nicht. Bin aber auch ehrlich man kann aber dafür was lernen wenn man z.b 2k ist und gegen 4k spielt. Ich verstehe aber den Punkt, dass es aber dann anstrengend werden könnte.<date>2023-12-24</date><name>Founntain</name></item>
+          <item xml:id="kepv6xx">Hey, ich bin Divine 2. Ist schon sehr anstrengend mal gemütlich zu zocken. Wie lange biste schon dabei?<date>2023-12-24</date><name>Tjoalorado</name></item>
+          <item xml:id="keq40o9">Ich wäre kompletter anfänger, wenn jemand nichts dagegen hat bitte anschreiben. Bin Pos4/5<date>2023-12-24</date><name>tobeymaguirefan2</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

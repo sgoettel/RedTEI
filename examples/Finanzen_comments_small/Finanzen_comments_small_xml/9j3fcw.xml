@@ -1,0 +1,50 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Finanzen/broker_gesucht</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">Finanzen/broker_gesucht</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/Finanzen/comments/9j3fcw/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2018-10-14</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="e6oc0xa">Vielleicht hilft dir das hier weiter: [URL]<lb/>Ich persönlich bin bei der DKB und soweit auch zufrieden. Normale Orders kosten 10€, Sparpläne 1,50€ und es gibt eine ganze Reihe Aktions-ETFs, die kostenlos besparbar sind. Für meine Zwecke reicht das locker. Außerdem ist das eh meine Hausbank und für &lt;10€ pro Jahr ist mir der Aufwand zu groß ein zweites Depot zu verwalten.<date>2018-09-26</date><name>TrolleriTrollera</name></item>
+          <item xml:id="e6oc3l9">Online Broker deiner Wahl geben sich alle nicht so wirklich viel, Rest ist Geschmackssache. Comdirect, Ing-Diba, Onvista, Consorsbank wären Kandidaten, gibt aber noch mehr wie DKB etc. Wenn du gerade dabei bist, vielleicht wechselst du das Girokonto gleich mit. Sparkassen langen bei sowas ja auch immer gerne zu bei den Gebühren.<lb/><lb/>Daytrader nehmen Discount Broker, meist sogar welche im Ausland z.B. den USA oder DeGiro oder sowas. Aber das wäre mir für die Steuern zu stressig.<date>2018-09-26</date><name>Doso777</name></item>
+          <item xml:id="e6occqy">DKB bietet leider keine Hebel/Futures/Options. <lb/>Aber ich klick mich da mal durch<date>2018-09-26</date><name>F4nta</name></item>
+          <item xml:id="e6ocx9w">Ich nutze flatex (allerdings nur für Sparpläne) und hatte damit bisher keine Probleme <date>2018-09-26</date><name>jhiojhiop</name></item>
+          <item xml:id="e6oh6bi">IB bzw Captrader/Lynx. wenn es ganz billig sein soll, Degiro.<date>2018-09-26</date><name>Baroq</name></item>
+          <item xml:id="e6ohlim">Bist du ich?<lb/><lb/>Bin aktuell in genau der gleichen Situation und langsam dabei mein Konto und Broker zu DKB umzuziehen. Ich nutze gerade beides parallel und kann bisher nur gutes von der DKB berichten.<lb/><lb/>Bei der DKB gibt es keine Kontoführungsgebühren und Kosten beim Broker sind 1,50 Euro pro Sparplanausführung. Und Bargeld abheben im Ausland ist auch kostenlos (für mich sehr positiv).<lb/><lb/>Die Auswahl bei der DKB an Fonds ist aber geringer, da ich aber sowieso nur in All World-ETFs investiere ist mir das egal.<date>2018-09-26</date><name>korrupter_politiker</name></item>
+          <item xml:id="e6oj1k4">Agora Direct ist ein weiterer Introducing Broker für IB.<lb/><lb/>Aber ja, IB, 0,1% Ordergebühren.<date>2018-09-26</date><name>livelivelivedie</name></item>
+          <item xml:id="e6ol9qj">Man kann über DKB Broker auch Knockout-Zertifikate und Optionscheine  handeln.<date>2018-09-26</date><name>bitfloat</name></item>
+          <item xml:id="e6olugh">Aber keine Optionen und Futures. Optionen sind nicht gleich Optionsscheine, falls das nicht ganz klar sein sollte.<date>2018-09-26</date><name>kgj6k</name></item>
+          <item xml:id="e6oqbiz">Ist klar. Bezog mich auf die Hebel-Ansage, da ist bei DKB halt das Genannte möglich.<date>2018-09-26</date><name>bitfloat</name></item>
+          <item xml:id="e6py1u0">Machen die Steuerbescheid für die Anlage KAP? Freistellungsauftrag?<date>2018-09-27</date><name>glucker</name></item>
+          <item xml:id="e6s30si">Weder noch.<date>2018-09-28</date><name>livelivelivedie</name></item>
+          <item xml:id="ec9kbvn">Führt Flatex die Steuern automatisch ab? Wie würdest du sagen ist flatex im Vergleich zu onvista?<date>2018-12-21</date><name>sven784230</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

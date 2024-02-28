@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">zocken/ich_suche_3_männer_für_for_honor_playstation</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">zocken/ich_suche_3_männer_für_for_honor_playstation</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/zocken/comments/1079ldp/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-02-12</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="j3lkaw7">Löse dich von deinen geschlechtertypischen Vorstellungen. - Brienne of Tarth<date>2023-01-09</date><name>Ch1pmunk_ch</name></item>
+          <item xml:id="j3lqkhp">Tut mir leid.<lb/><lb/>Ich meine, Leute.<date>2023-01-09</date><name>GeriSW</name></item>
+          <item xml:id="j3lqw8n">😁👍<lb/><lb/>Spiele selbst leider derzeit fast ausschliesslich Hunt Showdown und WoW<date>2023-01-09</date><name>Ch1pmunk_ch</name></item>
+          <item xml:id="j6kinnb">Ich wäre dabei<date>2023-01-30</date><name>Wise_Exit_453</name></item>
+          <item xml:id="j7c52fo">Heiße alushi habe dir auf discord eine Anfrage geschickt<date>2023-02-05</date><name>Wise_Exit_453</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

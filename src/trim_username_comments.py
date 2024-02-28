@@ -1,3 +1,10 @@
+"""
+Filter out specific authors/bots, deleted or removed comments, all kind of quotations and URLs, and RemindMeBot calls
+
+Author: Sebastian Göttel, 2024, script based on:
+https://github.com/sgoettel/zstsidescripts/blob/main/trim_username_comments.py
+"""
+
 import argparse
 import json
 import zstandard as zstd
@@ -9,6 +16,9 @@ CHUNK_SIZE = 16384
 # regex for both URL types
 plain_url_regex = re.compile(r'(?<!\])\b(?:https?://|www\.)\S+\b/?', re.IGNORECASE)
 markdown_url_regex = re.compile(r'\[([^\]]+)\]\((https?://|www\.)\S+\)')
+
+# regex for zero-width spaces
+zero_width_space_regex = re.compile(r'(&amp;#x200B;|&#x200B;|\\u200B)')
 
 def remove_plain_urls(text):
     return plain_url_regex.sub('[URL]', text)
@@ -28,8 +38,11 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
     dctx = zstd.ZstdDecompressor()
     cctx = zstd.ZstdCompressor(level=15)
     
-    # matches a citation marker at the start of a line or text, capturing everything up to the next citation marker, newline, or end of text
+    # pre 2023 quotation: matches a citation marker at the start of a line or text, capturing everything up to the next citation marker, newline, or end of text
     quote_regex = re.compile(r"(?:\n|^)(&gt;.*?)(?=(\n&gt;)|\n|$)")
+
+    # onwards 2023 quotation
+    modern_quote_regex = re.compile(r"(?:\n|^)>[^\n]+(\n>[^\n]*)*")
 
     # catches various ways users try to summon the RemindMeBot, even though there's technically just one right way to do it..it can vary..
     remindme_regex = re.compile(r'^\s*(!remindme|!RemindMe|!remind me|RemindMe!|Remind me!)\b', re.IGNORECASE)
@@ -101,9 +114,14 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
 
                         # remove quotations
                         if remove_quotes:
-                            cleaned_body = re.sub(quote_regex, '', obj["body"]).strip()
-                            if cleaned_body != obj["body"]:
-                                obj["body"] = cleaned_body
+                            cleaned_body_before_strip = re.sub(quote_regex, '', obj["body"])
+                            cleaned_body_after_strip = re.sub(modern_quote_regex, '', cleaned_body_before_strip).strip()
+                            
+                            # check if significant changes were made, besides removing whitespace
+                            substantial_change_made = (cleaned_body_before_strip.strip() != obj["body"].strip()) or (cleaned_body_after_strip != cleaned_body_before_strip.strip())
+
+                            if substantial_change_made:
+                                obj["body"] = cleaned_body_after_strip
                                 quote_removal_count += 1
                                 quote_changed = True
                                 body_changed = True
@@ -147,9 +165,18 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                             continue
 
 
-                        if body_changed: #this keeps me going..
+                        if body_changed:  # check if we got any modifications
+                            # remove all Zero-Width Spaces
+                            obj["body"] = zero_width_space_regex.sub('', obj["body"])
+                            
+                            # reduce multiple newlines down to a single one
+                            obj["body"] = re.sub(r'\n\s*\n+', '\n', obj["body"])
+
+
                             if last_modified_body != obj["body"]:  # only log if applicable
                                 last_modified_body = obj["body"]  # refresh last_modified_body
+
+                                # logging the changes if there are any
                                 if quote_changed:
                                     lf.write("\n=========== body: contained quotation ==========\n")
                                     lf.write(json.dumps({"original": original_body, "modified": obj["body"]}) + "\n")
@@ -157,6 +184,7 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                                     lf.write("\n=========== body: URL (any type) ==========\n")
                                     lf.write(json.dumps({"original": original_body, "modified": obj["body"]}) + "\n")
 
+                        # writing the updated comment back
                         writer.write(json.dumps(obj).encode() + b"\n")
 
                     except json.JSONDecodeError:
@@ -193,7 +221,7 @@ if __name__ == '__main__':
         print(f"{deleted_count} 'deleted/removed' comment(s) excluded.")
     
     if args.remove_quotes:
-        print(f"{quote_removal_count} quotes removed from comments.")
+        print(f"{quote_removal_count} quote(s) removed from comments.")
     
     if args.remove_remindme:
         print(f"{remindme_count} comment(s) asking for RemindMeBot removed.")
@@ -204,4 +232,3 @@ if __name__ == '__main__':
     print(f"{removed_url_only_comments_count} comment(s) removed for being only a URL.")
 
     print("Script executed successfully.")
-    

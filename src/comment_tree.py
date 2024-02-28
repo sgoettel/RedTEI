@@ -47,7 +47,12 @@ def extract_comments(zst_file, link_id=None, structured=True):
                                 top_level_comments.append(obj['id'])
                             obj['responses'] = []
 
-                    except json.JSONDecodeError:
+                    except Exception as e:                        
+                        print(f"Error processing object. Author: {obj.get('author', 'Unknown Author')}", end="")
+                        if 'permalink' in obj:
+                            print(f", Permalink: {obj['permalink']}")
+                        else:
+                            print()
                         continue
 
     if structured:

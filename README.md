@@ -28,25 +28,7 @@ pip install -r requirements.txt --no-cache-dir
 
 ## TODO's
 
-- run für weitere Subreddits (bisher: wohnen, Kochen, GermanRap)
-- Output Files genauer ansehen
-- Bedienbarkeit von `run.py` verbessern (Argparser mit mehr Argumenten)
-- logging einbauen
 - Funktionen aus `comment_tree.py` und `trim_username_comments.py` in `run.py` importieren statt `os.system`-Aufrufe
-- fix bug beim Verarbeiten von Subreddit Kochen (wahrscheinlich ist `permalink` bei älteren Threads nicht vorhanden): 
-```
-Convert json to XML files.
-Traceback (most recent call last):
-  File "run.py", line 71, in <module>
-    pipeline(zst_file, subreddit)
-  File "run.py", line 32, in pipeline
-    run(dir_json, dir_xml)
-  File "/home/koerber/reddit-json2xml/src/json2xml.py", line 240, in run
-    json2xml(f'{dir}/{file}', output_dir=output_dir)
-  File "/home/koerber/reddit-json2xml/src/json2xml.py", line 138, in json2xml
-    info['permalink'].split('/')
-KeyError: 'permalink'
-```
 
 Optional:
 - original date aus zst und epoch_time

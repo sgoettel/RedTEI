@@ -258,3 +258,6 @@ etcbot
 video_descriptionbot
 UselessConversionBot
 ClickableLinkBot
+kaenguru-knecht 
+thebenshapirobot
+FinanzenAT-ModTeam

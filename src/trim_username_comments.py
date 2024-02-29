@@ -20,6 +20,9 @@ markdown_url_regex = re.compile(r'\[([^\]]+)\]\((https?://|www\.)\S+\)')
 # regex for zero-width spaces
 zero_width_space_regex = re.compile(r'(&amp;#x200B;|&#x200B;|\\u200B)')
 
+# regex for reducing multiple newlines to a single one
+newline_regex = re.compile(r'\n\s*\n+')
+
 def remove_plain_urls(text):
     return plain_url_regex.sub('[URL]', text)
 
@@ -170,7 +173,7 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                             obj["body"] = zero_width_space_regex.sub('', obj["body"])
                             
                             # reduce multiple newlines down to a single one
-                            obj["body"] = re.sub(r'\n\s*\n+', '\n', obj["body"])
+                            obj["body"] = newline_regex.sub('\n', obj["body"])
 
 
                             if last_modified_body != obj["body"]:  # only log if applicable
@@ -183,6 +186,11 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                                 if url_changed:
                                     lf.write("\n=========== body: URL (any type) ==========\n")
                                     lf.write(json.dumps({"original": original_body, "modified": obj["body"]}) + "\n")
+
+                        
+                        elif obj["body"] == original_body: # if there are no modifications then..
+                            obj["body"] = zero_width_space_regex.sub('', obj["body"]) # remove Zero-Width Spaces as well 
+                            obj["body"] = newline_regex.sub('\n', obj["body"]) # and still reduce every other multiple newlines to a single one
 
                         # writing the updated comment back
                         writer.write(json.dumps(obj).encode() + b"\n")

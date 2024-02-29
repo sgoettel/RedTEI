@@ -3,7 +3,7 @@
 Hilfsskripte zur Verarbeitung von Reddit-Daten und Umwandlung von json in TEI-XML.
 
 ## Nutzung
-Hauptskript [run.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/run.py): `python src/run.py path/to/subreddit.zst`
+Hauptskript [run.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/run.py): `python src/run.py path-to-subreddit-zsta`
 
 Weitere Skripte:
 - [comment_tree.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/comment_tree.py): Ordnet alle Kommentare einem Thread zu (Details im Wiki)
@@ -14,6 +14,8 @@ Weitere Skripte:
 
 ## Beispiele
 Im Ordner [examples/](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/examples) finden sich drei (verkleinerte) Subreddits. In jedem Ordner liegen die zugrundeliegende zst-Datei (Input für run.py) des jeweiligen Subreddits, die daraus prozessierten JSON- und XML-Dateien (Output) sowie die zugehörige Logdatei.
+
+In `subreddits.tar.gz` befinden sich zwei vollständig prozessierte Subreddits: [r/Fußball](https://www.reddit.com/r/fussball/) und [r/zocken](https://www.reddit.com/r/zocken/).
 
 ## Installation
 Virtual Environment erstellen:

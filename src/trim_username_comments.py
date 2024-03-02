@@ -182,10 +182,12 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                                 # logging the changes if there are any
                                 if quote_changed:
                                     lf.write("\n=========== body: contained quotation ==========\n")
-                                    lf.write(json.dumps({"original": original_body, "modified": obj["body"]}) + "\n")
+                                    lf.write(json.dumps({"original": original_body}) + "\n\n")
+                                    lf.write(json.dumps({"modified": obj["body"]}) + "\n")
                                 if url_changed:
                                     lf.write("\n=========== body: URL (any type) ==========\n")
-                                    lf.write(json.dumps({"original": original_body, "modified": obj["body"]}) + "\n")
+                                    lf.write(json.dumps({"original": original_body}) + "\n\n")
+                                    lf.write(json.dumps({"modified": obj["body"]}) + "\n")
 
                         
                         elif obj["body"] == original_body: # if there are no modifications then..

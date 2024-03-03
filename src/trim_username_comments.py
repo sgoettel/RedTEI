@@ -159,7 +159,10 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                                 url_removal_count += urls_removed
 
                                 cleaned_body = obj["body"].strip()
-                                if not cleaned_body or re.fullmatch(r'(\[URL\](\s|\n)*)+', cleaned_body):
+                                # match strings consisting only of "[URL]" followed by any combination of
+                                # "!", "?", ".", spaces, or newlines, repeated any number of times
+
+                                if not cleaned_body or re.fullmatch(r'(\[URL\]([!?\.])*[\s\n]*)+', cleaned_body):
                                     # log comment and skip writing in output data
                                     lf.write("\n=========== body: only [URL] placeholders ==========\n")
                                     lf.write(json.dumps({"original": original_body}) + "\n")
@@ -171,7 +174,6 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                             lf.write("\n=========== body: !remindme ==========\n")
                             lf.write(json.dumps({"original": obj["body"]}) + "\n")
                             continue
-
 
                         # remove all Zero-Width Spaces and reduce multiple newlines down to a single one
                         # this is done for all comments, regardless of other modifications

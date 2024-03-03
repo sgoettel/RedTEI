@@ -37,6 +37,11 @@ def remove_markdown_urls(text):
     
     return markdown_url_regex.sub(replace_markdown_url, text)
 
+def is_comment_empty(comment_body):
+    # check if comment body is empty
+    return not comment_body.strip()
+
+
 def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_remindme, remove_urls, log_file):
     dctx = zstd.ZstdDecompressor()
     cctx = zstd.ZstdCompressor(level=15)
@@ -168,14 +173,12 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                             continue
 
 
+                        # remove all Zero-Width Spaces and reduce multiple newlines down to a single one
+                        # this is done for all comments, regardless of other modifications
+                        obj["body"] = zero_width_space_regex.sub('', obj["body"])
+                        obj["body"] = newline_regex.sub('\n', obj["body"])
+
                         if body_changed:  # check if we got any modifications
-                            # remove all Zero-Width Spaces
-                            obj["body"] = zero_width_space_regex.sub('', obj["body"])
-                            
-                            # reduce multiple newlines down to a single one
-                            obj["body"] = newline_regex.sub('\n', obj["body"])
-
-
                             if last_modified_body != obj["body"]:  # only log if applicable
                                 last_modified_body = obj["body"]  # refresh last_modified_body
 
@@ -189,12 +192,14 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
                                     lf.write(json.dumps({"original": original_body}) + "\n\n")
                                     lf.write(json.dumps({"modified": obj["body"]}) + "\n")
 
-                        
-                        elif obj["body"] == original_body: # if there are no modifications then..
-                            obj["body"] = zero_width_space_regex.sub('', obj["body"]) # remove Zero-Width Spaces as well 
-                            obj["body"] = newline_regex.sub('\n', obj["body"]) # and still reduce every other multiple newlines to a single one
+                        # check if the comment is empty after all modifications and cleaning
+                        if is_comment_empty(obj["body"]):
+                            # logging empty and ignored comments
+                            lf.write("\n=========== body: empty or whitespace only ==========\n")
+                            lf.write(json.dumps({"original": original_body}) + "\n")
+                            continue  # skip writing this comment to the output file
 
-                        # writing the updated comment back
+                        # writing the updated comment back to the output file
                         writer.write(json.dumps(obj).encode() + b"\n")
 
                     except json.JSONDecodeError:

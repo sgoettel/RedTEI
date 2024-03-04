@@ -186,7 +186,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
     # title statement once again
     bib_titlestmt2 = SubElement(biblfull, 'titleStmt')
     bib_titlemain2 = SubElement(bib_titlestmt2, 'title', type='main')
-    bib_titlemain2.text = docmeta["subreddit"] + '/' + docmeta["title"]
+    bib_titlemain2.text = 'Reddit/' + docmeta["subreddit"]
 
     # publication statement
     publicationstmt = SubElement(biblfull, 'publicationStmt')

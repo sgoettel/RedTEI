@@ -21,7 +21,8 @@ from lxml.etree import (
 blacklist_authors = []
 
 
-def build_subcomments(supercomment_element, subcomment, tree_structure=False, filtered=True):
+def build_subcomments(supercomment_element, subcomment, url,
+                        tree_structure=False, filtered=True):
     """
     Build TEI XML subcomments within a parent comment element.
 
@@ -29,6 +30,9 @@ def build_subcomments(supercomment_element, subcomment, tree_structure=False, fi
         supercomment_element (Element): The parent comment element to which
             subcomments will be added.
         subcomment (dict): The subcomment data in a dictionary format.
+        url (string): URL of the comment thread.
+        tree_structure (bool, optional): Whether comments and subcomments are
+            saved in a nested tree structure. Defaults to False.
         filtered (bool, optional): Whether deleted comments and authors are
             already removed. Defaults to True.
 
@@ -42,23 +46,29 @@ def build_subcomments(supercomment_element, subcomment, tree_structure=False, fi
 
     """
     if not subcomment['author'] in blacklist_authors:
-        comment = SubElement(supercomment_element, 'item',
-                             id=subcomment['id'])
+        comment = SubElement(supercomment_element,
+                             'item',
+                             # id=subcomment['id'],
+                             base=url + subcomment['id'])
         # transform 'id' to 'xml:id' attribute
         # https://github.com/knit-bee/tei-transform/blob/60ac079c0d91a9196e98c2be89c9c287cecee824/tei_transform/element_transformation.py#L18
         namespace = "http://www.w3.org/XML/1998/namespace"
-        old_attr = 'id'
+        old_attr = 'base'
         old_attribute = comment.attrib.get(old_attr)
         if old_attribute is not None:
             attr_value = comment.attrib.pop(old_attr)
             new_attribute = etree.QName(namespace, old_attr)
             comment.set(new_attribute, attr_value)
-        # author and date as subelements
+
+        # author, date, url as subelements
         author = SubElement(comment, 'name')
         author.text = subcomment['author']
         time = datetime.utcfromtimestamp(int(subcomment['created_utc']))
         date = SubElement(comment, 'date')
         date.text = str(time.date())
+        # comment url
+        comment_url = SubElement(comment, 'link')
+        # comment_url.text = url + subcomment['id']
         
         # convert html character references
         comment_text = html.unescape(subcomment['body'])
@@ -78,9 +88,10 @@ def build_subcomments(supercomment_element, subcomment, tree_structure=False, fi
         else:
             comment.text = comment_text
 
-        # display date and author after text
+        # display date, author and url after text
         comment.append(date)
         comment.append(author)
+        # comment.append(comment_url)
         # recursively build comment tree structure if wished
         if tree_structure:
             if subcomment['responses']:
@@ -89,7 +100,7 @@ def build_subcomments(supercomment_element, subcomment, tree_structure=False, fi
                     if not filtered:
                         if r['body'] == '[deleted]' or r['author'] == '[deleted]':
                             continue
-                    build_subcomments(comment_list, r)
+                    build_subcomments(comment_list, r, url)
 
 
 def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
@@ -147,10 +158,10 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
         _, _, subreddit, _, post_id, title, _, _ = info['permalink'].split('/')
         docmeta["title"] = title
         if subreddit_loc == 'title':
-            docmeta["title"] = f'{subreddit}/{title}'
+            docmeta["title"] = title
     else:
         # use subreddit and link_id if no permalink
-        docmeta["title"] = f'{subreddit}/{post_id}'
+        docmeta["title"] = post_id
     # build tei xml doc
     teidoc = Element("TEI", xmlns="http://www.tei-c.org/ns/1.0")
     header = SubElement(teidoc, 'teiHeader')
@@ -175,12 +186,14 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
     # title statement once again
     bib_titlestmt2 = SubElement(biblfull, 'titleStmt')
     bib_titlemain2 = SubElement(bib_titlestmt2, 'title', type='main')
-    bib_titlemain2.text = docmeta["title"]
+    bib_titlemain2.text = docmeta["subreddit"] + '/' + docmeta["title"]
 
     # publication statement
     publicationstmt = SubElement(biblfull, 'publicationStmt')
     publisher = SubElement(publicationstmt, 'publisher')
     publication_url = SubElement(publicationstmt, 'ptr', type='URL', target=docmeta['url'])
+    date_publication = SubElement(publicationstmt, 'date')
+    date_publication.text = docmeta["date"]
 
     # profile description
     profiledesc = SubElement(header, 'profileDesc')
@@ -208,14 +221,16 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
                 if comment['body'] == '[deleted]' or \
                     comment['author'] == '[deleted]':
                     continue
-            build_subcomments(responses, comment, tree_structure)
+            build_subcomments(responses, comment, docmeta["url"],
+            tree_structure)
     else:
         for comment in comments:
             if not filtered:
                 if comment['body'] == '[deleted]' or \
                     comment['author'] == '[deleted]':
                     continue
-            build_subcomments(responses, comment, tree_structure)
+            build_subcomments(responses, comment, docmeta["url"],
+            tree_structure)
 
     tei_str = tostring(teidoc, pretty_print=True,
                        encoding='utf-8').decode('utf-8')
@@ -227,10 +242,10 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
 
 def demo():
     """A short demo of the json2xml function."""
-    print(json2xml('../examples/wohnen_json/qqro38_flat.json', tree_structure=False,
-             output_dir='../examples/wohnen_xml'))
-    print(json2xml('../examples/wohnen_json/qlt4qy_flat.json', tree_structure=False,
-                   output_dir='../examples/wohnen_xml'))
+    print(json2xml('../examples/demo/5wa69r_flat.json', tree_structure=False,
+             output_dir='../examples/demo'))
+    print(json2xml('../examples/demo/1891529_flat.json', tree_structure=False,
+                   output_dir='../examples/demo'))
 
 
 def run(dir, output_dir):

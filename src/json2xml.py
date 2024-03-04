@@ -49,16 +49,16 @@ def build_subcomments(supercomment_element, subcomment, url,
         comment = SubElement(supercomment_element,
                              'item',
                              # id=subcomment['id'],
-                             base=url + subcomment['id'])
+                             source=url + subcomment['id'])
         # transform 'id' to 'xml:id' attribute
         # https://github.com/knit-bee/tei-transform/blob/60ac079c0d91a9196e98c2be89c9c287cecee824/tei_transform/element_transformation.py#L18
-        namespace = "http://www.w3.org/XML/1998/namespace"
-        old_attr = 'base'
-        old_attribute = comment.attrib.get(old_attr)
-        if old_attribute is not None:
-            attr_value = comment.attrib.pop(old_attr)
-            new_attribute = etree.QName(namespace, old_attr)
-            comment.set(new_attribute, attr_value)
+        #namespace = "http://www.w3.org/XML/1998/namespace"
+        #old_attr = 'base'
+        #old_attribute = comment.attrib.get(old_attr)
+        #if old_attribute is not None:
+         #   attr_value = comment.attrib.pop(old_attr)
+          #  new_attribute = etree.QName(namespace, old_attr)
+           # comment.set(new_attribute, attr_value)
 
         # author, date, url as subelements
         author = SubElement(comment, 'name')

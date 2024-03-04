@@ -4,12 +4,14 @@ import sys
 from json2xml import run
 from validate import load_schema, validate_directory
 
+
 # read botlist from file
 def read_bot_list(file_path):
     with open(file_path, 'r') as file:
         # Add doublequotes around each bot name
         bots = ['"' + line.strip() + '"' for line in file.readlines() if line.strip()]
     return bots
+
 
 def pipeline(zstfile, subreddit, config_dir='../src/config/'):
     # path to botlist
@@ -44,8 +46,24 @@ def pipeline(zstfile, subreddit, config_dir='../src/config/'):
     validate_directory(dir_xml, TEI_RELAXNG)
 
 
+def pipeline_json2xml(dir_json):
+    dir_xml = dir_json.replace('json', 'xml')
+    if not os.path.exists(dir_xml):
+        os.mkdir(dir_xml)
+    # convert all json to XML
+    run(dir_json, dir_xml)
+    print('Validate XML files.')
+    # validate all XML files
+    TEI_RELAXNG = load_schema()
+    validate_directory(dir_xml, TEI_RELAXNG)
+
+
 if __name__ == '__main__':
     # TODO implement argparser
-    zst_file = sys.argv[1]
-    subreddit = zst_file.split('/')[-1].replace('_comments.zst', '')
-    pipeline(zst_file, subreddit)
+    file = sys.argv[1]
+    if file.endswith('.zst'):
+        # full pipeline
+        subreddit = zst_file.split('/')[-1].replace('_comments.zst', '')
+        pipeline(zst_file, subreddit)
+    else:  # json2xml and validation only
+        pipeline_json2xml(file)

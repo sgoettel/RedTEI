@@ -9,7 +9,6 @@ import json
 import html
 import os
 
-from lxml import etree
 from lxml.etree import (
     Element,
     ElementTree,
@@ -18,8 +17,14 @@ from lxml.etree import (
 )
 
 
-blacklist_authors = []
-
+def fix_formatting(text):
+    """fix highlighting/inline-formatting and special characters"""
+    # bold, italics
+    # ignore crossed out text
+    if '~~' in text:
+        return None
+    # itemizing and enumerations
+    return text
 
 def build_subcomments(supercomment_element, subcomment, url,
                         tree_structure=False, filtered=True):
@@ -45,48 +50,50 @@ def build_subcomments(supercomment_element, subcomment, url,
         <lb> elements.
 
     """
-    if not subcomment['author'] in blacklist_authors:
-        comment = SubElement(supercomment_element,
-                             'item',
-                             source=url + subcomment['id'])
+    comment = SubElement(supercomment_element,
+                            'item',
+                            source=url + subcomment['id'])
 
-        # author, date as subelements
-        author = SubElement(comment, 'name')
-        author.text = subcomment['author']
-        time = datetime.utcfromtimestamp(int(subcomment['created_utc']))
-        date = SubElement(comment, 'date')
-        date.text = str(time.date())
-        
-        # convert html character references
-        comment_text = html.unescape(subcomment['body'])
-        # Replace &gt; with > manually to ensure correct display in XML
-        comment_text = comment_text.replace("&gt;", ">")
+    # author, date as subelements
+    author = SubElement(comment, 'name')
+    author.text = subcomment['author']
+    time = datetime.utcfromtimestamp(int(subcomment['created_utc']))
+    date = SubElement(comment, 'date')
+    date.text = str(time.date())
+    
+    # convert html character references
+    comment_text = html.unescape(subcomment['body'])
+    # Replace &gt; with > manually to ensure correct display in XML
+    comment_text = comment_text.replace("&gt;", ">")
+    comment_text = fix_formatting(comment_text)
+    if not comment_text:  # ignore
+        return
 
-        # transform line breaks to <lb>
-        if '\n' in comment_text:
-            num_lb = comment_text.count('\n')
-            # text until first line break
-            comment.text = comment_text.split('\n')[0]
-            for i in range(num_lb):
-                line_break = Element("lb")
-                # text after line break
-                line_break.tail = comment_text.split('\n')[i + 1]
-                comment.append(line_break)
-        else:
-            comment.text = comment_text
+    # transform line breaks to <lb>
+    if '\n' in comment_text:
+        num_lb = comment_text.count('\n')
+        # text until first line break
+        comment.text = comment_text.split('\n')[0]
+        for i in range(num_lb):
+            line_break = Element("lb")
+            # text after line break
+            line_break.tail = comment_text.split('\n')[i + 1]
+            comment.append(line_break)
+    else:
+        comment.text = comment_text
 
-        # display date, author and url after text
-        comment.append(date)
-        comment.append(author)
-        # recursively build comment tree structure if wished
-        if tree_structure:
-            if subcomment['responses']:
-                comment_list = SubElement(comment, 'list')
-                for r in subcomment['responses']:
-                    if not filtered:
-                        if r['body'] == '[deleted]' or r['author'] == '[deleted]':
-                            continue
-                    build_subcomments(comment_list, r, url)
+    # display date, author and url after text
+    comment.append(date)
+    comment.append(author)
+    # recursively build comment tree structure if wished
+    if tree_structure:
+        if subcomment['responses']:
+            comment_list = SubElement(comment, 'list')
+            for r in subcomment['responses']:
+                if not filtered:
+                    if r['body'] == '[deleted]' or r['author'] == '[deleted]':
+                        continue
+                build_subcomments(comment_list, r, url)
 
 
 def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
@@ -124,18 +131,17 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
         info = comments[0]
     time = datetime.utcfromtimestamp(int(info['created_utc']))
     docmeta["date"] = str(time.date())
-    # extract retrieved_on date, fallback to retrieved_utc if retrieved_on is not available
+    # extract retrieved_on date
     if 'retrieved_on' in info:
         retrieved_date = datetime.utcfromtimestamp(int(info['retrieved_on']))
+    # fallback to retrieved_utc if retrieved_on is not available
     elif 'retrieved_utc' in info:
         retrieved_date = datetime.utcfromtimestamp(int(info['retrieved_utc']))
-    else:  # retrieval date not saved in json
-        retrieved_date = ''
+    else:  # retrieval date not saved in json, use os creation time of file
+        file_creation = os.path.getctime(file)
+        retrieved_date = datetime.fromtimestamp(file_creation)
     # Convert retrieved date to string representation
-    if retrieved_date:
-        retrieved_on = str(retrieved_date.date())
-    else:
-        retrieved_on = retrieved_date
+    retrieved_on = str(retrieved_date.date())
     # process subreddit and link_id for URL and title
     subreddit = info['subreddit']
     post_id = info['link_id'][3:]  # remove 't3_'
@@ -180,7 +186,8 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
     # publication statement
     publicationstmt = SubElement(biblfull, 'publicationStmt')
     publisher = SubElement(publicationstmt, 'publisher')
-    publication_url = SubElement(publicationstmt, 'ptr', type='URL', target=docmeta['url'])
+    publication_url = SubElement(publicationstmt, 'ptr', type='URL',
+                                 target=docmeta['url'])
     date_publication = SubElement(publicationstmt, 'date')
     date_publication.text = docmeta["date"]
 
@@ -188,9 +195,11 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
     profiledesc = SubElement(header, 'profileDesc')
     creation = SubElement(profiledesc, 'creation')
     date_creation = SubElement(creation, 'date', type='download')
-    date_creation.text = retrieved_on  # use retrieved_on variable (either retrieved_on or retrieved_utc)
+    # use retrieved_on variable (either retrieved_on or retrieved_utc)
+    date_creation.text = retrieved_on
 
-    # additional profile description (if subreddit information is included in the profileDesc)
+    # additional profile description
+    # (if subreddit information is included in the profileDesc)
     if subreddit_loc == 'profiledesc':
         textclass = SubElement(profiledesc, 'textClass')
         subred = SubElement(textclass, 'subreddit')

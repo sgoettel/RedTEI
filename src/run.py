@@ -14,6 +14,7 @@ def read_bot_list(file_path):
 
 
 def pipeline(zstfile, subreddit, config_dir='../src/config/'):
+    """full pipeline: filter, extract json files, convert to XML, validate"""
     # path to botlist
     bot_file_path = os.path.join(config_dir, 'botlist.txt')
     bots = read_bot_list(bot_file_path)
@@ -33,7 +34,7 @@ def pipeline(zstfile, subreddit, config_dir='../src/config/'):
     # filter removed comments and bots
     botstr = ' -a '.join(bots)
     # TODO directly call function, not script
-    os.system(f'python trim_username_comments.py -a {botstr} -rd -rq -rr -ru {zst_file}')
+    os.system(f'python trim_username_comments.py -a {botstr} -rd -rq -rr -ru {zstfile}')
     # extract flat json files
     #  TODO directly call function, not script
     os.system(f'python comment_tree.py -a -f {zst_filtered} {dir_json}')
@@ -47,6 +48,7 @@ def pipeline(zstfile, subreddit, config_dir='../src/config/'):
 
 
 def pipeline_json2xml(dir_json):
+    """pipeline if the json files already exist: convert to XML, validate"""
     dir_xml = dir_json.replace('json', 'xml')
     if not os.path.exists(dir_xml):
         os.mkdir(dir_xml)
@@ -63,7 +65,7 @@ if __name__ == '__main__':
     file = sys.argv[1]
     if file.endswith('.zst'):
         # full pipeline
-        subreddit = zst_file.split('/')[-1].replace('_comments.zst', '')
-        pipeline(zst_file, subreddit)
+        subreddit = file.split('/')[-1].replace('_comments.zst', '')
+        pipeline(file, subreddit)
     else:  # json2xml and validation only
         pipeline_json2xml(file)

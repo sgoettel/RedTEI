@@ -17,15 +17,6 @@ from lxml.etree import (
 )
 
 
-def fix_formatting(text):
-    """fix highlighting/inline-formatting and special characters"""
-    # bold, italics
-    # ignore crossed out text
-    if '~~' in text:
-        return None
-    # itemizing and enumerations
-    return text
-
 def build_subcomments(supercomment_element, subcomment, url,
                         tree_structure=False, filtered=True):
     """
@@ -65,9 +56,6 @@ def build_subcomments(supercomment_element, subcomment, url,
     comment_text = html.unescape(subcomment['body'])
     # Replace &gt; with > manually to ensure correct display in XML
     comment_text = comment_text.replace("&gt;", ">")
-    comment_text = fix_formatting(comment_text)
-    if not comment_text:  # ignore
-        return
 
     # transform line breaks to <lb>
     if '\n' in comment_text:

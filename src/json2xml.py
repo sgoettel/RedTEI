@@ -17,6 +17,15 @@ from lxml.etree import (
 )
 
 
+def return_printables_and_spaces(char):
+    'Return a character if it belongs to certain classes'
+    return char if char.isprintable() or char.isspace() else ''
+
+def remove_control_characters(string):
+    '''Prevent non-printable and XML invalid character errors'''
+    return ''.join(map(return_printables_and_spaces, string))
+
+
 def build_subcomments(supercomment_element, subcomment, url,
                         tree_structure=False, filtered=True):
     """
@@ -56,6 +65,7 @@ def build_subcomments(supercomment_element, subcomment, url,
     comment_text = html.unescape(subcomment['body'])
     # Replace &gt; with > manually to ensure correct display in XML
     comment_text = comment_text.replace("&gt;", ">")
+    comment_text = remove_control_characters(comment_text)
 
     # transform line breaks to <lb>
     if '\n' in comment_text:
@@ -228,10 +238,10 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
 
 def demo():
     """A short demo of the json2xml function."""
-    print(json2xml('../examples/demo/5wa69r_flat.json', tree_structure=False,
+    json_files = ['5wa69r_flat', '1891529_flat', 'ushrnp_flat', 'wmip8z_flat']
+    for f in json_files:
+        print(json2xml(f'../examples/demo/{f}.json', tree_structure=False,
              output_dir='../examples/demo'))
-    print(json2xml('../examples/demo/1891529_flat.json', tree_structure=False,
-                   output_dir='../examples/demo'))
 
 
 def run(dir, output_dir):

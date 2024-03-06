@@ -23,6 +23,11 @@ zero_width_space_regex = re.compile(r'(&amp;#x200B;|&#x200B;|\\u200B)')
 # regex for reducing multiple newlines to a single one
 newline_regex = re.compile(r'\n\s*\n+')
 
+# regex for inline formatting
+strike_through_regex = re.compile(r"~~(.*?)~~")             # matches text enclosed in ~~ including the tildes
+bold_text_regex = re.compile(r"\*\*(?!\s)(.*?)(?<!\s)\*\*") # matches text surrounded by **, without adjacent spaces
+italic_text_regex = re.compile(r"\*(?!\s)(.*?)(?<!\s)\*")   # matches text surrounded by *, without adjacent spaces
+
 def remove_plain_urls(text):
     return plain_url_regex.sub('[URL]', text)
 
@@ -36,6 +41,12 @@ def remove_markdown_urls(text):
             return link_text
     
     return markdown_url_regex.sub(replace_markdown_url, text)
+
+def remove_inline_formatting(text):
+    text = strike_through_regex.sub('', text)  # remove ~~strikethrough~~ text completely, including the content between the tildes
+    text = bold_text_regex.sub(r'\1', text)    # remove double asterisks surrounding **bold text**, preserving the text itself
+    text = italic_text_regex.sub(r'\1', text)  # Remove single asterisks surrounding *italic text*, preserving the text itself
+    return text
 
 def is_comment_empty(comment_body):
     # check if comment body is empty
@@ -89,6 +100,9 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
 
                     line = buffer[:position]
                     buffer = buffer[position + 1:]
+
+                    # apply inline-formatting removals
+                    line = remove_inline_formatting(line)
 
                     # reset flags for every iteration
                     quote_changed = False

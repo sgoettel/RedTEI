@@ -43,12 +43,12 @@ def extract_comments(zst_file, link_id=None, structured=True):
 
                         if obj.get('link_id', '').startswith('t3_'):
                             comments_mapping[obj['id']] = obj
-                            if obj['parent_id'].startswith('t3_'):
+                            if str(obj['parent_id']).startswith('t3_'):
                                 top_level_comments.append(obj['id'])
                             obj['responses'] = []
 
                     except Exception as e:                        
-                        print(f"Error processing object. Author: {obj.get('author', 'Unknown Author')}", end="")
+                        print(f"Error processing object: {e}. Author: {obj.get('author', 'Unknown Author')}", end="")
                         if 'permalink' in obj:
                             print(f", Permalink: {obj['permalink']}")
                         else:

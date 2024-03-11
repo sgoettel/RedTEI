@@ -17,6 +17,14 @@ from lxml.etree import (
 )
 
 
+def return_printables_and_spaces(char):
+    'Return a character if it belongs to certain classes'
+    return char if char.isprintable() or char.isspace() else ''
+
+def remove_control_characters(string):
+    '''Prevent non-printable and XML invalid character errors'''
+    return ''.join(map(return_printables_and_spaces, string))
+
 def build_subcomments(supercomment_element, subcomment, url,
                         tree_structure=False, filtered=True):
     """
@@ -56,6 +64,7 @@ def build_subcomments(supercomment_element, subcomment, url,
     comment_text = html.unescape(subcomment['body'])
     # Replace &gt; with > manually to ensure correct display in XML
     comment_text = comment_text.replace("&gt;", ">")
+    comment_text = remove_control_characters(comment_text)
 
     # transform line breaks to <lb>
     if '\n' in comment_text:

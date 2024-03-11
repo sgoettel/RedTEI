@@ -27,7 +27,7 @@ strike_through_regex = re.compile(r"~~(.*?)~~")             # matches text enclo
 bold_text_regex = re.compile(r"\*\*(?!\s)(.*?)(?<!\s)\*\*") # matches text surrounded by **, without adjacent spaces
 italic_text_regex = re.compile(r"\*(?!\s)(.*?)(?<!\s)\*")   # matches text surrounded by *, without adjacent spaces
 
-def read_bot_list(config_dir='../src/config'):
+def read_bot_list(config_dir='src/config'):
     bot_file_path = os.path.join(config_dir, 'botlist.txt')
     bot_file_path = os.path.normpath(bot_file_path) # normalize path
     with open(bot_file_path, 'r') as file:

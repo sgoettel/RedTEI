@@ -121,3 +121,6 @@ tei-schema-pickle.lzma
 subreddits/
 src/nohup.out
 src/removed_comments_log.txt
+
+# log files
+filtered_log_*_comments.txt

@@ -21,7 +21,8 @@ def pipeline(zstfile, subreddit):
     os.makedirs(dir_json, exist_ok=True)
     os.makedirs(dir_xml, exist_ok=True)
     # execute process_comments function from trim_username_comments.py
-    process_comments(zstfile, remove_deleted=True, remove_quotes=True, remove_remindme=True, remove_urls=True)
+    process_comments(zstfile, remove_deleted=True, remove_quotes=True,
+                     remove_remindme=True, remove_urls=True)
     print("Extracting comments. This may take a while...")
     comments = extract_comments(zst_filtered)
     thread_comments = {}    
@@ -31,7 +32,8 @@ def pipeline(zstfile, subreddit):
             thread_comments[thread_id] = []
         thread_comments[thread_id].append(comment)
     for thread_id, comments_list in thread_comments.items():
-        with open(f"{dir_json}/{thread_id}_flat.json", 'w', encoding='utf-8') as outfile:
+        with open(f"{dir_json}/{thread_id}_flat.json", 'w', encoding='utf-8') \
+            as outfile:
             json.dump(comments_list, outfile, indent=4)
     print('Convert json to XML files.')
     # convert all json to XML

@@ -60,8 +60,10 @@ def build_subcomments(supercomment_element, subcomment, url,
     date = SubElement(comment, 'date')
     date.text = str(time.date())
     
-    # convert html character references
     comment_text = html.unescape(subcomment['body'])
+    # convert html character references
+    while "&gt;" in comment_text:
+        comment_text = html.unescape(comment_text)
     # Replace &gt; with > manually to ensure correct display in XML
     comment_text = comment_text.replace("&gt;", ">")
     comment_text = remove_control_characters(comment_text)
@@ -227,8 +229,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
             build_subcomments(responses, comment, docmeta["url"],
             tree_structure)
 
-    tei_str = tostring(teidoc, pretty_print=True,
-                       encoding='utf-8').decode('utf-8')
+    tei_str = tostring(teidoc, pretty_print=True, encoding='utf-8')
     if output_dir:
         ElementTree(teidoc).write(f'{output_dir}/{post_id}.xml',
                                   pretty_print=True, encoding='utf-8')

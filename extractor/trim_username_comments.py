@@ -5,7 +5,6 @@ Author: Sebastian Göttel, 2024, script based on:
 https://github.com/sgoettel/zstsidescripts/blob/main/trim_username_comments.py
 """
 
-import argparse
 import json
 import zstandard as zstd
 import os
@@ -27,6 +26,13 @@ newline_regex = re.compile(r'\n\s*\n+')
 strike_through_regex = re.compile(r"~~(.*?)~~")             # matches text enclosed in ~~ including the tildes
 bold_text_regex = re.compile(r"\*\*(?!\s)(.*?)(?<!\s)\*\*") # matches text surrounded by **, without adjacent spaces
 italic_text_regex = re.compile(r"\*(?!\s)(.*?)(?<!\s)\*")   # matches text surrounded by *, without adjacent spaces
+
+def read_bot_list(config_dir='src/config'):
+    bot_file_path = os.path.join(config_dir, 'botlist.txt')
+    bot_file_path = os.path.normpath(bot_file_path) # normalize path
+    with open(bot_file_path, 'r') as file:
+        bots = [line.strip().lower() for line in file.readlines() if line.strip()]
+    return bots
 
 def remove_plain_urls(text):
     return plain_url_regex.sub('[URL]', text)
@@ -224,40 +230,30 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_rem
 
     return excluded_counts, deleted_count, quote_removal_count, remindme_count, url_removal_count, removed_url_only_comments_count
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Filter Reddit comments based on certain criteria.')
-    parser.add_argument('zst_file', help='Path to the zst compressed file containing Reddit comments.')
-    parser.add_argument('-a', '--author', action='append', help='Username(s) to be filtered out.', required=False)
-    parser.add_argument('-rd', '--remove-deleted', action='store_true', help='Remove comments with deleted or removed body.')
-    parser.add_argument('-rq', '--remove-quotes', action='store_true', help='Remove quotes from comment body.')
-    parser.add_argument('-rr', '--remove-remindme', action='store_true', help='Remove comments asking for RemindMeBot (at the beginning of a comment).')
-    parser.add_argument('-ru', '--remove-urls', action='store_true', help='Remove URLs from comment body.')
-
-    args = parser.parse_args()
-
+def process_comments(zst_file, remove_deleted=False, remove_quotes=False, remove_remindme=False, remove_urls=False):
+    #read botlist
+    authors = read_bot_list()
     # extract file name and path
-    input_filename_without_path = os.path.basename(args.zst_file)
+    input_filename_without_path = os.path.basename(zst_file)
     input_filename_without_extension = input_filename_without_path.rsplit('.', 1)[0]
     log_filename = f"filtered_log_{input_filename_without_extension}.txt"
 
-    authors_to_remove = [author.lower() for author in args.author] if args.author else []
-
-    excluded_counts, deleted_count, quote_removal_count, remindme_count, url_removal_count, removed_url_only_comments_count = filter_comments(args.zst_file, authors_to_remove, args.remove_deleted, args.remove_quotes, args.remove_remindme, args.remove_urls, log_filename)
+    excluded_counts, deleted_count, quote_removal_count, remindme_count, url_removal_count, removed_url_only_comments_count = filter_comments(zst_file, authors, remove_deleted, remove_quotes, remove_remindme, remove_urls, log_filename)
 
     for name, count in excluded_counts.items():
         if count > 0:
             print(f"{count} comment(s) from '{name}' excluded.")
 
-    if args.remove_deleted:
+    if remove_deleted:
         print(f"{deleted_count} 'deleted/removed' comment(s) excluded.")
     
-    if args.remove_quotes:
+    if remove_quotes:
         print(f"{quote_removal_count} quote(s) removed from comments.")
     
-    if args.remove_remindme:
+    if remove_remindme:
         print(f"{remindme_count} comment(s) asking for RemindMeBot removed.")
     
-    if args.remove_urls:
+    if remove_urls:
         print(f"{url_removal_count} URL(s) removed from comments.")
     
     print(f"{removed_url_only_comments_count} comment(s) removed for being only a URL.")

@@ -8,6 +8,7 @@ from datetime import datetime
 import json
 import html
 import os
+import re
 
 from lxml.etree import (
     Element,
@@ -24,7 +25,6 @@ def return_printables_and_spaces(char):
 def remove_control_characters(string):
     '''Prevent non-printable and XML invalid character errors'''
     return ''.join(map(return_printables_and_spaces, string))
-
 
 def build_subcomments(supercomment_element, subcomment, url,
                         tree_structure=False, filtered=True):
@@ -61,11 +61,15 @@ def build_subcomments(supercomment_element, subcomment, url,
     date = SubElement(comment, 'date')
     date.text = str(time.date())
     
-    # convert html character references
     comment_text = html.unescape(subcomment['body'])
+    # convert html character references
+    while "&gt;" in comment_text:
+        comment_text = html.unescape(comment_text)
     # Replace &gt; with > manually to ensure correct display in XML
     comment_text = comment_text.replace("&gt;", ">")
     comment_text = remove_control_characters(comment_text)
+    # replace username mentions, /u/username → username
+    comment_text = re.sub(r'/u/(\w+)', r'\1', comment_text)
 
     # transform line breaks to <lb>
     if '\n' in comment_text:
@@ -228,8 +232,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
             build_subcomments(responses, comment, docmeta["url"],
             tree_structure)
 
-    tei_str = tostring(teidoc, pretty_print=True,
-                       encoding='utf-8').decode('utf-8')
+    tei_str = tostring(teidoc, pretty_print=True, encoding='utf-8')
     if output_dir:
         ElementTree(teidoc).write(f'{output_dir}/{post_id}.xml',
                                   pretty_print=True, encoding='utf-8')
@@ -238,10 +241,13 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
 
 def demo():
     """A short demo of the json2xml function."""
-    json_files = ['5wa69r_flat', '1891529_flat', 'ushrnp_flat', 'wmip8z_flat']
+    json_files = ['5wa69r_flat', '1891529_flat', 'ushrnp_flat', 'wmip8z_flat',
+                  '4dklie_flat']
     for f in json_files:
         print(json2xml(f'../examples/demo/{f}.json', tree_structure=False,
              output_dir='../examples/demo'))
+
+
 
 
 def run(dir, output_dir):

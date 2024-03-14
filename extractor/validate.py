@@ -27,8 +27,8 @@ def validate(path, TEI_RELAXNG):
 
 
 def validate_directory(directory, TEI_RELAXNG):
-    pathlist = [f'{directory}/{path}' for path in os.listdir(directory)
-                    if path.endswith('.xml')]
+    pathlist = [f'{directory}/{path}' for path in
+            os.listdir(directory)]
     for path in pathlist:
         validate(path, TEI_RELAXNG)
 

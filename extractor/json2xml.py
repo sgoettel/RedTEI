@@ -8,6 +8,7 @@ from datetime import datetime
 import json
 import html
 import os
+import re
 
 from lxml.etree import (
     Element,
@@ -67,6 +68,8 @@ def build_subcomments(supercomment_element, subcomment, url,
     # Replace &gt; with > manually to ensure correct display in XML
     comment_text = comment_text.replace("&gt;", ">")
     comment_text = remove_control_characters(comment_text)
+    # replace username mentions, /u/username → username
+    comment_text = re.sub(r'/u/(\w+)', r'\1', comment_text)
 
     # transform line breaks to <lb>
     if '\n' in comment_text:

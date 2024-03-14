@@ -26,7 +26,7 @@ def remove_control_characters(string):
     '''Prevent non-printable and XML invalid character errors'''
     return ''.join(map(return_printables_and_spaces, string))
 
-def build_subcomments(supercomment_element, subcomment, url,
+def build_subcomments(supercomment_element, subcomment, base_info,
                         tree_structure=False, filtered=True):
     """
     Build TEI XML subcomments within a parent comment element.
@@ -35,7 +35,7 @@ def build_subcomments(supercomment_element, subcomment, url,
         supercomment_element (Element): The parent comment element to which
             subcomments will be added.
         subcomment (dict): The subcomment data in a dictionary format.
-        url (string): URL of the comment thread.
+        base_info (dict): metadata of the comment thread.
         tree_structure (bool, optional): Whether comments and subcomments are
             saved in a nested tree structure. Defaults to False.
         filtered (bool, optional): Whether deleted comments and authors are
@@ -50,9 +50,18 @@ def build_subcomments(supercomment_element, subcomment, url,
         <lb> elements.
 
     """
+    # Cchek for 'permalink' in subcomment, else construct URL
+    if 'permalink' in subcomment:
+        comment_url = f"https://www.reddit.com{subcomment['permalink']}"
+    else:
+        subreddit = base_info['subreddit']
+        post_id = base_info["post_id"]
+        comment_id = subcomment['id']
+        comment_url = f"https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}"
+
     comment = SubElement(supercomment_element,
                             'item',
-                            source=url + 'comment/' + subcomment['id'])
+                            source=comment_url)
 
     # author, date as subelements
     author = SubElement(comment, 'name')
@@ -95,7 +104,7 @@ def build_subcomments(supercomment_element, subcomment, url,
                 if not filtered:
                     if r['body'] == '[deleted]' or r['author'] == '[deleted]':
                         continue
-                build_subcomments(comment_list, r, url)
+                build_subcomments(comment_list, r, base_info)
 
 
 def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
@@ -147,6 +156,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
     # process subreddit and link_id for URL and title
     subreddit = info['subreddit']
     post_id = info['link_id'][3:]  # remove 't3_'
+    docmeta['post_id'] = post_id
     # reconstruct URL
     docmeta["url"] = f'https://www.reddit.com/r/{subreddit}/comments/{post_id}/'
     docmeta["subreddit"] = subreddit
@@ -221,7 +231,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
                 if comment['body'] == '[deleted]' or \
                     comment['author'] == '[deleted]':
                     continue
-            build_subcomments(responses, comment, docmeta["url"],
+            build_subcomments(responses, comment, docmeta,
             tree_structure)
     else:
         for comment in comments:
@@ -229,7 +239,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
                 if comment['body'] == '[deleted]' or \
                     comment['author'] == '[deleted]':
                     continue
-            build_subcomments(responses, comment, docmeta["url"],
+            build_subcomments(responses, comment, docmeta,
             tree_structure)
 
     tei_str = tostring(teidoc, pretty_print=True, encoding='utf-8')

@@ -52,7 +52,7 @@ def build_subcomments(supercomment_element, subcomment, url,
     """
     comment = SubElement(supercomment_element,
                             'item',
-                            source=url + subcomment['id'])
+                            source=url + 'comment/' + subcomment['id'])
 
     # author, date as subelements
     author = SubElement(comment, 'name')

@@ -252,7 +252,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
 def demo():
     """A short demo of the json2xml function."""
     json_files = ['5wa69r_flat', '1891529_flat', 'ushrnp_flat', 'wmip8z_flat',
-                  '4dklie_flat']
+                  '4dklie_flat', 'lmjo20_flat']
     for f in json_files:
         print(json2xml(f'../examples/demo/{f}.json', tree_structure=False,
              output_dir='../examples/demo'))

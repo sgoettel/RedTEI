@@ -50,7 +50,7 @@ def build_subcomments(supercomment_element, subcomment, base_info,
         <lb> elements.
 
     """
-    # Cchek for 'permalink' in subcomment, else construct URL
+    # Check for 'permalink' in subcomment, else construct URL
     if 'permalink' in subcomment:
         comment_url = f"https://www.reddit.com{subcomment['permalink']}"
     else:

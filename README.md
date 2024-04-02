@@ -10,7 +10,15 @@ Weitere Skripte:
 - [json2xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/json2xml.py): Wandelt json-Dateien in Baumstruktur in TEI-valide XML-Dateien um
 - [trim_username_comments.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/trim_username_comments.py): Filtert Kommentare (Details im Wiki)
 - [validate.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/validate.py): validiere XML-Dateien, nach TEI-Schema
-- [integrity_zst_xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/integrity_zst_xml.py): Überprüft, ob alles korrekt konvertiert wurde: Zählt Kommentare in der (gefilterten) zst-Datei, extrahiert IDs und zählt die <item>-Tags in den XML-Dateien, die denselben IDs entsprechen. `python3 integrity_zst_xml.py path/zst_filtered.zst path/xml/directory `
+- [integrity_zst_xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/integrity_zst_xml.py): Überprüft, ob alles korrekt konvertiert wurde: Zählt Kommentare in der (gefilterten) zst-Datei, extrahiert IDs und zählt die <item>-Tags in den XML-Dateien, die denselben IDs entsprechen. `python3 integrity_zst_xml.py path/zst_filtered.zst path/xml/directory`
+
+### Tests
+Tests laufen lassen:
+
+```
+cd tests
+pytest
+```
 
 ## Beispiele
 Im Ordner [examples/](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/examples) finden sich drei (verkleinerte) Subreddits. In jedem Ordner liegen die zugrundeliegende zst-Datei (Input für run.py) des jeweiligen Subreddits, die daraus prozessierten JSON- und XML-Dateien (Output) sowie die zugehörige Logdatei.

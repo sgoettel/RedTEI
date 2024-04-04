@@ -11,11 +11,11 @@ def example_1():
     """example json (dict), xml (string) tuple"""
     with open('files/ushrnp_flat.json') as f:
         j = json.loads(f.read())
-    x = str(json2xml('files/ushrnp_flat.json', output_dir=''))
+    x = json2xml('files/ushrnp_flat.json', output_dir='')
     return j, x
 
 
-def test_url(example_data_1):
+def test_url(example_1):
     """test URL"""
     pass
 

@@ -10,6 +10,7 @@ import zstandard as zstd
 
 CHUNK_SIZE = 16384
 
+
 def extract_comments(zst_file, link_id=None):
     dctx = zstd.ZstdDecompressor()
     comments_mapping = {}

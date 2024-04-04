@@ -10,7 +10,7 @@ import pytest
 def example_data_1():
     # smallest zst file:
     # GermanRap_comments_small/GermanRap_comments_small.zst
-    return json2xml('files/')
+    return json2xml('files/GermanRap_comments_small/GermanRap_comments_small.zst')
 
 def test_url_filter():
     """test URL"""

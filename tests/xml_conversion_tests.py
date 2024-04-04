@@ -1,11 +1,10 @@
 import json
 import pytest
 import re
-# import requests
 import sys
 sys.path.append('../')
 
-from extractor.json2xml import json2xml, remove_control_characters
+from extractor.json2xml import json2xml
 
 
 @pytest.fixture
@@ -15,6 +14,7 @@ def example_1():
         j = json.loads(f.read())
     x = str(json2xml('files/ushrnp_flat.json', output_dir=''))
     return j, x
+
 
 @pytest.fixture
 def example_2():
@@ -32,9 +32,11 @@ def test_comment_structure(example_1):
     # chronological order of subcomments
     assert dates == sorted(dates)
 
+
 def test_subcomment_number(example_1):
     """assure all subcomments are included in the XML file"""
     assert len(example_1[0]) == example_1[1].count('<item source=')
+
 
 def test_encoding(example_1):
     """make sure encoding errors are fixed"""
@@ -47,9 +49,11 @@ def test_encoding(example_1):
     else:  # Assertion passes if the function call does not raise an error
         assert True
 
+
 def test_user_removal(example_1):
     """test removal of /u/"""
     assert not re.findall(r'/u/(\w+)', example_1[1])
+
 
 def test_subcomment_url_from_permalink(example_1):
     """test subcomment url has the correct structure"""
@@ -60,12 +64,13 @@ def test_subcomment_url_from_permalink(example_1):
         # constructed from permalink
         assert u_link == comment['permalink']
 
+
 def test_subcomment_url_other(example_2):
     """test subcomment url has the correct structure"""
     # f'https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}
     urls = re.findall('<item source=".+">', example_2[1])
     for u, comment in zip(urls, example_2[0]):
-        u_link = u.split('"')[1]#.replace('https://www.reddit.com', '')
+        u_link = u.split('"')[1]
         # constructed other
         subreddit = comment['subreddit']
         post_id = comment["link_id"].replace('t3_', '')

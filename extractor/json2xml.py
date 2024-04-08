@@ -22,12 +22,14 @@ def return_printables_and_spaces(char):
     'Return a character if it belongs to certain classes'
     return char if char.isprintable() or char.isspace() else ''
 
+
 def remove_control_characters(string):
     '''Prevent non-printable and XML invalid character errors'''
     return ''.join(map(return_printables_and_spaces, string))
 
+
 def build_subcomments(supercomment_element, subcomment, base_info,
-                        tree_structure=False, filtered=True):
+                      tree_structure=False, filtered=True):
     """
     Build TEI XML subcomments within a parent comment element.
 
@@ -50,7 +52,7 @@ def build_subcomments(supercomment_element, subcomment, base_info,
         <lb> elements.
 
     """
-    # Cchek for 'permalink' in subcomment, else construct URL
+    # Check for 'permalink' in subcomment, else construct URL
     if 'permalink' in subcomment:
         comment_url = f"https://www.reddit.com{subcomment['permalink']}"
     else:
@@ -59,9 +61,7 @@ def build_subcomments(supercomment_element, subcomment, base_info,
         comment_id = subcomment['id']
         comment_url = f"https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}"
 
-    comment = SubElement(supercomment_element,
-                            'item',
-                            source=comment_url)
+    comment = SubElement(supercomment_element, 'item', source=comment_url)
 
     # author, date as subelements
     author = SubElement(comment, 'name')
@@ -69,7 +69,7 @@ def build_subcomments(supercomment_element, subcomment, base_info,
     time = datetime.utcfromtimestamp(int(subcomment['created_utc']))
     date = SubElement(comment, 'date')
     date.text = str(time.date())
-    
+
     comment_text = html.unescape(subcomment['body'])
     # convert html character references
     while "&gt;" in comment_text:
@@ -231,18 +231,17 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
         for id, comment in comments.items():
             if not filtered:
                 if comment['body'] == '[deleted]' or \
-                    comment['author'] == '[deleted]':
+                        comment['author'] == '[deleted]':
                     continue
             build_subcomments(responses, comment, docmeta,
-            tree_structure)
+                              tree_structure)
     else:
         for comment in comments:
             if not filtered:
                 if comment['body'] == '[deleted]' or \
-                    comment['author'] == '[deleted]':
+                        comment['author'] == '[deleted]':
                     continue
-            build_subcomments(responses, comment, docmeta,
-            tree_structure)
+            build_subcomments(responses, comment, docmeta, tree_structure)
 
     tei_str = tostring(teidoc, pretty_print=True, encoding='utf-8')
     if output_dir:
@@ -257,9 +256,7 @@ def demo():
                   '4dklie_flat', 'lmjo20_flat']
     for f in json_files:
         print(json2xml(f'../examples/demo/{f}.json', tree_structure=False,
-             output_dir='../examples/demo'))
-
-
+                       output_dir='../examples/demo'))
 
 
 def run(dir, output_dir):

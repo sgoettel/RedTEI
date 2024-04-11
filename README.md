@@ -20,6 +20,14 @@ cd tests
 pytest
 ```
 
+Optional: Abdeckung mit [coverage](https://coverage.readthedocs.io/en/7.4.4/) (aktuell 79%)
+
+```
+cd tests
+coverage run -m pytest
+coverage report -m
+```
+
 ## Beispiele
 Im Ordner [examples/](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/examples) finden sich drei (verkleinerte) Subreddits. In jedem Ordner liegen die zugrundeliegende zst-Datei (Input für run.py) des jeweiligen Subreddits, die daraus prozessierten JSON- und XML-Dateien (Output) sowie die zugehörige Logdatei.
 

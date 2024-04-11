@@ -1,5 +1,4 @@
 import json
-from lxml import etree
 import pytest
 import re
 import sys
@@ -74,6 +73,5 @@ def test_header(example_1):
 
 if __name__ == '__main__':
     test_url()
-    test_ids()
     test_dates()
     test_header()

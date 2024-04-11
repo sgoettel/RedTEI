@@ -90,7 +90,9 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
 
     # catches various ways users try to summon the RemindMeBot, even though
     # there's technically just one right way to do it..it can vary..
-    remindme_regex = re.compile(r'^\s*(!remindme|!RemindMe|!remind me|RemindMe!|Remind me!)\b', re.IGNORECASE)
+    remindme_regex = re.compile(
+        r'^\s*(!remindme|!RemindMe|!remind me|RemindMe!|Remind me!)\b',
+        re.IGNORECASE)
 
     input_filename = zst_file
     output_filename = f"{zst_file.rsplit('.', 1)[0]}_filtered.zst"

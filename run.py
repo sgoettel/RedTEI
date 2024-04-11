@@ -9,7 +9,7 @@ from extractor.validate import load_schema, validate_directory
 
 def pipeline(zstfile, subreddit):
     """full pipeline: filter, extract json files, convert to XML, validate"""
-    print(f'Processing {subreddit}.')
+    print(f'Processing subreddit: "{subreddit}".')
     base_dir = os.path.dirname(os.path.abspath(__file__))
     subreddits_dir = os.path.join(base_dir, 'subreddits')
     # create general subreddits directory

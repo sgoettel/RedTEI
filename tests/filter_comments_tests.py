@@ -72,8 +72,7 @@ def test_url_filter():
 def test_botlist_removal(example_zst_filtered):
     """test comments from bots have been successfully removed"""
     botlist = {'AutoModerator', 'ClausKlebot', 'sneakpeekbot'}
-    # TODO FIX
-    authors = set(comment["author"] for comment in example_zst_filtered)
+    authors = set(comment["author"].lower() for comment in example_zst_filtered)
     # check empty set intersection of bots and authors
     assert not botlist.intersection(authors)
 

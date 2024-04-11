@@ -85,4 +85,4 @@ if __name__ == '__main__':
     test_encoding()
     test_user_removal(example_1)
     test_subcomment_url_from_permalink()
-    test_subcomment_url_other
+    test_subcomment_url_other()

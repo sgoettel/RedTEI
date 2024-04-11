@@ -81,6 +81,7 @@ def build_subcomments(supercomment_element, subcomment, base_info,
     comment_text = re.sub(r'/u/(\w+)', r'\1', comment_text)
     # replace NULL bytes/control character
     comment_text = comment_text.replace('\u001c', ' ')
+    comment_text = comment_text.replace('\u001e', ' ')
 
     # transform line breaks to <lb>
     if '\n' in comment_text:

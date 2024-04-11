@@ -57,11 +57,16 @@ def pipeline_json2xml(dir_json):
     validate_directory(dir_xml, TEI_RELAXNG)
 
 if __name__ == '__main__':
-    # TODO implement argparser
-    file = sys.argv[1]
-    if file.endswith('.zst'):
-        # full pipeline
-        subreddit = file.split('/')[-1].replace('_comments.zst', '')
-        pipeline(file, subreddit)
-    else:  # json2xml and validation only
-        pipeline_json2xml(file)
+    # possible TODO implement argparser
+    files = sys.argv[1:]
+    for file in files:
+        if file.endswith('.zst'):
+            # full pipeline
+            subreddit = file.split('/')[-1].replace('_comments.zst', '')
+            pipeline(file, subreddit)
+        elif file.endswith('_json') or file.endswith('_json/'):
+            # json2xml and validation only
+            pipeline_json2xml(file)
+        else:
+            print('Please insert the path to one or more .zst files or _json directories.')
+            continue

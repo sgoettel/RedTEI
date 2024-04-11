@@ -4,9 +4,10 @@ Transform Reddit files in json format to TEI-XML
 Author: Lydia Körber, 2023
 """
 
+import concurrent.futures
 from datetime import datetime
-import json
 import html
+import json
 import os
 import re
 
@@ -261,11 +262,13 @@ def demo():
 
 def run(dir, output_dir):
     """Convert all json files in a directory to xml."""
-    for file in os.listdir(dir):
-        try:
-            json2xml(f'{dir}/{file}', output_dir=output_dir)
-        except Exception as e:
-            print(file, e)
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        for file in os.listdir(dir):
+            try:
+                executor.submit(json2xml, f'{dir}/{file}',
+                                output_dir=output_dir)
+            except Exception as e:
+                print(file, e)
 
 
 if __name__ == '__main__':

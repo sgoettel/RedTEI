@@ -1,0 +1,40 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">GermanRap/atzenkeeper_mal_wieder_mit</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">GermanRap/atzenkeeper_mal_wieder_mit</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/17ccr4n/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-20</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="k5p1hq6">Wo ist die Augenklappe ?<date>2023-10-20</date><name>29z10z1923</name></item>
+          <item xml:id="k5p3rqd">Präsident 😁<date>2023-10-20</date><name>mooonshyne</name></item>
+          <item xml:id="k5p75uj">Hi, vielen Dank für deinen Post auf /r/GermanRap. Leider wurde er aus dem folgenden Grund entfernt:<lb/>- Repost - Es existiert bereits ein aktueller Thread zu diesem Release oder Thema.<lb/>Bitte mach dich noch mal mit den Regeln unseres Subreddits vertraut. Solltest du weitere Fragen haben, wende dich gerne an die Moderatoren.<date>2023-10-20</date><name>GermanRap-ModTeam</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

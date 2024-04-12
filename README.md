@@ -3,14 +3,14 @@
 Hilfsskripte zur Verarbeitung von Reddit-Daten und Umwandlung von json in TEI-XML.
 
 ## Nutzung
-Hauptskript [run.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/run.py): `python src/run.py path-to-subreddit-zsta`
+Hauptskript [run.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/run.py): `python src/run.py path-to-subreddit-zsta`
 
 Weitere Skripte:
-- [comment_tree.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/comment_tree.py): Ordnet alle Kommentare einem Thread zu (Details im Wiki)
-- [json2xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/json2xml.py): Wandelt json-Dateien in Baumstruktur in TEI-valide XML-Dateien um
-- [trim_username_comments.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/trim_username_comments.py): Filtert Kommentare (Details im Wiki)
-- [validate.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/validate.py): validiere XML-Dateien, nach TEI-Schema
-- [integrity_zst_xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/src/integrity_zst_xml.py): Überprüft, ob alles korrekt konvertiert wurde: Zählt Kommentare in der (gefilterten) zst-Datei, extrahiert IDs und zählt die <item>-Tags in den XML-Dateien, die denselben IDs entsprechen. `python3 integrity_zst_xml.py path/zst_filtered.zst path/xml/directory`
+- [comment_tree.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/comment_tree.py): Ordnet alle Kommentare einem Thread zu (Details im Wiki)
+- [json2xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/json2xml.py): Wandelt json-Dateien in Baumstruktur in TEI-valide XML-Dateien um
+- [trim_username_comments.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/trim_username_comments.py): Filtert Kommentare (Details im Wiki)
+- [validate.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/validate.py): validiere XML-Dateien, nach TEI-Schema
+
 
 ### Tests
 Tests laufen lassen:

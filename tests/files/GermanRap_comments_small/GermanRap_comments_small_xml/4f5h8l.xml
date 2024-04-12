@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">GermanRap/4f5h8l</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">GermanRap/4f5h8l</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/4f5h8l/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2016-05-17</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="d263ael">[URL] <lb/>If it was on the radio it was probably Cro<date>2016-04-17</date><name>RichHomieWentzel</name></item>
+          <item xml:id="d26ikg9">nailed it.<date>2016-04-17</date><name>pzumk</name></item>
+          <item xml:id="d27004s">That song is 5 years old? Damn, time goes by fast....<date>2016-04-18</date><name>-_Vamp_-</name></item>
+          <item xml:id="d273tn3">that's it man. thanks a bunch, i've been trying to find this song for months.<date>2016-04-18</date><name>dprioter</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

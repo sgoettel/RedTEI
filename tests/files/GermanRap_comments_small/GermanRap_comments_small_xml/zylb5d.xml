@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">GermanRap/euer_boy_mit_dem_vierten_teil_über_verschwörungs</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">GermanRap/euer_boy_mit_dem_vierten_teil_über_verschwörungs</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/zylb5d/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-04-11</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="jcxnfm8">Wobei, hatte sich da nicht sogar Marvin mal auf die Seite von EuerBoy gestellt und hat dann von Manuellsen Vorwürfe bekommen, dass er/Bushido EuerBoy für genau dies engagiert haben, um Welle gegen Manuellsen zu machen? <lb/>Bin mir da selbst halt nicht mehr sicher, da mir vor allem die Shitshow von damals im Kopf geblieben ist und wie Manu drauf abgegangen ist<date>2023-03-20</date><name>ScurrScurrSheesh</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

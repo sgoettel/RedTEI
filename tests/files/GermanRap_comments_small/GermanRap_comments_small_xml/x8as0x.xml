@@ -1,0 +1,39 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">GermanRap/wer_ist_der_stärkste_rapper_aus_eurer_region</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">GermanRap/wer_ist_der_stärkste_rapper_aus_eurer_region</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/x8as0x/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-03-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="j9chkfo">ALS<date>2023-02-20</date><name>BlakkOpps</name></item>
+          <item xml:id="jmnocd3">Majoe, Ali471, CHIROK471, Silva...alle aus Duisburg. Jasko auch, wenn er alle 5 Jahre bock auf einen Song hat.<date>2023-06-02</date><name>franllemagne</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

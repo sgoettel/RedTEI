@@ -1,0 +1,40 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">GermanRap/6hv3xw</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">GermanRap/6hv3xw</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/6hv3xw/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2017-07-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="dj1ilo4">Bullshit, das ist McBomber. <date>2017-06-17</date><name>Demokratos</name></item>
+          <item xml:id="dj1moch">MC Bomber hat doch einen ganz anderen Spracheinschlag und eine andere Stimmfarbe<date>2017-06-17</date><name>JosefKDid911</name></item>
+          <item xml:id="dj1mt9o">Klingt für mich genau gleich... <date>2017-06-17</date><name>Demokratos</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

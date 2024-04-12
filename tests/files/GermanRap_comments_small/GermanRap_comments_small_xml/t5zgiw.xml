@@ -1,0 +1,38 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">GermanRap/tiefbasskommando_sachschaden_ep_und_elektro_rap</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl/>
+        <biblFull>
+          <titleStmt>
+            <title type="main">GermanRap/tiefbasskommando_sachschaden_ep_und_elektro_rap</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/t5zgiw/"/>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-03-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item xml:id="j7qp7s9">Die beiden alleine sind so oder so gottesgleich und die beiden Alben sind absolut nicht mehr normal, habe Trail Mix 2 sogar auf CD🤝🏻<date>2023-02-08</date><name>Detlef_D_Soost69</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

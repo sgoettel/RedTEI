@@ -92,6 +92,9 @@ def build_subcomments(supercomment_element, subcomment, base_info,
             line_break = Element("lb")
             # text after line break
             line_break.tail = comment_text.split('\n')[i + 1]
+            # white space after last line break
+            if i == num_lb - 1:
+                line_break.tail += ' '
             comment.append(line_break)
     else:
         comment.text = comment_text
@@ -139,11 +142,11 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
         return
     # extract post metadata information
     docmeta = dict()
-    # use first comment entry to extract meta data information
+    # use last comment entry to extract meta data information
     if tree_structure:  # dict
-        _, info = list(comments.items())[0]
+        _, info = list(comments.items())[-1]
     else:  # list
-        info = comments[0]
+        info = comments[-1]
     time = datetime.utcfromtimestamp(int(info['created_utc']))
     docmeta["date"] = str(time.date())
     # extract retrieved_on date
@@ -204,7 +207,7 @@ def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
     publisher = SubElement(publicationstmt, 'publisher')
     publication_url = SubElement(publicationstmt, 'ptr', type='URL',
                                  target=docmeta['url'])
-    date_publication = SubElement(publicationstmt, 'date')
+    date_publication = SubElement(publicationstmt, 'date', type='last_comment')
     date_publication.text = docmeta["date"]
 
     # profile description

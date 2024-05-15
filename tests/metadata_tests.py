@@ -55,7 +55,7 @@ def test_header(example_1):
           <publicationStmt>
             <publisher/>
             <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/ushrnp/"/>
-            <date>2022-05-18</date>
+            <date type="last_comment">2022-05-20</date>
           </publicationStmt>
         </biblFull>
       </sourceDesc>

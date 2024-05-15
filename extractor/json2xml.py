@@ -96,6 +96,7 @@ def build_subcomments(supercomment_element, subcomment, base_info,
     else:
         comment.text = comment_text
 
+    comment.text += ' '  # add whitespace before children
     # display date, author and url after text
     comment.append(date)
     comment.append(author)

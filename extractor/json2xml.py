@@ -102,6 +102,7 @@ def build_subcomments(supercomment_element, subcomment, base_info,
     comment.text += ' '  # add whitespace before children
     # display date, author and url after text
     comment.append(date)
+    date.tail = " "
     comment.append(author)
     # recursively build comment tree structure if wished
     if tree_structure:

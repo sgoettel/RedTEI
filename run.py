@@ -104,6 +104,58 @@ def pipeline_json2xml(dir_json):
     TEI_RELAXNG = load_schema()
     validate_directory(xml_output_dir, TEI_RELAXNG)
 
+# count JSON objects in a .zst file with NDJSON content
+def count_json_objects_in_zst(zst_path):
+    count = 0
+    with open(zst_path, 'rb') as file:
+        dctx = zstd.ZstdDecompressor()
+        with dctx.stream_reader(file) as reader:
+            buffer = ""
+            while chunk := reader.read(16384):
+                buffer += chunk.decode(errors='ignore')
+                # count lines in the buffer that correspond to JSON objects
+                while '\n' in buffer:
+                    line, buffer = buffer.split('\n', 1)
+                    if line.strip():
+                        count += 1
+    return count
+
+# counts JSON objects in all JSON files within a directory
+def count_json_objects_in_directory(directory_path):
+    count = 0
+    for root, _, files in os.walk(directory_path):
+        for file_name in files:
+            if file_name.endswith('.json'):
+                file_path = os.path.join(root, file_name)
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    try:
+                        for line in file:
+                            json.loads(line)
+                            count += 1
+                    except json.JSONDecodeError:
+                        # handle JSON array format
+                        file.seek(0)
+                        data = json.load(file)
+                        if isinstance(data, list):
+                            count += len(data)
+    return count
+
+# compare the number of JSON objects in the filtered .zst file and the JSON output directory
+def compare_json_counts(filtered_zst_path, json_output_dir):
+    zst_count = count_json_objects_in_zst(filtered_zst_path)
+    json_count = count_json_objects_in_directory(json_output_dir)
+    
+    print(f"Number of JSON objects in filtered .zst file: {zst_count}")
+    print(f"Number of JSON objects in JSON output directory: {json_count}")
+    
+    if zst_count == json_count:
+        print("The number of JSON objects matches.")
+    else:
+        print("Note: number of JSON objects differ, likely due to comments containing null bytes or control characters that couldn't be processed.")
+        if error_log:
+            print("Details on problematic objects are listed above.")
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process Reddit comments.')
     parser.add_argument('files', nargs='+', help='Path to one or more .zst files or _json directories.')

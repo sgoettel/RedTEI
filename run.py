@@ -89,6 +89,11 @@ def pipeline(zstfile, subreddit, no_group=False):
     TEI_RELAXNG = load_schema()
     validate_directory(xml_output_dir, TEI_RELAXNG)
 
+    # JSON object count consistency between filtered zst file and JSON output directory
+    filtered_zst_path = f"{zstfile.rsplit('.', 1)[0]}_filtered.zst"
+    print("Checking consistency of JSON object (comments) count between the filtered .zst file and JSON output directory...")
+    compare_json_counts(filtered_zst_path, json_output_dir)
+
 def pipeline_json2xml(dir_json):
     """pipeline if the json files already exist: convert to XML, validate"""
     xml_output_dir = dir_json.replace('json', 'xml')

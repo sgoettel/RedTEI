@@ -1,7 +1,7 @@
 """
 Transform Reddit files in json format to TEI-XML
 
-Author: Lydia Körber, 2023
+Author: Lydia Körber, Sebastan Göttel 2024
 """
 
 from datetime import datetime
@@ -19,13 +19,42 @@ from lxml.etree import (
 
 
 def return_printables_and_spaces(char):
-    'Return a character if it belongs to certain classes'
+    """Return a character if it belongs to certain classes"""
     return char if char.isprintable() or char.isspace() else ''
 
 
 def remove_control_characters(string):
-    '''Prevent non-printable and XML invalid character errors'''
+    """Prevent non-printable and XML invalid character errors"""
     return ''.join(map(return_printables_and_spaces, string))
+
+def process_comment_text(comment_text):
+    """Processes the comment text, converts HTML characters, and removes problematic XML characters."""
+    comment_text = html.unescape(comment_text) # convert html character references
+    comment_text = comment_text.replace("&gt;", ">") # Replace &gt; with > manually to ensure correct display in XML
+    comment_text = remove_control_characters(comment_text)
+    comment_text = re.sub(r'/u/(\w+)', r'\1', comment_text) # replace username mentions, /u/username → username
+    
+    # Remove additional control characters and NULL bytes
+    comment_text = comment_text.replace('\u001c', ' ') # File Separator
+    comment_text = comment_text.replace('\u001e', ' ') # Record Separator
+    comment_text = comment_text.replace('\0', ' ')  # NULL-Bytes
+    
+    # transform line breaks to <lb> (do we need white space after last line break?)
+    try:
+        if '\n' in comment_text:
+            text_parts = comment_text.split('\n')
+            elements = [remove_control_characters(text_parts[0])]
+            for part in text_parts[1:]:
+                lb_element = Element("lb")
+                lb_element.tail = remove_control_characters(part)  # ensure XML-safe text
+                elements.append(lb_element)
+            return elements
+        else:
+            return [remove_control_characters(comment_text)]
+    except ValueError as e:
+        print("Error processing comment text:", repr(comment_text))
+        print("Error message:", e)
+        raise e
 
 
 def build_subcomments(supercomment_element, subcomment, base_info,
@@ -69,50 +98,6 @@ def build_subcomments(supercomment_element, subcomment, base_info,
     time = datetime.utcfromtimestamp(int(subcomment['created_utc']))
     date = SubElement(comment, 'date')
     date.text = str(time.date())
-
-    comment_text = html.unescape(subcomment['body'])
-    # convert html character references
-    while "&gt;" in comment_text:
-        comment_text = html.unescape(comment_text)
-    # Replace &gt; with > manually to ensure correct display in XML
-    comment_text = comment_text.replace("&gt;", ">")
-    comment_text = remove_control_characters(comment_text)
-    # replace username mentions, /u/username → username
-    comment_text = re.sub(r'/u/(\w+)', r'\1', comment_text)
-    # replace NULL bytes/control character
-    comment_text = comment_text.replace('\u001c', ' ')
-    comment_text = comment_text.replace('\u001e', ' ')
-
-    # transform line breaks to <lb>
-    if '\n' in comment_text:
-        num_lb = comment_text.count('\n')
-        # text until first line break
-        comment.text = comment_text.split('\n')[0]
-        for i in range(num_lb):
-            line_break = Element("lb")
-            # text after line break
-            line_break.tail = comment_text.split('\n')[i + 1]
-            # white space after last line break
-            if i == num_lb - 1:
-                line_break.tail += ' '
-            comment.append(line_break)
-    else:
-        comment.text = comment_text
-
-    comment.text += ' '  # add whitespace before children
-    # display date, author and url after text
-    comment.append(date)
-    date.tail = " "
-    comment.append(author)
-    # recursively build comment tree structure if wished
-    if tree_structure:
-        if subcomment['responses']:
-            comment_list = SubElement(comment, 'list')
-            for r in subcomment['responses']:
-                if not filtered:
-                    if r['body'] == '[deleted]' or r['author'] == '[deleted]':
-                        continue
-                build_subcomments(comment_list, r, base_info)
 
 
 def json2xml(file, tree_structure=False, output_dir='wohnen_xml',

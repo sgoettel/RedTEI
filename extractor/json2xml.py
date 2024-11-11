@@ -234,12 +234,46 @@ def json2xml(file, tree_structure=False, output_dir=None,
 
 
 def demo():
-    """A short demo of the json2xml function."""
-    json_files = ['5wa69r_flat', '1891529_flat', 'ushrnp_flat', 'wmip8z_flat',
-                  '4dklie_flat', 'lmjo20_flat']
-    for f in json_files:
-        print(json2xml(f'../examples/demo/{f}.json', tree_structure=False,
-                       output_dir='../examples/demo'))
+    """demo showcasing json2xml in grouped and no-group modes."""
+    # deefine input and output directories for demo files
+    input_dirs = {
+        "grouped": "../examples/demo/grouped",
+        "nogroup": "../examples/demo/nogroup"
+    }
+    output_base_dir = "../examples/demo"
+    
+    # iterate over the modes and process each set of files
+    for mode, input_dir in input_dirs.items():
+        output_dir = os.path.join(output_base_dir, mode)
+        os.makedirs(output_dir, exist_ok=True)
+        
+        print(f"Processing files in {input_dir} for mode: {mode}")
+        
+        # process JSOn file in the current mode directory
+        for json_file in os.listdir(input_dir):
+            if json_file.endswith(".json"):
+                input_path = os.path.join(input_dir, json_file)
+                
+                # extract metadata identifiers from the file name
+                parts = json_file.replace(".json", "").split("_")
+                link_id = parts[0]
+                comment_id = parts[1] if len(parts) > 1 else None
+
+                try:
+                    # convert JSON to XML in the designated output directory
+                    xml_output_dir = output_dir
+                    os.makedirs(xml_output_dir, exist_ok=True)
+                    
+                    # call json2xml with appropriate mode
+                    group_mode = (mode == "grouped")
+                    json2xml(input_path, output_dir=xml_output_dir, link_id=link_id, comment_id=comment_id, group_mode=group_mode)
+                    
+                    print(f"Processed {json_file} → Output in {xml_output_dir}")
+                    
+                except Exception as e:
+                    print(f"Error processing {json_file}: {e}")
+
+    print("\nDemo complete. XML files are located in the output/demo directory.")
 
 
 def run(dir, output_dir):

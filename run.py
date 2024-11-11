@@ -1,6 +1,7 @@
 import json
 import os
 import argparse
+import zstandard as zstd
 
 from extractor.trim_username_comments import process_comments
 from extractor.comment_tree import extract_comments

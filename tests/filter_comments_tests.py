@@ -13,16 +13,14 @@ from extractor.trim_username_comments import (filter_comments,
 
 @pytest.fixture
 def example_zst():
-    # smallest zst file:
-    # GermanRap_comments_small/GermanRap_comments_small.zst
+    # kleinste zst-Datei für den Test:
     comments = extract_comments('files/GermanRap_comments_small/GermanRap_comments_small.zst')
     return comments
 
 
 @pytest.fixture
 def example_zst_filtered():
-    # smallest zst file:
-    # GermanRap_comments_small/GermanRap_comments_small.zst
+    # Filtered zst-Datei
     filter_comments('files/GermanRap_comments_small/GermanRap_comments_small.zst',
                     authors=['AutoModerator', 'ClausKlebot', 'sneakpeekbot'],
                     remove_deleted=True,
@@ -34,81 +32,57 @@ def example_zst_filtered():
     return comments
 
 
-@pytest.fixture
-def example_json_files():
-    """returns a list of json files/dictionaries"""
-    dir = 'files/GermanRap_comments_small/GermanRap_comments_small_json/'
-    # example list of extracted json files
-    files = list()
+@pytest.fixture(params=["grouped", "nogroup"])
+def example_json_files(request):
+    """Gibt eine Liste von JSON-Dateien zurück, basierend auf dem Gruppierungsmodus."""
+    mode = request.param
+    dir = f'files/GermanRap_comments_small/GermanRap_comments_small.zst_json_{mode}/0001/'
+    files = []
+    
+    # Laden der JSON-Dateien aus dem entsprechenden Verzeichnis
     for f in os.listdir(dir):
-        with open(dir+f, 'r', encoding='latin-1') as f:
-            txt = f.read()
-        comments = json.loads(txt)
-        files.append(comments)
+        with open(os.path.join(dir, f), 'r', encoding='utf-8') as file:
+            comments = json.load(file)
+            files.append(comments)
     return files
 
 
 def test_url_filter():
-    """test URL"""
-    # remove plain urls
+    """Testet das Filtern von URLs."""
     assert remove_plain_urls('http://example.io') == '[URL]'
     assert remove_plain_urls('https://example.io') == '[URL]'
-    # w/ www
     assert remove_plain_urls('http://www.example.io') == '[URL]'
-    # wo/ http
     assert remove_plain_urls('www.example.io') == '[URL]'
-    # different domain
     assert remove_plain_urls('http://example.eu') == '[URL]'
-    # text before and after
     assert remove_plain_urls('text www.example.io text') == 'text [URL] text'
-    # remove markdown urls
     assert remove_markdown_urls('[text](www.link.de)') == 'text'
-    # text and link are urls
     assert remove_markdown_urls('[www.example.com](www.link.de)') == '[URL]'
-    # no url
     assert remove_markdown_urls('[text](no url)') == '[text](no url)'
 
 
 def test_botlist_removal(example_zst_filtered):
-    """test comments from bots have been successfully removed"""
+    """Testet, ob Kommentare von Bots erfolgreich entfernt wurden."""
     botlist = {'AutoModerator', 'ClausKlebot', 'sneakpeekbot'}
     authors = set(comment["author"].lower() for comment in example_zst_filtered)
-    # check empty set intersection of bots and authors
     assert not botlist.intersection(authors)
 
 
 def test_removed_comments(example_zst_filtered):
-    """test removed comments are excluded"""
+    """Testet, ob entfernte Kommentare ausgeschlossen wurden."""
     del_strings = ["[removed]", "[deleted]", "[removed by reddit]"]
     for comment in example_zst_filtered:
         for d in del_strings:
-            assert not d in comment["body"]
-            # in case we implement removal of deleted authors' comments:
-            # assert not d in comment["author"]
+            assert d not in comment["body"]
 
 
 def test_inline_formatting():
-    """test inline formatting (bold, italic, strikethrough) is removed"""
-    # remove_inline_formatting
-    # strikethrough
-    assert remove_inline_formatting('Als ~~Zugführer~~ Lokführer muss man') \
-        == 'Als  Lokführer muss man'
-    # bold
-    assert remove_inline_formatting('Als **Zugführer** Lokführer muss man') \
-        == 'Als Zugführer Lokführer muss man'
-    # italic
-    assert remove_inline_formatting('Als *Zugführer* Lokführer muss man') \
-        == 'Als Zugführer Lokführer muss man'
-    # mismatch of asterisks
-    assert remove_inline_formatting('Als **Zugführer* Lokführer muss man') \
-        == 'Als Zugführer* Lokführer muss man'
-    # bold and italic in one sentence
-    assert remove_inline_formatting('Als *Zugführer* **Lokführer** muss man') \
-        == 'Als Zugführer Lokführer muss man'
+    """Testet, ob Inline-Formatierung entfernt wird."""
+    assert remove_inline_formatting('Als ~~Zugführer~~ Lokführer muss man') == 'Als  Lokführer muss man'
+    assert remove_inline_formatting('Als **Zugführer** Lokführer muss man') == 'Als Zugführer Lokführer muss man'
+    assert remove_inline_formatting('Als *Zugführer* Lokführer muss man') == 'Als Zugführer Lokführer muss man'
+    assert remove_inline_formatting('Als **Zugführer* Lokführer muss man') == 'Als Zugführer* Lokführer muss man'
+    assert remove_inline_formatting('Als *Zugführer* **Lokführer** muss man') == 'Als Zugführer Lokführer muss man'
 
 
 if __name__ == '__main__':
-    test_url_filter()
-    test_botlist_removal()
-    test_removed_comments()
-    test_inline_formatting()
+    pytest.main()

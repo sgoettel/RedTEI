@@ -96,181 +96,140 @@ def create_comment_element(parent_element, comment, base_info, element_type='ite
 
     return comment_elem
 
+def create_tei_header(teidoc, docmeta, retrieved_on, group_mode):
+    """creates the TEI header based on the mode."""
+    header = SubElement(teidoc, 'teiHeader')
+    filedesc = SubElement(header, 'fileDesc')
+    
+    # common titleStmt
+    titleStmt = SubElement(filedesc, 'titleStmt')
+    title_main = SubElement(titleStmt, 'title', type='main')
+    title_main.text = docmeta["title"]
 
-def build_subcomments(supercomment_element, subcomment, base_info,
-                      tree_structure=False, filtered=True):
-    """
-    Build TEI XML subcomments within a parent comment element.
+    # common publicationStmt
+    publicationStmt = SubElement(filedesc, 'publicationStmt')
+    SubElement(publicationStmt, 'p')
 
-    Args:
-        supercomment_element (Element): The parent comment element to which
-            subcomments will be added.
-        subcomment (dict): The subcomment data in a dictionary format.
-        base_info (dict): metadata of the comment thread.
-        tree_structure (bool, optional): Whether comments and subcomments are
-            saved in a nested tree structure. Defaults to False.
-        filtered (bool, optional): Whether deleted comments and authors are
-            already removed. Defaults to True.
+    # sourceDesc for both modes with basic information
+    sourceDesc = SubElement(filedesc, 'sourceDesc')
+    bibl = SubElement(sourceDesc, 'bibl')
+    bibl.text = f"Reddit/{docmeta['subreddit']}: {docmeta['title']}, {docmeta['date']}"
 
-    Description:
-        This function appends subcomments to a specified parent comment element
-        in TEI XML format.
-        Each subcomment is represented as a <p> element with attributes for
-        'id' and 'author'.
-        Additionally, line breaks within subcomment text are transformed into
-        <lb> elements.
+    biblFull = SubElement(sourceDesc, 'biblFull')
+    titleStmt_full = SubElement(biblFull, 'titleStmt')
 
-    """
-    # Check for 'permalink' in subcomment, else construct URL
-    if 'permalink' in subcomment:
-        comment_url = f"https://www.reddit.com{subcomment['permalink']}"
+    # distinction depending on mode
+    if group_mode:
+        # standard mode (grouped): simpler structure
+        title_main_full = SubElement(titleStmt_full, 'title', type='main')
+        title_main_full.text = f"Reddit/{docmeta['subreddit']}"
+
+        pubStmt = SubElement(biblFull, 'publicationStmt')
+        publisher = SubElement(pubStmt, 'publisher')
+        ptr_url = SubElement(pubStmt, 'ptr', type="URL", target=docmeta["thread_url"])
+        date_publication = SubElement(pubStmt, 'date', type="last_comment")
+        date_publication.text = str(docmeta["date"])
+
     else:
-        subreddit = base_info['subreddit']
-        post_id = base_info["post_id"]
-        comment_id = subcomment['id']
-        comment_url = f"https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}"
+        # `--no-group` mode: more detailed structure
+        title_main_a = SubElement(titleStmt_full, 'title', type='main', level="a")
+        title_main_a.text = docmeta["title"]
 
-    comment = SubElement(supercomment_element, 'item', source=comment_url)
+        author = SubElement(titleStmt_full, 'author')
+        author.text = docmeta["author"]
+
+        pubStmt = SubElement(biblFull, 'publicationStmt')
+        publisher = SubElement(pubStmt, 'publisher')
+        ptr_thread = SubElement(pubStmt, 'ptr', type="thread", target=docmeta["thread_url"])
+        ptr_comment = SubElement(pubStmt, 'ptr', type="comment", target=docmeta["comment_url"])
+        date_last_comment = SubElement(pubStmt, 'date')
+        date_last_comment.text = str(docmeta["date"])
+
+        # specific seriesStmt for `--no-group`
+        seriesStmt = SubElement(biblFull, 'seriesStmt')
+        title_main_m = SubElement(seriesStmt, 'title', type="main", level="m")
+        title_main_m.text = "Reddit"
+        
+        title_sub_m = SubElement(seriesStmt, 'title', type="sub", level="m")
+        title_sub_m.text = docmeta["subreddit"]
+
+    # common profileDesc with download date
+    profileDesc = SubElement(header, 'profileDesc')
+    creation = SubElement(profileDesc, 'creation')
+    download_date = SubElement(creation, 'date', type="download")
+    download_date.text = retrieved_on
 
 
-def json2xml(file, tree_structure=False, output_dir='wohnen_xml',
-             filtered=True, subreddit_loc='title'):
-    """
-    Convert Reddit JSON data to TEI XML format.
-
-    Args:
-        file (str): The path to the input JSON file.
-        tree_structure (bool, optional): Whether the input file is in a tree
-            structure. Defaults to False.
-        output_dir (str, optional): The directory to save the generated XML
-            file. Defaults to 'wohnen_xml'.
-        filtered (bool, optional): Whether deleted comments and authors are
-            already removed. Defaults to True.
-        subreddit_loc (str, optional): Location to include subreddit
-            information ('profiledesc' or 'title'). Defaults to 'title'.
-
-    Returns:
-        str: The TEI XML document as a string.
-    """
-    # read json file
+def json2xml(file, tree_structure=False, output_dir=None, 
+             filtered=True, subreddit_loc='title', link_id=None, 
+             comment_id=None, group_mode=True):
+    """converts Reddit JSON data into TEI XML."""
+    # read JSON file
     with open(file, 'r', encoding='latin-1') as f:
         txt = f.read()
     comments = json.loads(txt)
     if not comments:
         print(f'Empty file: {file}')
         return
-    # extract post metadata information
-    docmeta = dict()
-    # use last comment entry to extract meta data information
-    if tree_structure:  # dict
-        _, info = list(comments.items())[-1]
-    else:  # list
-        info = comments[-1]
-    time = datetime.utcfromtimestamp(int(info['created_utc']))
-    docmeta["date"] = str(time.date())
-    # extract retrieved_on date
+    
+    # extract metadata
+    info = comments[-1] if not tree_structure else list(comments.values())[-1]
+    post_id = link_id or info['link_id'][3:]  # remove 't3_' prefix
+    subreddit = info['subreddit']
+
+    # create title and URL
+    title = post_id  # fallback if no permalink part is present
+    if 'permalink' in info:
+        _, _, subreddit, _, post_id, title, *_ = info['permalink'].split('/')
+    
+    thread_url = f"https://www.reddit.com/r/{subreddit}/comments/{post_id}/"
+    comment_url = f"{thread_url}comment/{info['id']}/"
+
+    # create metadata structure
+    docmeta = {
+        "post_id": post_id,
+        "title": title,
+        "date": datetime.utcfromtimestamp(int(info['created_utc'])).date(),
+        "subreddit": subreddit,
+        "author": info.get("author", "Unknown Author"),
+        "thread_url": thread_url,
+        "comment_url": comment_url,
+    }
+    
+    # determine download date
     if 'retrieved_on' in info:
         retrieved_date = datetime.utcfromtimestamp(int(info['retrieved_on']))
-    # fallback to retrieved_utc if retrieved_on is not available
     elif 'retrieved_utc' in info:
         retrieved_date = datetime.utcfromtimestamp(int(info['retrieved_utc']))
-    else:  # retrieval date not saved in json, use os creation time of file
+    else:
         file_creation = os.path.getctime(file)
         retrieved_date = datetime.fromtimestamp(file_creation)
-    # Convert retrieved date to string representation
     retrieved_on = str(retrieved_date.date())
-    # process subreddit and link_id for URL and title
-    subreddit = info['subreddit']
-    post_id = info['link_id'][3:]  # remove 't3_'
-    docmeta['post_id'] = post_id
-    # reconstruct URL
-    docmeta["url"] = f'https://www.reddit.com/r/{subreddit}/comments/{post_id}/'
-    docmeta["subreddit"] = subreddit
-    # create title
-    if 'permalink' in info:
-        _, _, subreddit, _, post_id, title, _, _ = info['permalink'].split('/')
-        docmeta["title"] = title
-        if subreddit_loc == 'title':
-            docmeta["title"] = title
-    else:
-        # use subreddit and link_id if no permalink
-        docmeta["title"] = post_id
-    # build tei xml doc
+
+    # create TEI root element and add header
     teidoc = Element("TEI", xmlns="http://www.tei-c.org/ns/1.0")
-    header = SubElement(teidoc, 'teiHeader')
-    filedesc = SubElement(header, 'fileDesc')
+    create_tei_header(teidoc, docmeta, retrieved_on, group_mode)
 
-    # title statement
-    bib_titlestmt = SubElement(filedesc, 'titleStmt')
-    bib_titlemain = SubElement(bib_titlestmt, 'title', type='main')
-    bib_titlemain.text = docmeta["title"]
-    if 'author' in docmeta.keys():
-        bib_author = SubElement(bib_titlestmt, 'author')
-        bib_author.text = docmeta.author
-    publicationstmt_a = SubElement(filedesc, 'publicationStmt')
-    # empty paragraph, otherwise license?
-    publicationstmt_p = SubElement(publicationstmt_a, 'p')
-
-    # source description
-    sourcedesc = SubElement(filedesc, 'sourceDesc')
-    source_bibl = SubElement(sourcedesc, 'bibl')
-    biblfull = SubElement(sourcedesc, 'biblFull')
-
-    # title statement once again
-    bib_titlestmt2 = SubElement(biblfull, 'titleStmt')
-    bib_titlemain2 = SubElement(bib_titlestmt2, 'title', type='main')
-    bib_titlemain2.text = 'Reddit/' + docmeta["subreddit"]
-
-    # publication statement
-    publicationstmt = SubElement(biblfull, 'publicationStmt')
-    publisher = SubElement(publicationstmt, 'publisher')
-    publication_url = SubElement(publicationstmt, 'ptr', type='URL',
-                                 target=docmeta['url'])
-    date_publication = SubElement(publicationstmt, 'date', type='last_comment')
-    date_publication.text = docmeta["date"]
-
-    # profile description
-    profiledesc = SubElement(header, 'profileDesc')
-    creation = SubElement(profiledesc, 'creation')
-    date_creation = SubElement(creation, 'date', type='download')
-    # use retrieved_on variable (either retrieved_on or retrieved_utc)
-    date_creation.text = retrieved_on
-
-    # additional profile description
-    # (if subreddit information is included in the profileDesc)
-    if subreddit_loc == 'profiledesc':
-        textclass = SubElement(profiledesc, 'textClass')
-        subred = SubElement(textclass, 'subreddit')
-        term = SubElement(subred, 'term')
-        term.text = docmeta["subreddit"]
-
-    # text, body, comments
+    # text body based on mode
     text = SubElement(teidoc, "text")
     body = SubElement(text, "body")
-    # correct level for responses? or rather under text or other?
-    res = SubElement(body, "div", type="comments")
-    responses = SubElement(res, "list")
-    if tree_structure:
-        # iterate comments to include responses
-        for id, comment in comments.items():
-            if not filtered:
-                if comment['body'] == '[deleted]' or \
-                        comment['author'] == '[deleted]':
-                    continue
-            build_subcomments(responses, comment, docmeta,
-                              tree_structure)
-    else:
+    if group_mode:
+        # standard mode: insert comments into a <list>
+        comments_div = SubElement(body, "div", type="comments")
+        comment_list = SubElement(comments_div, "list")
+        
         for comment in comments:
-            if not filtered:
-                if comment['body'] == '[deleted]' or \
-                        comment['author'] == '[deleted]':
-                    continue
-            build_subcomments(responses, comment, docmeta, tree_structure)
+            if not filtered or comment['body'] != '[deleted]':
+                create_comment_element(comment_list, comment, docmeta, element_type='item')
+    else:
+        # `--no-group` mode: each comment as an individual <p> element
+        if not filtered or info['body'] != '[deleted]':
+            create_comment_element(body, info, docmeta, element_type='p')
 
+    # save XML
     tei_str = tostring(teidoc, pretty_print=True, encoding='utf-8')
-    if output_dir:
-        ElementTree(teidoc).write(f'{output_dir}/{post_id}.xml',
-                                  pretty_print=True, encoding='utf-8')
+    filename = f"{output_dir}/{post_id}.xml" if group_mode else f"{output_dir}/{link_id}_{comment_id}.xml"
+    ElementTree(teidoc).write(filename, pretty_print=True, encoding='utf-8')
     return tei_str
 
 

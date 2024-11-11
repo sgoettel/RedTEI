@@ -4,7 +4,7 @@ import argparse
 
 from extractor.trim_username_comments import process_comments
 from extractor.comment_tree import extract_comments
-from extractor.json2xml import run
+from extractor.json2xml import json2xml
 from extractor.validate import load_schema, validate_directory
 
 MAX_FILES_PER_DIR = 1000 # max files each folder
@@ -90,15 +90,19 @@ def pipeline(zstfile, subreddit, no_group=False):
 
 def pipeline_json2xml(dir_json):
     """pipeline if the json files already exist: convert to XML, validate"""
-    dir_xml = dir_json.replace('json', 'xml')
-    if not os.path.exists(dir_xml):
-        os.mkdir(dir_xml)
-    # convert all json to XML
-    run(dir_json, dir_xml)
+    xml_output_dir = dir_json.replace('json', 'xml')
+    os.makedirs(xml_output_dir, exist_ok=True)
+    for file in os.listdir(dir_json):
+        json_path = os.path.join(dir_json, file)
+        if os.path.isfile(json_path):
+            link_id, comment_id = file.replace('.json', '').split('_')
+            # select or create an XML subdirectory for output
+            xml_subdir = get_output_dir(xml_output_dir)
+            json2xml(json_path, output_dir=xml_subdir, link_id=link_id, comment_id=comment_id)
+    
     print('Validate XML files.')
-    # validate all XML files
     TEI_RELAXNG = load_schema()
-    validate_directory(dir_xml, TEI_RELAXNG)
+    validate_directory(xml_output_dir, TEI_RELAXNG)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process Reddit comments.')

@@ -1,0 +1,43 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">neuer_song</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: neuer_song, 2023-04-21</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">neuer_song</title>
+            <author>Saarstriker</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/12tvzyb/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/12tvzyb/comment/jh4hrrb/"/>
+            <date>2023-04-21</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-06-24</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Hi, vielen Dank für deinen Post auf /r/GermanRap. Leider wurde er aus dem folgenden Grund entfernt:
+- Dein Post verstößt gegen unsere Regeln bzgl. eingereichtem OC (Original Content). Verzichte auf bloße Eigenwerbung, Ankündugingen und Teaser, nenne mindestens Tracktitel und Artistnamen/Viseotitel im Titel und nutze den "OC" Flair.
+Bitte mach dich noch mal mit den Regeln unseres Subreddits vertraut. Solltest du weitere Fragen haben, wende dich gerne an die Moderatoren.</p>
+    </body>
+  </text>
+</TEI>

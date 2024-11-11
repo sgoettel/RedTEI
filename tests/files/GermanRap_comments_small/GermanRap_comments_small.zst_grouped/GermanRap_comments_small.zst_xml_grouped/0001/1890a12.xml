@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">alligatoah_komm_hau_ab_intro_schlaftabletten</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: alligatoah_komm_hau_ab_intro_schlaftabletten, 2023-12-02</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main">Reddit/GermanRap</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/1890a12/"/>
+            <date type="last_comment">2023-12-02</date>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-12-02</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item source="https://www.reddit.com/r/GermanRap/comments/1890a12/comment/kbnylup/">Ich tu mich echt schwer mit so ,,Klamauk-Rap'' aber gegen Alligatoah bin ich machtlos. Ich liebe die alten StRw-Zeiten... <date>2023-12-02</date> <name>muelletob</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/1890a12/comment/kbnzu4g/">Wer braucht eigentlich Hosen? <date>2023-12-02</date> <name>IAmMrMighty</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/1890a12/comment/kbo1jqi/">jedenfalls niemand, der in der Badewanne nen Disstrack gegen ne fucking Wespe schreibt! <date>2023-12-02</date> <name>muelletob</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/1890a12/comment/kbo491z/">Herrlich! <date>2023-12-02</date> <name>IAmMrMighty</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">urgestein_boulevard_bou_zur_würdung_von</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: urgestein_boulevard_bou_zur_würdung_von, 2023-03-23</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">urgestein_boulevard_bou_zur_würdung_von</title>
+            <author>Sand_is_Coarse</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/11ywgsi/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/11ywgsi/comment/jddfr9p/"/>
+            <date>2023-03-23</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-04-11</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Ich glaube, dass das Thema nur behandelt wird, weil sich die Kultur einer Minderheit „angeeignet“ wurde. Es gibt in Deutschland Rokoko-Kirchen, die Teil des Kulturerbes sind. Dabei stammt der Rokoko aus Frankreich. Da würde man sich auch nicht darüber aufregen, dass Bayern sich die Kultur der Franzosen angeeignet haben. Genauso wenig wie beim Klassizismus, dem Barock und so weiter. Aber aus irgendeinem Grund haben seit einigen Jahrzehnten Minderheiten alleinige Anrechte auf Kulturen.  
+Und der Heidelberger Hip Hop mag eine starke Anlehnung an New York haben, aber er findet in einer anderen Sprache statt und behandelt Probleme einer anderen Gesellschaft. Torch muss nicht über Housing Projects und Food Stamps sprechen.</p>
+    </body>
+  </text>
+</TEI>

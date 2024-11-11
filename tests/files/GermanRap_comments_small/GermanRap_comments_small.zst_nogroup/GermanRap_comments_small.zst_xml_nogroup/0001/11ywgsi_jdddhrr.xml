@@ -1,0 +1,43 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">urgestein_boulevard_bou_zur_würdung_von</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: urgestein_boulevard_bou_zur_würdung_von, 2023-03-23</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">urgestein_boulevard_bou_zur_würdung_von</title>
+            <author>BreakBalanceKnob</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/11ywgsi/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/11ywgsi/comment/jdddhrr/"/>
+            <date>2023-03-23</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-04-11</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Naja weil es hier um deutsches Kulturerbe geht. Soweit ich weiß liegt die Bronx nicht in Deutschland.
+Also kannst du so finden aber finde ich eben etwas seltsam wenn es eindeutig keine doppelschöpfung ist sondern das selbe. Ich würde ja genauso es nicht deutsches Kulturerbe nennen wenn Amerikaner aus der Bronx nach heidelberg ziehen um dort zu rappen. Dann ist es doch immer noch die Ursprungskultur und damit hat es kein Alleinstellungsmerkmal.
+Ja ist schwierig aber mir geht's tatsächlich nicht um die etwas toxische Debatte dahinter sondern wirklich um die Definition ab wann etwas eine neue Kultur ist. Also für mich hört sich das an als würde man den deutschen Judo Verein als deutsches Kulturgut eintragen. Das ist ja auch Unsinn</p>
+    </body>
+  </text>
+</TEI>

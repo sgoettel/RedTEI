@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">ski_aggu_nicht_nachmachen_feat_monk_longus_mongus</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: ski_aggu_nicht_nachmachen_feat_monk_longus_mongus, 2023-10-13</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">ski_aggu_nicht_nachmachen_feat_monk_longus_mongus</title>
+            <author>TetraDax</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/176cmqy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/176cmqy/comment/k4oowxh/"/>
+            <date>2023-10-13</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-13</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Digger ich bin einer dejenigen die hier am meisten sich zu doll was auf Old School-Rap runterholen, aber objektiv waren die meisten Rapper vor 20-30 Jahren sau viel schlechter. Die erfolgreichste Crew zu der Zeit enthielt fucking Denyo.</p>
+    </body>
+  </text>
+</TEI>

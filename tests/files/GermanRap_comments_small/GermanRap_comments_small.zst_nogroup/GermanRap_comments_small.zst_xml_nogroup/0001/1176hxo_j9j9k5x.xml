@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">der_aufstieg_und_fall_von_deluxe_records</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: der_aufstieg_und_fall_von_deluxe_records, 2023-02-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">der_aufstieg_und_fall_von_deluxe_records</title>
+            <author>Stonkey__Kong</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/1176hxo/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/1176hxo/comment/j9j9k5x/"/>
+            <date>2023-02-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-03-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>War ja leider auch die höchst Zeit von illegalen Downloads und es wurde generell kaum Musik gekauft. Außer die ganze großen (Samy selbst, Savas, Sido, etc) hat ja in der Zeit kaum jemand Platten verkauft. 
+So rückblickend schon echt interessant zu sehen. Gefühlt hat damals jeder deutschrapfan snaga und Pillath gehört und gefeiert und zumindest mal gekannt und trotzdem hatten die quasi 0 Erfolg</p>
+    </body>
+  </text>
+</TEI>

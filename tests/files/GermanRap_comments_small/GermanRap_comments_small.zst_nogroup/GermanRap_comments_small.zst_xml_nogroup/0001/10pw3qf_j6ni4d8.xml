@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">safespace_discord_für_hiphop_künstlerinnen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: safespace_discord_für_hiphop_künstlerinnen, 2023-01-31</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">safespace_discord_für_hiphop_künstlerinnen</title>
+            <author>YeLmYeLmYeLm</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/10pw3qf/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/10pw3qf/comment/j6ni4d8/"/>
+            <date>2023-01-31</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-02-11</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Ich nutze Reddit sehr selten und bin auch nicht bei Discord besonders fit. Auf sooo vielen Subreddits lese ich Werbung für Discordserver, scheinbar bringt es Vorteile, wenn viele Leute über Reflinks reingeholt werden. Reddit selbst hat sogar eine eigene Meldekategorie (Linkfarming) für solche Beiträge.
+Sicher hast du dir mehr Mühe gegeben mit deinem Beitrag als Spambots,klar. Aber ich finde es trotzdem uncool in einem Reddit einen Discordserver zu promoten, der sogar eine Konkurrenz zum eigenen Discordserver dieses Reddits hier zu sein will. Indirekt sagt das doch auch aus, dass der Discord Server von GermanRap eben kein Safespace ist?</p>
+    </body>
+  </text>
+</TEI>

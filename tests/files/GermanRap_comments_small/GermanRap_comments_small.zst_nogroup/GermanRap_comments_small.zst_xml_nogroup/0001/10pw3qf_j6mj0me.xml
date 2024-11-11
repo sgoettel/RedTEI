@@ -1,0 +1,45 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">safespace_discord_für_hiphop_künstlerinnen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: safespace_discord_für_hiphop_künstlerinnen, 2023-01-31</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">safespace_discord_für_hiphop_künstlerinnen</title>
+            <author>HENNEYE</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/10pw3qf/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/10pw3qf/comment/j6mj0me/"/>
+            <date>2023-01-31</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-02-11</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Moin,
+vielleicht hast du ja auch mal Bock, auf unseren "Subreddit" Discord (Anführungszeichen, da mittlerweile auch viele auf andere Wege zu uns finden) zu kommen. Wir sind mittlerweile über 1.500 Mitglieder:innen, davon einige Regulars und von Lifestyle-Chatting bis gemeinsam Musik machen ist dort alles dabei. 
+Wir sind natürlich auch immer froh über Feedback und Leute, die sich anderweitig (z.B. durch Song-/Beatchallenges) in der Community einbringen möchten. Gerne unterstützen wir dabei; zeitlich ists natürlich manchmal ein Problem, aber wir haben auch aus diesem Grund erst vor wenigen Tagen unser Admin- und Modteam erweitert. 
+Wir legen zudem auch großen Wert auf einen diskriminierungsfreien und respektvollen Umgang miteinander; ich denke, da würde mir jede Person auf dem Server zustimmen. 
+Vielleicht schaust dus dir ja mal an und man sieht sich bald!</p>
+    </body>
+  </text>
+</TEI>

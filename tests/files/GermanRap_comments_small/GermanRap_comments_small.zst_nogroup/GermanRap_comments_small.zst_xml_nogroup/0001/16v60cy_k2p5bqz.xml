@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">edgar_wasser_das_erste_lied</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: edgar_wasser_das_erste_lied, 2023-09-29</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">edgar_wasser_das_erste_lied</title>
+            <author>HalunkeEU</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/16v60cy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/16v60cy/comment/k2p5bqz/"/>
+            <date>2023-09-29</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-09-29</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Wurde schon gepostet</p>
+    </body>
+  </text>
+</TEI>

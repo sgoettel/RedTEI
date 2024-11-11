@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_ist_marvins_mission</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_ist_marvins_mission, 2023-08-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_ist_marvins_mission</title>
+            <author>ktkf</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/comment/jx9sadt/"/>
+            <date>2023-08-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Was zur Hölle. Als könnte jemand keine andere Meinung zu politischen Themen haben, vor allem, wenn er seit Jahren in Amerika lebt und womöglich eine andere Perspektive hat als jemand, der in Deutschland lebt. Dass dann aber direkt die krassen Theorien ausgepackt werden und mit großen Worten um sich geworfen wird. 
+Gerade auch das Posten und der Beitrag á la "Was meint ihr, darf er das?" bestätigt solche Meinungen doch - sowas findet vor allem in diesen überwoken Schwurblergruppen statt, die ungewollte Meinungen gerne durch Druck zensieren/canceln wollen. Auch, wenn wir hier auf Reddit sind, müsst ihr euch nicht wie die allerletzten Kellerkinder geben.</p>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">funfact_sun_diego_hat_die_vermutlich_teuerste_uhr</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: funfact_sun_diego_hat_die_vermutlich_teuerste_uhr, 2023-08-08</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">funfact_sun_diego_hat_die_vermutlich_teuerste_uhr</title>
+            <author>arnonym90</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15kum7b/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15kum7b/comment/jva48lp/"/>
+            <date>2023-08-08</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Find die auch geil. Ist aber sicher alles Geschmackssache, kp warum man sich darüber streiten muss. Viel wichtiger wären mal wieder paar geile Sunny Tracks 😭</p>
+    </body>
+  </text>
+</TEI>

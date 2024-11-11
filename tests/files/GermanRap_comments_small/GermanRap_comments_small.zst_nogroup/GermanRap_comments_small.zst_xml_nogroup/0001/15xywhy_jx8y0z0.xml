@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_ist_marvins_mission</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_ist_marvins_mission, 2023-08-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_ist_marvins_mission</title>
+            <author>seth_roggen</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/comment/jx8y0z0/"/>
+            <date>2023-08-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Er lebt zwar in den Staaten hat aber mehr angst um cops die vermeintlich um ihr Leben fürchten müssten als PoCs die da seit Jahrzehnten strukturell repressionen und Gewalt ausgesetzt werden…selbst der Großteil der amis sieht ein Problem in der US Pol….</p>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,45 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">warheit_intifada</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: warheit_intifada, 2023-10-21</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main">Reddit/GermanRap</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/17b7kvv/"/>
+            <date type="last_comment">2023-10-21</date>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-21</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item source="https://www.reddit.com/r/GermanRap/comments/17b7kvv/comment/k5j2qlz/">Sonderschüler rap <date>2023-10-19</date> <name>corbo_99</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/17b7kvv/comment/k5j372s/">Ich hab Abi. Ein kurzer Blick auf deine "Gedichte" in deinem Profil und ich seh unzählige Rechtschreib- und Grammatikfehler. Also wer ist hier der Sonderschüler? <date>2023-10-19</date> <name>overthinking_kills</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/17b7kvv/comment/k5j4rmq/">Meine Rechtschreibfehler sind ein Stilmittel, deine "Musik" klingt danach als hätte sich die Geschlosse mal im Musikraum künstlerisch austoben dürfen. Da ändert dein Abi auch nichts dran. <date>2023-10-19</date> <name>corbo_99</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/17b7kvv/comment/k5ji2k8/">Wieso heißt das nicht Azad feat Jeyz Hannibal-Intifada <date>2023-10-19</date> <name>Fuffy40789</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/17b7kvv/comment/k5jmezd/">Hanybal so underrated. <date>2023-10-19</date> <name>PedaloRowdy</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/17b7kvv/comment/k5pa65n/">Weil die damals als Warheit n ganzes Album veröffentlicht haben <date>2023-10-20</date> <name>angry_forester</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/17b7kvv/comment/k5rnzdd/">Deine Rechtschreibfehler sind Stilmittel? Da bist du der erste Dichter, der sowas nutzt. Sehr innovativ! <date>2023-10-21</date> <name>overthinking_kills</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

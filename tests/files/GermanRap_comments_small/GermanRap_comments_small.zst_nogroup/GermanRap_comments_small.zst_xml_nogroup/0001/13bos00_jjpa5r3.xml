@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wollte_mal_meinen_neuen_track_mit_euch_teilen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: wollte_mal_meinen_neuen_track_mit_euch_teilen, 2023-05-11</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">wollte_mal_meinen_neuen_track_mit_euch_teilen</title>
+            <author>grizzy45</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/13bos00/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/13bos00/comment/jjpa5r3/"/>
+            <date>2023-05-11</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-06-26</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Stimme und Flow gehen richtig hart, aber Streicher- und bulgarische Frauenchor-Samples sind einfach übertrieben whack. Als hätten wir 2012 und JulienBoss erklärt dir gerade, eine wieso der neue Kolle-Song sehr schlau sei. Halte das für das HipHop-Gegenstück der überdramatischen Seifenoper, beides bedient sich exklusiv an abgegriffenen (Sound-)Bildern. Die wirken alle gleich, als würde man einer AI auftragen einen Type Beat aus 2012 zu machen.</p>
+    </body>
+  </text>
+</TEI>

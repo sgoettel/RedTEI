@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">kalim_frage_an_die_leute_aus_hamburg</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: kalim_frage_an_die_leute_aus_hamburg, 2023-03-11</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">kalim_frage_an_die_leute_aus_hamburg</title>
+            <author>S-_Lifts</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/11nq3q0/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/11nq3q0/comment/jbtgzcb/"/>
+            <date>2023-03-11</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-04-12</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Immer wenn in der Rapszene gesagt wird "Jeder in Stadt XY weiß..." hat noch nie jemand in Stadt XY davon gehört.</p>
+    </body>
+  </text>
+</TEI>

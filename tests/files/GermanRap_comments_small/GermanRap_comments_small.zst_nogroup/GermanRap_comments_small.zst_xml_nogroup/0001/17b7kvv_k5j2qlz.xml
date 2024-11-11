@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">warheit_intifada</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: warheit_intifada, 2023-10-19</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">warheit_intifada</title>
+            <author>corbo_99</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/17b7kvv/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/17b7kvv/comment/k5j2qlz/"/>
+            <date>2023-10-19</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-19</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Sonderschüler rap</p>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_ist_marvins_mission</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_ist_marvins_mission, 2023-08-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_ist_marvins_mission</title>
+            <author>Brunnenmolch</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/comment/jx95iw4/"/>
+            <date>2023-08-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Ich glaube die wenigsten Wähler lesen das Programm der AFD, täten sie das und verstünden sie es, würden sie die Partei nicht wählen. Die AFD will nämlich vor allem eins - von unten nach oben umverteilen und Reiche noch besser stellen. Der Rest ist eher Beiwerk und Bauernfängerei. Ich kann mir schon vorstellen, dass viele die wählen, weil sie rechte Ansichten haben -  der Punkt ist aber, dass diese Ansichten nicht der Realität und der Statistik standhalten, sie beruhen also auf mangelnder Informiertheit. Bestimmt gibt es da auch Leute, die Menschen mit dunkler Haut einfach kacke finden, aber ich denke viele hätten andere Ansichten, wenn sie sich mehr mit den Dingen beschäftigen würden und informierter wären.</p>
+    </body>
+  </text>
+</TEI>

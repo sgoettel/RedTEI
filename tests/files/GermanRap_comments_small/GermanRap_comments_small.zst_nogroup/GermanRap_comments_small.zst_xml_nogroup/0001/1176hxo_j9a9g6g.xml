@@ -1,0 +1,44 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">der_aufstieg_und_fall_von_deluxe_records</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: der_aufstieg_und_fall_von_deluxe_records, 2023-02-20</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">der_aufstieg_und_fall_von_deluxe_records</title>
+            <author>GermanrapHausmeister</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/1176hxo/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/1176hxo/comment/j9a9g6g/"/>
+            <date>2023-02-20</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-03-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Das schreibt der:die Künstler:in zum eigenen Werk:
+In diesem Video geht es um die History des Hamburger Labels Deluxe Records &amp;amp; warum es leider keinen großen Erfolg fand.
+*
+^^(Github des Bots)</p>
+    </body>
+  </text>
+</TEI>

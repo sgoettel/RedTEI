@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">fler_telefonat_mit_einem_feind</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: fler_telefonat_mit_einem_feind, 2023-08-10</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">fler_telefonat_mit_einem_feind</title>
+            <author>Samuelhi202</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15mymkk/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15mymkk/comment/jvk5mba/"/>
+            <date>2023-08-10</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-10</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Irfan Peci, geboren 1989 in Serbien, aufgewachsen in der Oberpfalz, wird 2007 zum Deutschland-Chef der »Globalen Islamischen Medienfront« (GIMF), eines der weltweit wichtigsten Propaganda-Netzwerke für al-Qaida. Vom BKA enttarnt, wird er inhaftiert und als V-Mann für den Verfassungsschutz angeworben.</p>
+    </body>
+  </text>
+</TEI>

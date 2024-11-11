@@ -1,0 +1,43 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">safespace_discord_für_hiphop_künstlerinnen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: safespace_discord_für_hiphop_künstlerinnen, 2023-01-31</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">safespace_discord_für_hiphop_künstlerinnen</title>
+            <author>Drouxor</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/10pw3qf/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/10pw3qf/comment/j6mj1i7/"/>
+            <date>2023-01-31</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-02-11</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>ich bin verwirrter als vorher.
+aber wird schon passen!
+viel erfolg.</p>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_ist_marvins_mission</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_ist_marvins_mission, 2023-08-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_ist_marvins_mission</title>
+            <author>carstenhag</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/comment/jxbuh8f/"/>
+            <date>2023-08-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Mit linke woke bubble sind DerRadikaleDemokrat, Shurjoka und Leute in deren Umfeld gemeint. Die machen eine dumme Aussage nach der anderen, bezichtigen Leute von Straftaten die nie passiert sind, etc.
+Ja, mir geht das von Marv auch manchmal auf'n Sack, vor allem wenn er das 10. Mal wie ein boomer über Gendern ablästert. Pauschal ihn zu verteufeln macht aber kein Sinn.</p>
+    </body>
+  </text>
+</TEI>

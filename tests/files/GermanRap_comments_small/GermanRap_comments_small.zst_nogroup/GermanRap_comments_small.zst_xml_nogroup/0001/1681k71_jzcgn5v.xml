@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">rolling_g_vs_atropatrap_acapella_battle_fob_2023</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: rolling_g_vs_atropatrap_acapella_battle_fob_2023, 2023-09-06</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">rolling_g_vs_atropatrap_acapella_battle_fob_2023</title>
+            <author>rumcoda</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/1681k71/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/1681k71/comment/jzcgn5v/"/>
+            <date>2023-09-06</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-09-06</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Hm ich nenn sie einfach Atropa, aber sie heißt auf jeden Fall Anne.</p>
+    </body>
+  </text>
+</TEI>

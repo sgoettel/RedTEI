@@ -1,0 +1,47 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">beste_line_2023</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: beste_line_2023, 2023-11-26</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">beste_line_2023</title>
+            <author>Sensitive_Potato_775</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/183ygq7/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/183ygq7/comment/kasxm4a/"/>
+            <date>2023-11-26</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-11-26</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Ich glaube, wir haben unterschiedliche Definitionen von guten Lines. Aber ist ja auch okay. Meine sind jedenfalls
+"Ich seh das als Realist: es muss wack sein, wenn man nicht Kollegah ist. Der Künstler beim Zeichnen des Portraits malt mich
+Mit abfälligem Antlitz: René Magritte" - Kollegah
+"Sie hatte Angst, dass ich nie wieder werd wie damals. Deswegen startet dieses Album beim Psychiater" - Vega
+"Könnte alles so gemütlich sein, doch was ist los, wenn dir in Wirklichkeit nix bleibt als Druck in der Brust und bleierne Müdigkeit?" - Vega
+"Sie spüren, dass es falsch ist, doch schaufeln weiter euer Grab und gegen das Gefühl verschreibt der Arzt Pharmazeutika" - Menx &amp; Primus
+"Ich hab ne einfache Frage, wie ist es 'für die Tränen seiner Mutter einen Maybach zu fahren'? Eine Rolie zu haben und 'keine Zeit mehr zu haben' und in jedem Song das gleiche zu sagen, immer das gleiche zu sagen?" - Menx &amp; Primus</p>
+    </body>
+  </text>
+</TEI>

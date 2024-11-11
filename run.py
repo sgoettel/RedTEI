@@ -8,6 +8,7 @@ from extractor.json2xml import run
 from extractor.validate import load_schema, validate_directory
 
 MAX_FILES_PER_DIR = 1000 # max files each folder
+error_log = []  # error log for problematic JSON objects
 
 def get_output_dir(base_dir):
     """finds or creates a subdirectory that contains less than MAX_FILES_PER_DIR files."""
@@ -24,38 +25,68 @@ def get_output_dir(base_dir):
     else:
         return os.path.join(base_dir, subdirs[-1])
 
-def pipeline(zstfile, subreddit):
-    """full pipeline: filter, extract json files, convert to XML, validate"""
+def pipeline(zstfile, subreddit, no_group=False):
     print(f'Processing subreddit: "{subreddit}".')
     base_dir = os.path.dirname(os.path.abspath(__file__))
     subreddits_dir = os.path.join(base_dir, 'subreddits')
-    # create general subreddits directory
     os.makedirs(subreddits_dir, exist_ok=True)
-    # generate file name for filtered zst file
-    zst_filtered = f"{zstfile.rsplit('.', 1)[0]}_filtered.zst"
+    
+    # define mode based on grouping
+    mode = "nogroup" if no_group else "grouped"
+    subreddit_folder = os.path.join(subreddits_dir, f"{subreddit}_{mode}")
+    os.makedirs(subreddit_folder, exist_ok=True)
 
-    # execute process_comments function from trim_username_comments.py
-    process_comments(zstfile, remove_deleted=True, remove_quotes=True,
-                     remove_remindme=True, remove_urls=True)
+    # define JSON and XML output directories based on mode
+    json_output_dir = os.path.join(subreddit_folder, f"{subreddit}_json_{mode}")
+    xml_output_dir = os.path.join(subreddit_folder, f"{subreddit}_xml_{mode}")
+
+    os.makedirs(json_output_dir, exist_ok=True)
+    os.makedirs(xml_output_dir, exist_ok=True)
+    
+    # process comments in the zst file (apply filters)
+    process_comments(zstfile, remove_deleted=True, remove_quotes=True, remove_remindme=True, remove_urls=True)
     print("Extracting comments. This may take a while...")
-    comments = extract_comments(zst_filtered)
-    thread_comments = {}    
-    for comment in comments:
-        thread_id = comment.get('link_id', '').replace('t3_', '')
-        if thread_id not in thread_comments:
-            thread_comments[thread_id] = []
-        thread_comments[thread_id].append(comment)
-    for thread_id, comments_list in thread_comments.items():
-        with open(f"{dir_json}/{thread_id}_flat.json", 'w', encoding='utf-8') \
-            as outfile:
-            json.dump(comments_list, outfile, indent=4)
-    print('Convert json to XML files.')
-    # convert all json to XML
-    run(dir_json, dir_xml)
+    comments = extract_comments(f"{zstfile.rsplit('.', 1)[0]}_filtered.zst")
+    
+    if no_group:
+        # processing each comment individually in `no_group` mode
+        for comment in comments:
+            comment_id = comment['id']
+            link_id = comment['link_id'].replace('t3_', '')
+            json_subdir = get_output_dir(json_output_dir)
+            json_filename = f"{json_subdir}/{link_id}_{comment_id}.json"
+            try:
+                # save each comment as a JSON file and convert it to XML
+                with open(json_filename, 'w', encoding='utf-8') as outfile:
+                    json.dump([comment], outfile, indent=4)
+                xml_subdir = get_output_dir(xml_output_dir)
+                json2xml(json_filename, output_dir=xml_subdir, link_id=link_id, comment_id=comment_id, group_mode=not args.no_group)
+            except Exception as e:
+                error_log.append(f"Error in file {json_filename}: {e}")
+    else:
+        # group coments by thread in grouped mode
+        thread_comments = {}
+        for comment in comments:
+            thread_id = comment.get('link_id', '').replace('t3_', '')
+            if thread_id not in thread_comments:
+                thread_comments[thread_id] = []
+            thread_comments[thread_id].append(comment)
+
+        # save grouped comments per thread as JSON and convert to XML
+        for thread_id, comments_list in thread_comments.items():
+            json_subdir = get_output_dir(json_output_dir)
+            json_filename = f"{json_subdir}/{thread_id}_flat.json"
+            try:
+                with open(json_filename, 'w', encoding='utf-8') as outfile:
+                    json.dump(comments_list, outfile, indent=4)
+                xml_subdir = get_output_dir(xml_output_dir)
+                json2xml(json_filename, output_dir=xml_subdir)
+            except Exception as e:
+                error_log.append(f"Error in file {json_filename}: {e}")
+    
     print('Validate XML files.')
-    # validate all XML files
     TEI_RELAXNG = load_schema()
-    validate_directory(dir_xml, TEI_RELAXNG)
+    validate_directory(xml_output_dir, TEI_RELAXNG)
 
 def pipeline_json2xml(dir_json):
     """pipeline if the json files already exist: convert to XML, validate"""

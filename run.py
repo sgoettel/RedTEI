@@ -7,6 +7,23 @@ from extractor.comment_tree import extract_comments
 from extractor.json2xml import run
 from extractor.validate import load_schema, validate_directory
 
+MAX_FILES_PER_DIR = 1000 # max files each folder
+
+def get_output_dir(base_dir):
+    """finds or creates a subdirectory that contains less than MAX_FILES_PER_DIR files."""
+    subdirs = sorted(
+        [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d)) and d.isdigit()],
+        key=lambda x: int(x)
+    )
+    # create a new subdirectory if the last one is full
+    if not subdirs or len(os.listdir(os.path.join(base_dir, subdirs[-1]))) >= MAX_FILES_PER_DIR:
+        next_subdir = str(int(subdirs[-1]) + 1).zfill(5) if subdirs else "00001"
+        new_dir = os.path.join(base_dir, next_subdir)
+        os.makedirs(new_dir, exist_ok=True)
+        return new_dir
+    else:
+        return os.path.join(base_dir, subdirs[-1])
+
 def pipeline(zstfile, subreddit):
     """full pipeline: filter, extract json files, convert to XML, validate"""
     print(f'Processing subreddit: "{subreddit}".')
@@ -16,11 +33,7 @@ def pipeline(zstfile, subreddit):
     os.makedirs(subreddits_dir, exist_ok=True)
     # generate file name for filtered zst file
     zst_filtered = f"{zstfile.rsplit('.', 1)[0]}_filtered.zst"
-    # create directory and initialize subdirectory names
-    dir_json = os.path.join(subreddits_dir, subreddit, f"{subreddit}_json")
-    dir_xml = os.path.join(subreddits_dir, subreddit, f"{subreddit}_xml")
-    os.makedirs(dir_json, exist_ok=True)
-    os.makedirs(dir_xml, exist_ok=True)
+
     # execute process_comments function from trim_username_comments.py
     process_comments(zstfile, remove_deleted=True, remove_quotes=True,
                      remove_remindme=True, remove_urls=True)

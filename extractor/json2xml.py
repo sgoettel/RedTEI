@@ -55,6 +55,46 @@ def process_comment_text(comment_text):
         print("Error processing comment text:", repr(comment_text))
         print("Error message:", e)
         raise e
+    
+def create_comment_element(parent_element, comment, base_info, element_type='item'):
+    """Creates XML element for a comment (as <item> or <p> depending on the mode)."""
+    comment_url = f"{base_info['thread_url']}comment/{comment['id']}/"
+    
+    # different structures depending on the mode
+    if element_type == 'item':
+        # standard mode: Comment as <item> with metadata
+        comment_elem = SubElement(parent_element, 'item', source=comment_url)
+        
+        # process the comment's text content
+        comment_content = process_comment_text(comment['body'])
+        if isinstance(comment_content, list):
+            comment_elem.text = comment_content[0]
+            for element in comment_content[1:]:
+                comment_elem.append(element)
+        else:
+            comment_elem.text = comment_content
+
+        # add <date> and <name> only in standard mode
+        date_elem = SubElement(comment_elem, 'date')
+        date_elem.text = str(datetime.utcfromtimestamp(int(comment['created_utc'])).date())
+        date_elem.tail = " "  # optional space after <date> (how should we handle this?)
+
+        author_elem = SubElement(comment_elem, 'name')
+        author_elem.text = comment['author']
+        author_elem.tail = " "  # optional space after <name> (same question)
+        
+    else:
+        # `--no-group` mode: only comment text as <p> without metadata
+        comment_elem = SubElement(parent_element, 'p')
+        comment_content = process_comment_text(comment['body'])
+        if isinstance(comment_content, list):
+            comment_elem.text = comment_content[0]
+            for element in comment_content[1:]:
+                comment_elem.append(element)
+        else:
+            comment_elem.text = comment_content
+
+    return comment_elem
 
 
 def build_subcomments(supercomment_element, subcomment, base_info,
@@ -91,13 +131,6 @@ def build_subcomments(supercomment_element, subcomment, base_info,
         comment_url = f"https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}"
 
     comment = SubElement(supercomment_element, 'item', source=comment_url)
-
-    # author, date as subelements
-    author = SubElement(comment, 'name')
-    author.text = subcomment['author']
-    time = datetime.utcfromtimestamp(int(subcomment['created_utc']))
-    date = SubElement(comment, 'date')
-    date.text = str(time.date())
 
 
 def json2xml(file, tree_structure=False, output_dir='wohnen_xml',

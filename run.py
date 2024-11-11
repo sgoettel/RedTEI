@@ -1,6 +1,6 @@
 import json
 import os
-import sys
+import argparse
 
 from extractor.trim_username_comments import process_comments
 from extractor.comment_tree import extract_comments
@@ -57,16 +57,15 @@ def pipeline_json2xml(dir_json):
     validate_directory(dir_xml, TEI_RELAXNG)
 
 if __name__ == '__main__':
-    # possible TODO implement argparser
-    files = sys.argv[1:]
-    for file in files:
+    parser = argparse.ArgumentParser(description='Process Reddit comments.')
+    parser.add_argument('files', nargs='+', help='Path to one or more .zst files or _json directories.')
+    parser.add_argument('--no-group', action='store_true', help='Process each comment individually.')
+    args = parser.parse_args()
+    for file in args.files:
         if file.endswith('.zst'):
-            # full pipeline
             subreddit = file.split('/')[-1].replace('_comments.zst', '')
-            pipeline(file, subreddit)
+            pipeline(file, subreddit, no_group=args.no_group)
         elif file.endswith('_json') or file.endswith('_json/'):
-            # json2xml and validation only
             pipeline_json2xml(file)
         else:
-            print('Please insert the path to one or more .zst files or _json directories.')
-            continue
+            print('Please provide the path to one or more .zst files or _json directories.')

@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">kalim_frage_an_die_leute_aus_hamburg</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: kalim_frage_an_die_leute_aus_hamburg, 2023-03-10</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">kalim_frage_an_die_leute_aus_hamburg</title>
+            <author>Abu_Sosa</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/11nq3q0/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/11nq3q0/comment/jbp37gh/"/>
+            <date>2023-03-10</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-04-12</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Kalim hat wohl jmd der „ne Nummer“ ist verraten. Und auch Faruks Tod ausgenutzt um sich drauf zu profilieren obwohl er mit dem nicht viel zu tun hatte Blabla. Viele Leute nicht gut zu sprechen auf ihn in HH. Gibt wohl Aufnahmen und auch Schriftstücke wo man hört/sieht das er verraten hat.</p>
+    </body>
+  </text>
+</TEI>

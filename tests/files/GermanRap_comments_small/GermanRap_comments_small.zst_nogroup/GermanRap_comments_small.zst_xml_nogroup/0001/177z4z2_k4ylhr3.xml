@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">welche_deutschen_underground_rapper_würdest_du</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: welche_deutschen_underground_rapper_würdest_du, 2023-10-15</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">welche_deutschen_underground_rapper_würdest_du</title>
+            <author>Scary-Cockroach-1159</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/177z4z2/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/177z4z2/comment/k4ylhr3/"/>
+            <date>2023-10-15</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-15</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Hm, kp ob man ihn als "Uderground Rapper" bezeichnen kann, aber ich würde Entetainment vorschlagen. Meiner Meinung nach total underrated der Typ.</p>
+    </body>
+  </text>
+</TEI>

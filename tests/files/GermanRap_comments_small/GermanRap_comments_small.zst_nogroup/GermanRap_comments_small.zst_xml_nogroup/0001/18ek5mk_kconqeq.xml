@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">the_t_may_be_low_but_that_hairline_be_high</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: the_t_may_be_low_but_that_hairline_be_high, 2023-12-09</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">the_t_may_be_low_but_that_hairline_be_high</title>
+            <author>WhiteTurk69</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/18ek5mk/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/18ek5mk/comment/kconqeq/"/>
+            <date>2023-12-09</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-12-09</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>HT in der Türkei regelt</p>
+    </body>
+  </text>
+</TEI>

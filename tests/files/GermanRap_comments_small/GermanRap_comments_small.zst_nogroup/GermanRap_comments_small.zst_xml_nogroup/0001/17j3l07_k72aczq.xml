@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">bushido_arena_tour_nochmal_aufgestockt</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: bushido_arena_tour_nochmal_aufgestockt, 2023-10-30</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">bushido_arena_tour_nochmal_aufgestockt</title>
+            <author>InsaneBane192</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/17j3l07/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/17j3l07/comment/k72aczq/"/>
+            <date>2023-10-30</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-30</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Inwiefern machen ausverkaufte Touren Bushido weniger zum Müllmenschen..</p>
+    </body>
+  </text>
+</TEI>

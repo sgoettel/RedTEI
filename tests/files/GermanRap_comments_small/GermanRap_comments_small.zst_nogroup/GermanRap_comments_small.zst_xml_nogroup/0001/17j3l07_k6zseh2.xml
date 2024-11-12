@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">bushido_arena_tour_nochmal_aufgestockt</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: bushido_arena_tour_nochmal_aufgestockt, 2023-10-29</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">bushido_arena_tour_nochmal_aufgestockt</title>
+            <author>No_Librarian_2135</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/17j3l07/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/17j3l07/comment/k6zseh2/"/>
+            <date>2023-10-29</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-29</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Er meinte in einem Interview (ich glaube bei Kiss FM), dass die Konzerte so werden sollen, dass man das Gefühl hat, alle 25 Jahre Bushido nochmal mit zu erleben.</p>
+    </body>
+  </text>
+</TEI>

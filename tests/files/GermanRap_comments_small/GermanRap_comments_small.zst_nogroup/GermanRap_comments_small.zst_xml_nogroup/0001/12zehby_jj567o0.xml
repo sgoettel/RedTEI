@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">erstes_rap_konzert</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: erstes_rap_konzert, 2023-05-06</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">erstes_rap_konzert</title>
+            <author>Trem0r13</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/12zehby/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/12zehby/comment/jj567o0/"/>
+            <date>2023-05-06</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-06-26</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Also hab pilsatir platin und turbo schon gefeiert, aber danach irwie nich mehr so. Aber ich höre nochmal rein.</p>
+    </body>
+  </text>
+</TEI>

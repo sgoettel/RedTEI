@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_haltet_ihr_von_yakary</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_haltet_ihr_von_yakary, 2023-09-29</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_haltet_ihr_von_yakary</title>
+            <author>Discountjockey</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/16v62dy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/16v62dy/comment/k2pios6/"/>
+            <date>2023-09-29</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-09-29</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Hat mich beim ersten Mal angenehm überrascht. Könnte mir vorstellen, dass die Delivery auf Dauer nervt. Dieser schreiende Flow bei dem alle 2 Zeilen der Beat aussetzt hat schon Impact, allerdings hört man sich da nach max. 3 Songs komplett satt dran mMn. 
+Aber der ist ja noch ganz am Anfang und vielleicht bekommt er das noch gedribbelt, sonst sehe ich für ihn immerhin eine Karriere als Hook-Feature-Fachmann.</p>
+    </body>
+  </text>
+</TEI>

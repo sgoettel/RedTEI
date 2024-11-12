@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">4zba58</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: 4zba58, 2016-08-26</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">4zba58</title>
+            <author>TheG-man98</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/4zba58/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/4zba58/comment/d6y47a0/"/>
+            <date>2016-08-26</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2016-09-11</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Alter warum hab ich von dem Release nichts mitbekommen :O Sehr naises Mixtape</p>
+    </body>
+  </text>
+</TEI>

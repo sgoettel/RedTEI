@@ -2,87 +2,104 @@ import json
 import pytest
 import re
 import sys
+import os
 sys.path.append('../')
 
 from extractor.json2xml import json2xml
 
+# Hilfsfunktion zur dynamischen Extraktion von `link_id` und `comment_id`
+def get_ids(json_data):
+    link_id = json_data[0]["link_id"].split("_")[1]  # Entferne `t3_`-Präfix
+    comment_id = json_data[0]["id"]
+    return link_id, comment_id
 
+# Fixture für den `grouped` Modus
 @pytest.fixture
-def example_1():
-    """example json (dict), xml (string) tuple"""
-    with open('files/ushrnp_flat.json') as f:
-        j = json.loads(f.read())
-    x = str(json2xml('files/ushrnp_flat.json', output_dir=''))
-    return j, x
+def grouped_example():
+    """Beispiel JSON und XML für den `grouped` Modus."""
+    with open('files/grouped/14u42ly_flat.json') as f:
+        json_data = json.load(f)
+    output_dir = 'files/tmp_output'
+    xml_output = json2xml('files/grouped/14u42ly_flat.json', output_dir=output_dir, group_mode=True)
+    with open(f"{output_dir}/14u42ly.xml", 'r') as xml_file:
+        xml_data = xml_file.read()
+    return json_data, xml_data
 
-
+# Fixture für den `nogroup` Modus
 @pytest.fixture
-def example_2():
-    """example json (dict), xml (string) tuple"""
-    with open('files/5wa69r_flat.json') as f:
-        j = json.loads(f.read())
-    x = str(json2xml('files/5wa69r_flat.json', output_dir=''))
-    return j, x
+def nogroup_example():
+    """Beispiel JSON und XML für den `nogroup` Modus."""
+    with open('files/nogroup/14t73le_jr1494w.json') as f:
+        json_data = json.load(f)
+        
+    # Dynamische Extraktion von link_id und comment_id
+    link_id, comment_id = get_ids(json_data)
 
+    output_dir = 'files/tmp_output'
+    xml_output = json2xml(
+        'files/nogroup/14t73le_jr1494w.json', 
+        output_dir=output_dir, 
+        group_mode=False, 
+        link_id=link_id, 
+        comment_id=comment_id
+    )
+    with open(f"{output_dir}/{link_id}_{comment_id}.xml", 'r') as xml_file:
+        xml_data = xml_file.read()
+    return json_data, xml_data
 
-def test_comment_structure(example_1):
-    """test chronological structure of subcomments"""
-    # <date>yyyy-mm-dd</date>
-    dates = re.findall(r'<date>\d\d\d\d-\d\d-\d\d</date>', example_1[1])
-    # chronological order of subcomments
+# Tests für den `grouped` Modus
+def test_grouped_comment_structure(grouped_example):
+    """Testet die chronologische Struktur der Kommentare im `grouped` Modus."""
+    dates = re.findall(r'<date>\d\d\d\d-\d\d-\d\d</date>', grouped_example[1])
     assert dates == sorted(dates)
 
+def test_grouped_subcomment_number(grouped_example):
+    """Stellt sicher, dass alle Subkommentare im XML im `grouped` Modus enthalten sind."""
+    assert len(grouped_example[0]) == grouped_example[1].count('<item source=')
 
-def test_subcomment_number(example_1):
-    """assure all subcomments are included in the XML file"""
-    assert len(example_1[0]) == example_1[1].count('<item source=')
-
-
-def test_encoding(example_1):
-    """make sure encoding errors are fixed"""
-    # assert correct file conversion of a file that used to throw errors
-    # TODO find a nicer way to test this
-    try:
-        json2xml("files/lmjo20_flat.json", output_dir='')
-    except Exception as e:
-        raise AssertionError(f"Error occurred: {e}")
-    else:  # Assertion passes if the function call does not raise an error
-        assert True
-
-
-def test_user_removal(example_1):
-    """test removal of /u/"""
-    assert not re.findall(r'/u/(\w+)', example_1[1])
-
-
-def test_subcomment_url_from_permalink(example_1):
-    """test subcomment url has the correct structure"""
-    # f'https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}
-    urls = re.findall('<item source=".+">', example_1[1])
-    for u, comment in zip(urls, example_1[0]):
-        u_link = u.split('"')[1].replace('https://www.reddit.com', '')
-        # constructed from permalink
-        assert u_link == comment['permalink']
-
-
-def test_subcomment_url_other(example_2):
-    """test subcomment url has the correct structure"""
-    # f'https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}
-    urls = re.findall('<item source=".+">', example_2[1])
-    for u, comment in zip(urls, example_2[0]):
-        u_link = u.split('"')[1]
-        # constructed other
+def test_grouped_subcomment_url(grouped_example):
+    """Testet die URL-Struktur für Unterkommentare im `grouped` Modus."""
+    urls = re.findall('<item source="(.+?)">', grouped_example[1])
+    for u, comment in zip(urls, grouped_example[0]):
         subreddit = comment['subreddit']
         post_id = comment["link_id"].replace('t3_', '')
         comment_id = comment['id']
-        comment_url = f"https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}"
-        assert u_link == comment_url
+        expected_url = f"https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}/"
+        assert u == expected_url
 
+# Tests für den `--no-group` Modus
+def test_nogroup_body_structure(nogroup_example):
+    """Prüft den Body-Inhalt im `nogroup` Modus (Einzelkommentar)."""
+    tree = nogroup_example[1]
+    assert re.search(r'<body>.*<p>.*</p>.*</body>', tree, re.DOTALL)
+    assert '<div type="comments">' not in tree
 
-if __name__ == '__main__':
-    test_comment_structure()
-    test_subcomment_number(example_1)
-    test_encoding()
-    test_user_removal(example_1)
-    test_subcomment_url_from_permalink()
-    test_subcomment_url_other()
+def test_nogroup_subcomment_url(nogroup_example):
+    """Testet die URL-Struktur für den Kommentar im `--no-group` Modus."""
+    url = re.search(r'<ptr type="comment" target="(.+?)"/>', nogroup_example[1]).group(1)
+    comment = nogroup_example[0][0]
+    subreddit = comment['subreddit']
+    post_id = comment["link_id"].replace('t3_', '')
+    comment_id = comment['id']
+    expected_url = f"https://www.reddit.com/r/{subreddit}/comments/{post_id}/comment/{comment_id}/"
+    assert url == expected_url
+
+def test_nogroup_author(nogroup_example):
+    """Testet, dass der Autor im `nogroup` Modus korrekt im XML enthalten ist."""
+    tree = nogroup_example[1]
+    author = re.search(r'<author>(.*?)</author>', tree).group(1)
+    assert author == nogroup_example[0][0]['author']
+
+# Zusätzliche Tests zur Fehlervermeidung und Encoding
+def test_encoding():
+    """Überprüft, dass Encoding-Fehler vermieden werden."""
+    try:
+        json2xml("files/grouped/14u42ly_flat.json", output_dir='files/tmp_output', group_mode=True)
+    except Exception as e:
+        raise AssertionError(f"Fehler aufgetreten: {e}")
+    else:
+        assert True
+
+def test_user_removal(grouped_example):
+    """Testet die Entfernung von /u/ im `grouped` Modus."""
+    assert not re.findall(r'/u/(\w+)', grouped_example[1])

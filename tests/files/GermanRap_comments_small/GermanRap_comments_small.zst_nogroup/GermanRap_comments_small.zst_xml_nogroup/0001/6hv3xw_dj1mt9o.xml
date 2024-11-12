@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">6hv3xw</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: 6hv3xw, 2017-06-17</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">6hv3xw</title>
+            <author>Demokratos</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/6hv3xw/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/6hv3xw/comment/dj1mt9o/"/>
+            <date>2017-06-17</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2017-07-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Klingt für mich genau gleich... </p>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,40 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">atzenkeeper_mal_wieder_mit</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: atzenkeeper_mal_wieder_mit, 2023-10-20</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main">Reddit/GermanRap</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/17ccr4n/"/>
+            <date type="last_comment">2023-10-20</date>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-20</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item source="https://www.reddit.com/r/GermanRap/comments/17ccr4n/comment/k5p1hq6/">Wo ist die Augenklappe ? <date>2023-10-20</date> <name>29z10z1923</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/17ccr4n/comment/k5p3rqd/">Präsident 😁 <date>2023-10-20</date> <name>mooonshyne</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">kollegah_kauft_klicks_und_kommentare</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: kollegah_kauft_klicks_und_kommentare, 2023-11-06</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">kollegah_kauft_klicks_und_kommentare</title>
+            <author>gerngeschehn</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/17oqukn/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/17oqukn/comment/k81rjfq/"/>
+            <date>2023-11-06</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-11-06</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>... wer von den großen im Mainstream macht das nicht? Gerne Antworten.</p>
+    </body>
+  </text>
+</TEI>

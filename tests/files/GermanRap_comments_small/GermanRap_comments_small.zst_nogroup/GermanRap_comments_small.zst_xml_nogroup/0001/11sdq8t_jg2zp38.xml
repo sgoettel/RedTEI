@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">suche_einen_raptrack_der_entfernt_wurde_shababs</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: suche_einen_raptrack_der_entfernt_wurde_shababs, 2023-04-13</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">suche_einen_raptrack_der_entfernt_wurde_shababs</title>
+            <author>gggghijkliddzu</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/11sdq8t/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/11sdq8t/comment/jg2zp38/"/>
+            <date>2023-04-13</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-06-23</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Gibt's da auch einen mit dem outtro? Das war richtig gut</p>
+    </body>
+  </text>
+</TEI>

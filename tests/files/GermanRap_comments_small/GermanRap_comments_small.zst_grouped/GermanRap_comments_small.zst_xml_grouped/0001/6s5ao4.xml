@@ -1,0 +1,39 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">6s5ao4</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: 6s5ao4, 2017-08-08</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main">Reddit/GermanRap</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/6s5ao4/"/>
+            <date type="last_comment">2017-08-08</date>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2017-08-27</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item source="https://www.reddit.com/r/GermanRap/comments/6s5ao4/comment/dlb418m/">Jop <date>2017-08-08</date> <name>zitr0y</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

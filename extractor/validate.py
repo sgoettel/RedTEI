@@ -26,10 +26,18 @@ def validate(path, TEI_RELAXNG):
 
 
 def validate_directory(directory, TEI_RELAXNG):
-    pathlist = [f'{directory}/{path}' for path in
-                os.listdir(directory)]
-    for path in pathlist:
-        validate(path, TEI_RELAXNG)
+    """validates all XML files in the directory and subdirectories recursively."""
+    for root, _, files in os.walk(directory):  # all directories and subdirectories recursively
+        for file in files:
+            path = os.path.join(root, file)
+            # only validate XML files
+            if path.endswith('.xml') and os.path.getsize(path) > 0:
+                try:
+                    validate(path, TEI_RELAXNG)
+                except etree.XMLSyntaxError as e:
+                    print(f"Syntax error in file {path}: {e}")
+            else:
+                print(f"Skipping invalid or empty file: {path}")
 
 
 if __name__ == '__main__':

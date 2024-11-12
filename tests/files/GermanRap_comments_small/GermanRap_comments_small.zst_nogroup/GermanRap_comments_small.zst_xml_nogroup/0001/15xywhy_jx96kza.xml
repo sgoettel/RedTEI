@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_ist_marvins_mission</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_ist_marvins_mission, 2023-08-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_ist_marvins_mission</title>
+            <author>112er</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/comment/jx96kza/"/>
+            <date>2023-08-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Alleine bei den Kommentaren hier merkt man wie verloren die meisten  auf diesen Sub sind. So bald jemand eine andere Meinung als die meisten hat ,ist man sofort wahnsinnig oder rechtsextrem. Safe über die Hälfte von euch hat sich  nichtmal nur ein bisschen mit dem Themen auseinander gesetzt sondern labert nur das nach was er oder sie von anderen gehört hat.</p>
+    </body>
+  </text>
+</TEI>

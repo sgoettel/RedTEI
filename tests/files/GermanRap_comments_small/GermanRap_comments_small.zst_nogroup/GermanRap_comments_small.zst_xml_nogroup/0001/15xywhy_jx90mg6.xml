@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_ist_marvins_mission</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_ist_marvins_mission, 2023-08-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_ist_marvins_mission</title>
+            <author>Brunnenmolch</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/comment/jx90mg6/"/>
+            <date>2023-08-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Kuchen war eigentlich schon imer ein Spinner, der ziemlich uninformiert ist, seine eigenen Quellen nicht versteht und schlecht "recherchiert". Trotzdem fühlt er sich aufgrund seiner "Hochbegabung" (die er nur selbst bei sich feststellt, ich bin mit ihm zur Schule gegeangen) dazu berufen anderen Leuten ständig die Welt zu erklären, sie als dumm zu bezeichnen und ihnen zu sagen was richtig ist. Am besten bei Leuten, die sich sehr viel mehr mit den Themen auseinandersetzen zu denen er sich äußert. Seine antifeministischen Videos sind das erste was mir da einfällt, seitdem versuche ich zu vergessen, dass er existiert, was mir bis gerade eben auch gut gelungen ist.</p>
+    </body>
+  </text>
+</TEI>

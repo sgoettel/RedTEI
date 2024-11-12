@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">alligatoah_komm_hau_ab_intro_schlaftabletten</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: alligatoah_komm_hau_ab_intro_schlaftabletten, 2023-12-02</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">alligatoah_komm_hau_ab_intro_schlaftabletten</title>
+            <author>IAmMrMighty</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/1890a12/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/1890a12/comment/kbo491z/"/>
+            <date>2023-12-02</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-12-02</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Herrlich!</p>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">cro_wählt_afd_ßß</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: cro_wählt_afd_ßß, 2023-11-27</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">cro_wählt_afd_ßß</title>
+            <author>Arkatoshi</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/184wbq2/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/184wbq2/comment/kaz89hy/"/>
+            <date>2023-11-27</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-11-27</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Die Lyrics von dem ganzen Song sagen doch was anderes?
+Oder habe ich den Sarkasmus nicht gesehen?🧐</p>
+    </body>
+  </text>
+</TEI>

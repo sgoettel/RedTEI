@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">erstes_rap_konzert</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: erstes_rap_konzert, 2023-04-26</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">erstes_rap_konzert</title>
+            <author>Odd-Wrongdoer-3427</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/12zehby/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/12zehby/comment/jhu7wvd/"/>
+            <date>2023-04-26</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-06-25</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>ich mochte die musik von denen auch nicht, bin trotzdem auf ein konzert von denen gegangen und die stimmung war wild</p>
+    </body>
+  </text>
+</TEI>

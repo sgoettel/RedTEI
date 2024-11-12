@@ -265,3 +265,4 @@ TotesMessenger
 BIDA_bot
 TweetPoster
 GermanRap-ModTeam
+generic_reddit_bot_2

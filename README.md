@@ -1,41 +1,62 @@
 # reddit-json2xml
 
-Hilfsskripte zur Verarbeitung von Reddit-Daten und Umwandlung von json in TEI-XML.
+Scripts to process Reddit data from compressed `.zst` files to TEI-XML.
 
-## Nutzung
-Hauptskript [run.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/run.py): `python src/run.py path-to-subreddit-zsta`
+## Overview
 
-Weitere Skripte:
-- [comment_tree.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/comment_tree.py): Ordnet alle Kommentare einem Thread zu (Details im Wiki)
-- [json2xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/json2xml.py): Wandelt json-Dateien in Baumstruktur in TEI-valide XML-Dateien um
-- [trim_username_comments.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/trim_username_comments.py): Filtert Kommentare (Details im Wiki)
-- [validate.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/validate.py): validiere XML-Dateien, nach TEI-Schema
+This project provides a pipeline, orchestrated by `run.py`, to transform Reddit comments into TEI-XML. The process includes extracting and filtering comments, grouping them into threads, and converting them into a TEI-valid XML format. The pipeline includes two processing modes, which allow either grouped or individual handling of comments.
 
+## Usage
 
-### Tests
-Tests laufen lassen:
-
+To run the main script, use:
+```bash
+python run.py path/to/subreddit.zst
+# or to process each comment individually
+python run.py --no-group path/to/subreddit.zst
 ```
+
+The default mode groups all comments by thread (or "link") in a single JSON and XML file, while the `--no-group` flag saves each comment as a separate JSON and XML file.
+
+### Supporting Scripts
+
+-   [comment_tree.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/comment_tree.py): Extracts and organizes comments by thread.
+-   [json2xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/json2xml.py): Converts JSON data into TEI-XML format.
+-   [trim_username_comments.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/trim_username_comments.py): Filters and prepares comments by removing certain elements 
+-   [validate.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/validate.py): Validates the XML output against a TEI schema.
+
+For more details on how the filtering proccess etc. works see the [Wiki](https://git.zdl.org/koerber/reddit-json2xml/wiki).
+
+## Testing
+
+Run tests with:
+```bash
 cd tests
 pytest
 ```
 
-Optional: Abdeckung mit [coverage](https://coverage.readthedocs.io/en/7.4.4/) (aktuell 79%)
+For [coverage](https://coverage.readthedocs.io/en/7.4.4/) analysis (currently 82%) use:
 
-```
+```bash
 cd tests
 coverage run -m pytest
 coverage report -m
 ```
 
-## Beispiele
-Im Ordner [examples/](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/examples) finden sich drei (verkleinerte) Subreddits. In jedem Ordner liegen die zugrundeliegende zst-Datei (Input für run.py) des jeweiligen Subreddits, die daraus prozessierten JSON- und XML-Dateien (Output) sowie die zugehörige Logdatei.
+## Examples
 
-In `subreddits.tar.gz` befinden sich zwei vollständig prozessierte Subreddits: [r/Fußball](https://www.reddit.com/r/fussball/) und [r/zocken](https://www.reddit.com/r/zocken/).
+In the [examples/demo](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/examples) directory, you’ll find sample JSON files in two folders: `grouped` and `ungrouped`. To see the conversion process, run:
+
+```bash
+python extractor/json2xml.py
+```
+
+The JSON samples will be processed and converted into XML files in their respective folders (`grouped` or `ungrouped`).
+
 
 ## Installation
-Virtual Environment erstellen:
-```
+
+To set up the environment:
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip

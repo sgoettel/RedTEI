@@ -1,0 +1,47 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">beste_line_2023</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: beste_line_2023, 2023-11-29</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">beste_line_2023</title>
+            <author>IcyGoal2712</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/183ygq7/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/183ygq7/comment/kb8l78w/"/>
+            <date>2023-11-29</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-11-29</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Allein von Reimstruktur aber auch Inhalt:
+Nachts in meiner Vill wird es spooky
+Ich jag dich durch die Zimmer so wie Scooby
+(Ich häng nicht mit Rapper, doch du siehst
+mich meistens mit Uzi,
+Ich tue so als ob es dich nie gab, Scusi)
+Genetikk - Crime Pays</p>
+    </body>
+  </text>
+</TEI>

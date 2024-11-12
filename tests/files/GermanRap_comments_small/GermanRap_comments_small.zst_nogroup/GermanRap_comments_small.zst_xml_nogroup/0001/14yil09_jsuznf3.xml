@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">wer_ist_titan_des_germanrap</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: wer_ist_titan_des_germanrap, 2023-07-21</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">wer_ist_titan_des_germanrap</title>
+            <author>GetNoHighScores</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/14yil09/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/14yil09/comment/jsuznf3/"/>
+            <date>2023-07-21</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-07-21</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>So geben nur schwächlinge an.![img](emote|t5_2v7pv|9689)</p>
+    </body>
+  </text>
+</TEI>

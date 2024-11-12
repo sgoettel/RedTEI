@@ -1,0 +1,43 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_ist_marvins_mission</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_ist_marvins_mission, 2023-08-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_ist_marvins_mission</title>
+            <author>Delicious_Invite_615</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/comment/jx9xcu0/"/>
+            <date>2023-08-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Das hast du falsch verstanden. Ich halte von denen allen nichts.
+Aber dass er nicht informiert oder nicht gebildet genug wäre um es zu verstehen… Nein, sorry aber der lebt täglich damit und ist gebildeter als der Durchschnitt dort wo er lebt. Er ist pro-Trump weil er pro-Trump sein will.
+Ich kann diese Argumentation nicht leiden, dass Konservative oder Rechte nicht informiert genug oder nicht ausreichend gebildet sind. Die Informationen sind frei zugänglich und als jemand in D zu besser über US Politik informiert zu sein als jemand, der in den USA lebt ist auch ein ziemlicher Hot Take.</p>
+    </body>
+  </text>
+</TEI>

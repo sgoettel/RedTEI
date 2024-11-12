@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">urgestein_boulevard_bou_zur_würdung_von</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: urgestein_boulevard_bou_zur_würdung_von, 2023-03-23</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">urgestein_boulevard_bou_zur_würdung_von</title>
+            <author>Sand_is_Coarse</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/11ywgsi/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/11ywgsi/comment/jdbof9w/"/>
+            <date>2023-03-23</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-04-11</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Hab’s aufgemacht in der Erwartung enttäuscht zu werden, aber sehr based Ansicht. Warum gerade der Hip Hop dieser einen Stadt so besonders herausgehoben werden sollte ist mir absolut unverständlich. Den Punkt der kulturellen Aneignung kann ich aber nicht nachvollziehen, schreibt er das weil es gerade hip ist?</p>
+    </body>
+  </text>
+</TEI>

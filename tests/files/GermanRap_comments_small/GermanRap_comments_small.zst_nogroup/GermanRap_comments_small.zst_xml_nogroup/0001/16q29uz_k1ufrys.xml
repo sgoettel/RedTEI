@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">kollegah_herbst</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: kollegah_herbst, 2023-09-23</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">kollegah_herbst</title>
+            <author>69Bullish420</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/16q29uz/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/16q29uz/comment/k1ufrys/"/>
+            <date>2023-09-23</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-09-23</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Er hat das quasi erfunden 😅</p>
+    </body>
+  </text>
+</TEI>

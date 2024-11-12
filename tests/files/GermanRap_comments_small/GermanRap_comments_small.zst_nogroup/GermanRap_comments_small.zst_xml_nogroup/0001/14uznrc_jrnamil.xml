@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">risiko</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: risiko, 2023-07-12</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">risiko</title>
+            <author>Scary-Initiative654</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/14uznrc/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/14uznrc/comment/jrnamil/"/>
+            <date>2023-07-12</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-07-12</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Ah ok danke schön</p>
+    </body>
+  </text>
+</TEI>

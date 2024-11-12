@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">alle_gegen_alle_zugezogen_maskulin</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: alle_gegen_alle_zugezogen_maskulin, 2017-10-21</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">alle_gegen_alle_zugezogen_maskulin</title>
+            <author>JustSmall</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/77k41s/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/77k41s/comment/doohjho/"/>
+            <date>2017-10-21</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2017-11-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Wusste doch irgendwas mit Balkan, danke Brudi! &amp;lt;3</p>
+    </body>
+  </text>
+</TEI>

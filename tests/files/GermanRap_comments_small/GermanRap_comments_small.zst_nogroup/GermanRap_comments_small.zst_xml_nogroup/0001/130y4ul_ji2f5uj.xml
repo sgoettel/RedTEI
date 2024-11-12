@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">apache_207_kleine_hure</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: apache_207_kleine_hure, 2023-04-28</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">apache_207_kleine_hure</title>
+            <author>donkubrick</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/130y4ul/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/130y4ul/comment/ji2f5uj/"/>
+            <date>2023-04-28</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-06-25</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Puh, ich meine ich weiss persoenlich auch nicht was der Track fuer nen Mehrwert hat? Hat halt immer big incel vibes sich ueber sowas belangloses zu echauffieren, wenn juckt es am Ende des Tages, scheinbar Apache wenn er extra nen Track darueber aufnimmt.</p>
+    </body>
+  </text>
+</TEI>

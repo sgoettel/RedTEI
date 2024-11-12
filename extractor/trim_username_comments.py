@@ -320,4 +320,4 @@ def process_comments(zst_file, remove_deleted=False, remove_quotes=False,
 
     print(f"{removed_url_only_comments_count} comment(s) removed for being only a URL.")
 
-    print("Script executed successfully.")
+    print("Comments successfully filtered.")

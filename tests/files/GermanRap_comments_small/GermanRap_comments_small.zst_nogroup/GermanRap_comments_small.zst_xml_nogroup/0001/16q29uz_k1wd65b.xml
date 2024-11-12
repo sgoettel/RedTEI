@@ -1,0 +1,48 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">kollegah_herbst</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: kollegah_herbst, 2023-09-23</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">kollegah_herbst</title>
+            <author>MoizZz406</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/16q29uz/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/16q29uz/comment/k1wd65b/"/>
+            <date>2023-09-23</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-09-23</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Nostalgie Zeitmaschine
+Bin froh diese Zeit mitgemacht zu haben
+Komme immer wieder zurück
+Boss der Bosse höre ich wöchentlich
+Wir werden alt
+Ist schön sich für kurze Zeit wieder jung zu fühlen, und den alten vibe wieder aufzugreifen. 
+Aber leider kann man dieses Gefühl nicht mehr ganz zurück holen. 
+Schade drum</p>
+    </body>
+  </text>
+</TEI>

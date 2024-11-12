@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">kex_kuhl_odmgdia_scotch_rückkehr_der_jägiritter</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: kex_kuhl_odmgdia_scotch_rückkehr_der_jägiritter, 2017-11-24</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">kex_kuhl_odmgdia_scotch_rückkehr_der_jägiritter</title>
+            <author>schlotzfreshhomie</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/7f3coe/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/7f3coe/comment/dq9z7mu/"/>
+            <date>2017-11-24</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2017-12-11</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Klassiker!</p>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">bushido_arena_tour_nochmal_aufgestockt</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: bushido_arena_tour_nochmal_aufgestockt, 2023-10-30</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">bushido_arena_tour_nochmal_aufgestockt</title>
+            <author>aprilftw</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/17j3l07/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/17j3l07/comment/k71sybe/"/>
+            <date>2023-10-30</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-30</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Der OG Keemo Hateboner von manchen hier ist echt größer als der Circlejerk. Die schaffen es sogar, ihn bei Themen ins Gespräch zu bringen, die 0 mit ihm zu tun haben
+Glaube niemand hier hätte je behauptet, dass OG Keemo mehr Fans zu Live Auftritten zieht, als Bushido</p>
+    </body>
+  </text>
+</TEI>

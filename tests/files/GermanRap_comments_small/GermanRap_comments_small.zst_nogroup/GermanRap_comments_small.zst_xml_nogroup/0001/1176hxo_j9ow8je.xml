@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">der_aufstieg_und_fall_von_deluxe_records</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: der_aufstieg_und_fall_von_deluxe_records, 2023-02-23</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">der_aufstieg_und_fall_von_deluxe_records</title>
+            <author>LeMan92</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/1176hxo/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/1176hxo/comment/j9ow8je/"/>
+            <date>2023-02-23</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-03-07</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Nee, das ist ein anderer Artist. Zumindest meines Wissens nach.</p>
+    </body>
+  </text>
+</TEI>

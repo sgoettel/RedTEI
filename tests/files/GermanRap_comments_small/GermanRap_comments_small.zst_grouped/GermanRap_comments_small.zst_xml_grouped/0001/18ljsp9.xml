@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">tierstar_propagiert_gewalt_es_wird_kein_mitleid</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: tierstar_propagiert_gewalt_es_wird_kein_mitleid, 2023-12-18</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main">Reddit/GermanRap</title>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="URL" target="https://www.reddit.com/r/GermanRap/comments/18ljsp9/"/>
+            <date type="last_comment">2023-12-18</date>
+          </publicationStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-12-18</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="comments">
+        <list>
+          <item source="https://www.reddit.com/r/GermanRap/comments/18ljsp9/comment/kdy3iz0/">Was für eine Müll-Überschrift. <date>2023-12-18</date> <name>According-Intern-143</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/18ljsp9/comment/kdybo4j/">Im Gesamtkonzept spricht er sich mehrfach explizit gegen Gewalt aus. <date>2023-12-18</date> <name>Background-Row2065</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/18ljsp9/comment/kdyf58d/">Widerliches Framing... <date>2023-12-18</date> <name>BRAZLAFF_repariert</name></item>
+          <item source="https://www.reddit.com/r/GermanRap/comments/18ljsp9/comment/kdyk7hc/">Tierstar propagiert keine Gewalt <date>2023-12-18</date> <name>CrossbarCaptain</name></item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>

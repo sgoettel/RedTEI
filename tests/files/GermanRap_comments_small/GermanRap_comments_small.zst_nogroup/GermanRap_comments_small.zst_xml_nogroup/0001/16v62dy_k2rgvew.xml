@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_haltet_ihr_von_yakary</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_haltet_ihr_von_yakary, 2023-09-29</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_haltet_ihr_von_yakary</title>
+            <author>Son_Gonos</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/16v62dy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/16v62dy/comment/k2rgvew/"/>
+            <date>2023-09-29</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-09-29</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Gibt 2 Unterschiede die das beinahe unmöglich machen. 1. Yakary macht trotzdem konstant gute Musik was bei Manuellsen ja nicht der Fall ist. 2. Für mich alleine der Fakt dass der eine iwie Mitte 40 ist und der andere gerade mal 23 oder so glaub ich macht es schon wesentlich weniger peinlich</p>
+    </body>
+  </text>
+</TEI>

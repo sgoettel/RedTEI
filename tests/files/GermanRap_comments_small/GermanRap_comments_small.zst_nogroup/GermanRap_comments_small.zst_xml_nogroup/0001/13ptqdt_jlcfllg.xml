@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">gamechanger_story_kola_mit_ice_remix_von_money</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: gamechanger_story_kola_mit_ice_remix_von_money, 2023-05-23</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">gamechanger_story_kola_mit_ice_remix_von_money</title>
+            <author>rctrulez</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/13ptqdt/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/13ptqdt/comment/jlcfllg/"/>
+            <date>2023-05-23</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-06-27</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Ja LGoony ist ohne Witz einer der krassesten Künstler im Game. 
+Trotzdem BMG&gt;Swag Mob, waren wohl leider auch paar nicht so nette Leute drin. An dieser Stelle shout out an Tom und Arne.</p>
+    </body>
+  </text>
+</TEI>

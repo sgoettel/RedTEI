@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">4f5h8l</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: 4f5h8l, 2016-04-17</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">4f5h8l</title>
+            <author>pzumk</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/4f5h8l/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/4f5h8l/comment/d26ikg9/"/>
+            <date>2016-04-17</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2016-05-17</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>nailed it.</p>
+    </body>
+  </text>
+</TEI>

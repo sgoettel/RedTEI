@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_ist_marvins_mission</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_ist_marvins_mission, 2023-08-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_ist_marvins_mission</title>
+            <author>Brunnenmolch</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/comment/jx8zsva/"/>
+            <date>2023-08-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Naja er lebt da drüben und ist eigentlich ziemlich offen damit pro Trump und Republikaner zu sein. Er trug früher auch regelmäßig eine MAGA Cap. In Deutschland wäre er damit wahrscheinlich ungefähr bei der AFD (rechter Flügel) einzuordnen.
+Ich glaube nicht, dass er eine Mission hat, sondern einfach, dass er nicht besonders gebildet ist. Ich möchte mich damit gar nicht über ihn lustig machen, aber wer diese Politik unterstützt ist nicht informiert darüber, was Trump und Republikaner so machen, prfoitiert direkt davon (weil man reich ist), oder hasst einfach Frauen, Schwule, Arme und Ausländer. Da ich ihn nie als Sexist, Homophoben o.Ä wahrgenommen habe und ich auch nicht denke, dass er besonders reich ist wird es wohl so sein, dass er schlichtweg nicht informiert, oder gebildet ist. Dürfte wohl kaum eine Überraschung sein, dass man nicht nur weil man in der Öffentlichkeit steht irgendwas im Kopf haben muss.</p>
+    </body>
+  </text>
+</TEI>

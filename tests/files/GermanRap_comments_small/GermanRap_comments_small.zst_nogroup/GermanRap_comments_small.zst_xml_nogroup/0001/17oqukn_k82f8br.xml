@@ -1,0 +1,42 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">kollegah_kauft_klicks_und_kommentare</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: kollegah_kauft_klicks_und_kommentare, 2023-11-06</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">kollegah_kauft_klicks_und_kommentare</title>
+            <author>erik_7581</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/17oqukn/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/17oqukn/comment/k82f8br/"/>
+            <date>2023-11-06</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-11-06</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Ich war noch nie in diesem Sub unterwegs, aber wollte trotzdem kurz was anmerken. 
+Ich kenne ein ähnliches Verhalten von Instagram, wo man mit gekauften Abos und Likes anderen Leuten schaden kann. Eine Influencerin bei uns aus der Region, hat ihr Instagramprofil auch schon öfters auf Privat stellen müssen, da sie ungewollt extrem viele gekaufte Likes und Abos erhalten hat, und dir so etwas langfristig schadet und vom  Algorithmus bestraft wird.</p>
+    </body>
+  </text>
+</TEI>

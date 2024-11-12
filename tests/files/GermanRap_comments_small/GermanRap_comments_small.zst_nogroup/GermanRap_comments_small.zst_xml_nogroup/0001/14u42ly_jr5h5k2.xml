@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">pashanim_sommergewitter_heat_waves_remix</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: pashanim_sommergewitter_heat_waves_remix, 2023-07-08</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">pashanim_sommergewitter_heat_waves_remix</title>
+            <author>BO1s_R_GREAT_XD</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/14u42ly/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/14u42ly/comment/jr5h5k2/"/>
+            <date>2023-07-08</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-07-08</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Würd ich mir instant in die Playlist packen wenns auf Spotify wäre</p>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">rucksackträger_werden_verstehen</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: rucksackträger_werden_verstehen, 2023-09-09</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">rucksackträger_werden_verstehen</title>
+            <author>Ridicul0iD</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/16dk7ia/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/16dk7ia/comment/jzthigh/"/>
+            <date>2023-09-09</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-09-09</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Nee.  Graff + Rap/MCing + breakdance = hiphop.</p>
+    </body>
+  </text>
+</TEI>

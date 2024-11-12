@@ -1,0 +1,41 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">welche_deutschen_underground_rapper_würdest_du</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: welche_deutschen_underground_rapper_würdest_du, 2023-10-16</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">welche_deutschen_underground_rapper_würdest_du</title>
+            <author>IcyGoal2712</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/177z4z2/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/177z4z2/comment/k53538v/"/>
+            <date>2023-10-16</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-10-16</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Ganz klar, MDAWG357. Vorallem Graue Wolken und Plastik sind krasse Banger</p>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,44 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">was_ist_marvins_mission</title>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Reddit/GermanRap: was_ist_marvins_mission, 2023-08-22</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main" level="a">was_ist_marvins_mission</title>
+            <author>carstenhag</author>
+          </titleStmt>
+          <publicationStmt>
+            <publisher/>
+            <ptr type="thread" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/"/>
+            <ptr type="comment" target="https://www.reddit.com/r/GermanRap/comments/15xywhy/comment/jxbuw0a/"/>
+            <date>2023-08-22</date>
+          </publicationStmt>
+          <seriesStmt>
+            <title type="main" level="m">Reddit</title>
+            <title type="sub" level="m">GermanRap</title>
+          </seriesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date type="download">2023-08-22</date>
+      </creation>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Er wohnt in Washington DC, aber okay.
+Ich bin auch komplett gegen Trump, habe aber auch nur das negative mitbekommen was er gemacht hat, weil das das einzige war, was bei uns in den Medien war.  
+Marvin hat da schon ein Punkt wenn er sagt, dass er es wahrscheinlich ein bissssschen besser beurteilen kann wie die Präsidenten sind, als wir in Deutschland.
+PS: manchmal hat er sowas gesagt wie "ja als Trump Präsident war, war der Sprit billig" was vollkommener Quatsch ist. Das kritisiere ich definitiv.</p>
+    </body>
+  </text>
+</TEI>

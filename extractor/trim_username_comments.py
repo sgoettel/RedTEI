@@ -48,7 +48,7 @@ def remove_plain_urls(text):
 
 def remove_markdown_urls(text):
     def replace_markdown_url(match):
-        link_text, link_url = match.groups()
+        link_text, _ = match.groups()
         # check if text is also URL
         if plain_url_regex.match(link_text):
             return "[URL]"
@@ -263,18 +263,18 @@ def filter_comments(
                                     continue  # skip comment
 
                         # remove RemindMe bot invocations
-                        if remove_remindme and remindme_regex.search(obj["body"]):
+                        if remove_remindme and remindme_regex.search(obj.get("body", "")):
                             remindme_count += 1
                             lf.write("\n=========== body: !remindme ==========\n")
-                            lf.write(json.dumps({"original": obj["body"]}) + "\n")
+                            lf.write(json.dumps({"original": obj.get("body", "")}) + "\n")
                             continue
 
                         # remove all Zero-Width Spaces and reduce multiple
                         # newlines down to a single one
                         # this is done for all comments,
                         # regardless of other modifications
-                        obj["body"] = zero_width_space_regex.sub("", obj["body"])
-                        obj["body"] = newline_regex.sub("\n", obj["body"])
+                        obj["body"] = zero_width_space_regex.sub("", obj.get("body", ""))
+                        obj["body"] = newline_regex.sub("\n", obj.get("body", ""))
 
                         if body_changed:  # check if we got any modifications
                             # only log if applicable
@@ -306,7 +306,7 @@ def filter_comments(
 
                         # check if the comment is empty after all modifications
                         # and cleaning
-                        if is_comment_empty(obj["body"]):
+                        if is_comment_empty(obj.get("body", "")):
                             # logging empty and ignored comments
                             lf.write(
                                 "\n=========== body: empty or whitespace only ==========\n"

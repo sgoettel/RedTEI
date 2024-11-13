@@ -1,4 +1,4 @@
-lxml==4.9.3
-zstandard==0.21.0
-pytest==7.4.*
-coverage==7.2.*
+lxml==5.3.0
+zstandard==0.23.0
+pytest==8.3.3
+coverage==7.6.4

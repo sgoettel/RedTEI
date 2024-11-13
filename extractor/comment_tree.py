@@ -17,22 +17,22 @@ def extract_comments(zst_file, link_id=None):
 
     with open(zst_file, 'rb') as fh:
         with dctx.stream_reader(fh) as reader:
-            buffer = ""
+            bufferstr = ""
 
             while True:
                 chunk = reader.read(CHUNK_SIZE)
                 if not chunk:
                     break
 
-                buffer += chunk.decode(errors='ignore')
+                bufferstr += chunk.decode(errors='ignore')
 
                 while True:
-                    position = buffer.find('\n')
+                    position = bufferstr.find('\n')
                     if position == -1:
                         break
 
-                    line = buffer[:position]
-                    buffer = buffer[position + 1:]
+                    line = bufferstr[:position]
+                    bufferstr = bufferstr[position + 1:]
 
                     try:
                         obj = json.loads(line)

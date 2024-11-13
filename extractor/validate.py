@@ -1,7 +1,8 @@
 import lzma
 import os
-from pickle import load as load_pickle
 import sys
+
+from pickle import load as load_pickle
 
 from lxml import etree
 

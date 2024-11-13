@@ -7,22 +7,23 @@ https://github.com/sgoettel/zstsidescripts/blob/main/trim_username_comments.py
 """
 
 import json
-import zstandard as zstd
 import os
 import re
+
+import zstandard as zstd
+
 
 CHUNK_SIZE = 16384
 
 # regex for both URL types
-plain_url_regex = re.compile(r'(?<!\])\b(?:https?://|www\.)\S+\b/?',
-                             re.IGNORECASE)
-markdown_url_regex = re.compile(r'\[([^\]]+)\]\((https?://|www\.)\S+\)')
+plain_url_regex = re.compile(r"(?<!\])\b(?:https?://|www\.)\S+\b/?", re.IGNORECASE)
+markdown_url_regex = re.compile(r"\[([^\]]+)\]\((https?://|www\.)\S+\)")
 
 # regex for zero-width spaces
-zero_width_space_regex = re.compile(r'(&amp;#x200B;|&#x200B;|\\u200B)')
+zero_width_space_regex = re.compile(r"(&amp;#x200B;|&#x200B;|\\u200B)")
 
 # regex for reducing multiple newlines to a single one
-newline_regex = re.compile(r'\n\s*\n+')
+newline_regex = re.compile(r"\n\s*\n+")
 
 # regex for inline formatting
 # matches text enclosed in ~~ including the tildes
@@ -33,17 +34,16 @@ bold_text_regex = re.compile(r"\*\*(?!\s)(.*?)(?<!\s)\*\*")
 italic_text_regex = re.compile(r"\*(?!\s)(.*?)(?<!\s)\*")
 
 
-def read_bot_list(config_dir='src/config'):
-    bot_file_path = os.path.join(config_dir, 'botlist.txt')
+def read_bot_list(config_dir="src/config"):
+    bot_file_path = os.path.join(config_dir, "botlist.txt")
     bot_file_path = os.path.normpath(bot_file_path)  # normalize path
-    with open(bot_file_path, 'r') as file:
-        bots = [line.strip().lower() for line in file.readlines()
-                if line.strip()]
+    with open(bot_file_path, "r", encoding="utf-8") as inputfile:
+        bots = [line.strip().lower() for line in inputfile.readlines() if line.strip()]
     return bots
 
 
 def remove_plain_urls(text):
-    return plain_url_regex.sub('[URL]', text)
+    return plain_url_regex.sub("[URL]", text)
 
 
 def remove_markdown_urls(text):
@@ -51,22 +51,21 @@ def remove_markdown_urls(text):
         link_text, link_url = match.groups()
         # check if text is also URL
         if plain_url_regex.match(link_text):
-            return '[URL]'
-        else:
-            return link_text
+            return "[URL]"
+        return link_text
 
     return markdown_url_regex.sub(replace_markdown_url, text)
 
 
 def remove_inline_formatting(text):
     # remove ~~strikethrough~~ txt completely, including content between tildes
-    text = strike_through_regex.sub('', text)
+    text = strike_through_regex.sub("", text)
     # remove double asterisks surrounding **bold text**,
     # preserving the text itself
-    text = bold_text_regex.sub(r'\1', text)
+    text = bold_text_regex.sub(r"\1", text)
     # Remove single asterisks surrounding *italic text*,
     # preserving the text itself
-    text = italic_text_regex.sub(r'\1', text)
+    text = italic_text_regex.sub(r"\1", text)
     return text
 
 
@@ -75,8 +74,15 @@ def is_comment_empty(comment_body):
     return not comment_body.strip()
 
 
-def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
-                    remove_remindme, remove_urls, log_file):
+def filter_comments(
+    zst_file,
+    authors,
+    remove_deleted,
+    remove_quotes,
+    remove_remindme,
+    remove_urls,
+    log_file,
+):
     dctx = zstd.ZstdDecompressor()
     cctx = zstd.ZstdCompressor(level=15)
 
@@ -91,28 +97,26 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
     # catches various ways users try to summon the RemindMeBot, even though
     # there's technically just one right way to do it..it can vary..
     remindme_regex = re.compile(
-        r'^\s*(!remindme|!RemindMe|!remind me|RemindMe!|Remind me!)\b',
-        re.IGNORECASE)
+        r"^\s*(!remindme|!RemindMe|!remind me|RemindMe!|Remind me!)\b", re.IGNORECASE
+    )
 
     input_filename = zst_file
     output_filename = f"{zst_file.rsplit('.', 1)[0]}_filtered.zst"
     log_filename = log_file
 
-    excluded_counts = {author.lower(): 0 for author in authors} \
-        if authors else {}
+    excluded_counts = {author.lower(): 0 for author in authors} if authors else {}
     deleted_count = 0
     removed_url_only_comments_count = 0
     quote_removal_count = 0
     remindme_count = 0
     url_removal_count = 0
 
-    with open(input_filename, 'rb') as fh, \
-            open(output_filename, 'wb') as ofh, \
-            open(log_filename, 'w') as lf:
+    with open(input_filename, "rb") as fh, open(output_filename, "wb") as ofh, open(
+        log_filename, "w", encoding="utf-8"
+    ) as lf:
         lf.write("Logfile initiated.\n")
-        with dctx.stream_reader(fh) as reader, \
-                cctx.stream_writer(ofh) as writer:
-            buffer = ""
+        with dctx.stream_reader(fh) as reader, cctx.stream_writer(ofh) as writer:
+            bufferstr = ""
             deleted_tags = ["[removed]", "[deleted]", "[removed by reddit]"]
 
             while True:
@@ -120,19 +124,19 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
                 if not chunk:
                     break
 
-                buffer += chunk.decode(errors='ignore')
+                bufferstr += chunk.decode(errors="ignore")
 
                 # initialize last_modified_body for every new chunk
                 last_modified_body = None
 
                 while True:
-                    position = buffer.find('\n')
+                    position = bufferstr.find("\n")
 
                     if position == -1:
                         break
 
-                    line = buffer[:position]
-                    buffer = buffer[position + 1:]
+                    line = bufferstr[:position]
+                    bufferstr = bufferstr[position + 1 :]
 
                     # apply inline-formatting removals
                     line = remove_inline_formatting(line)
@@ -144,50 +148,55 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
                     try:
                         obj = json.loads(line)
                         body_changed = False
-                        original_body = obj["body"]
+                        original_body = obj.get("body", "").strip()
+                        author = obj.get("author", "").lower()
 
                         # check and filter out comments from specific authors
-                        if authors and obj["author"].lower() in authors:
-                            excluded_counts[obj["author"].lower()] += 1
+                        if authors and author in authors:
+                            excluded_counts[author] += 1
                             # skip further processing for this comment
                             continue
 
                         # check and remove deleted or removed comments
-                        if remove_deleted \
-                                and obj["body"].strip() in deleted_tags:
+                        if remove_deleted and original_body in deleted_tags:
                             deleted_count += 1
                             # log the removal
                             lf.write("\n=========== body: deleted/removed ==========\n")
-                            lf.write(json.dumps({
-                                "original": original_body,
-                                "deleted_comment": obj})
-                                + "\n")
+                            lf.write(
+                                json.dumps(
+                                    {"original": original_body, "deleted_comment": obj}
+                                )
+                                + "\n"
+                            )
                             continue
 
                         # check if body-text is just plaintext URL
-                        if remove_urls and \
-                                plain_url_regex.fullmatch(obj["body"].strip()):
+                        if remove_urls and plain_url_regex.fullmatch(original_body):
                             removed_url_only_comments_count += 1
                             # log the removal
-                            lf.write("\n=========== body: removed due to being only a URL ==========\n")
-                            lf.write(json.dumps({"original": original_body})
-                                     + "\n")
+                            lf.write(
+                                "\n=========== body: removed due to being only a URL ==========\n"
+                            )
+                            lf.write(json.dumps({"original": original_body}) + "\n")
                             continue
 
                         # remove quotations
                         if remove_quotes:
-                            cleaned_body_before_strip = re.sub(quote_regex,
-                                                               '', obj["body"])
-                            cleaned_body_after_strip = \
-                                re.sub(modern_quote_regex, '',
-                                       cleaned_body_before_strip).strip()
+                            cleaned_body_before_strip = re.sub(
+                                quote_regex, "", original_body
+                            )
+                            cleaned_body_after_strip = re.sub(
+                                modern_quote_regex, "", cleaned_body_before_strip
+                            ).strip()
 
                             # check if significant changes were made, besides removing whitespace
-                            substantial_change_made = \
-                                (cleaned_body_before_strip.strip()
-                                 != obj["body"].strip()) or \
-                                (cleaned_body_after_strip !=
-                                    cleaned_body_before_strip.strip())
+                            substantial_change_made = (
+                                cleaned_body_before_strip.strip()
+                                != obj.get("body", "").strip()
+                            ) or (
+                                cleaned_body_after_strip
+                                != cleaned_body_before_strip.strip()
+                            )
 
                             if substantial_change_made:
                                 obj["body"] = cleaned_body_after_strip
@@ -198,32 +207,41 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
                         # remove URLs
                         if remove_urls:
                             # count URLs in comments
-                            original_plain_url_count = \
-                                len(plain_url_regex.findall(obj["body"]))
-                            original_markdown_url_count = \
-                                len(markdown_url_regex.findall(obj["body"]))
+                            original_plain_url_count = len(
+                                plain_url_regex.findall(obj.get("body", ""))
+                            )
+                            original_markdown_url_count = len(
+                                markdown_url_regex.findall(obj.get("body", ""))
+                            )
 
                             # for markdown URLs
-                            new_body_markdown_urls_removed = \
-                                remove_markdown_urls(obj["body"])
+                            new_body_markdown_urls_removed = remove_markdown_urls(
+                                obj.get("body", "")
+                            )
                             # for plain URLs
-                            new_body_plain_urls_removed = \
-                                remove_plain_urls(new_body_markdown_urls_removed)
+                            new_body_plain_urls_removed = remove_plain_urls(
+                                new_body_markdown_urls_removed
+                            )
 
-                            if new_body_plain_urls_removed != obj["body"]:
+                            if new_body_plain_urls_removed != obj.get("body", ""):
                                 obj["body"] = new_body_plain_urls_removed
                                 body_changed = True
                                 url_changed = True
 
                                 # count URLs after processing
-                                new_plain_url_count = \
-                                    len(plain_url_regex.findall(obj["body"]))
-                                new_markdown_url_count = \
-                                    len(markdown_url_regex.findall(obj["body"]))
+                                new_plain_url_count = len(
+                                    plain_url_regex.findall(obj["body"])
+                                )
+                                new_markdown_url_count = len(
+                                    markdown_url_regex.findall(obj["body"])
+                                )
 
                                 # count number of processed URLs and add to url_removal_count
-                                urls_removed = (original_plain_url_count - new_plain_url_count) \
-                                    + (original_markdown_url_count - new_markdown_url_count)
+                                urls_removed = (
+                                    original_plain_url_count - new_plain_url_count
+                                ) + (
+                                    original_markdown_url_count - new_markdown_url_count
+                                )
                                 url_removal_count += urls_removed
 
                                 cleaned_body = obj["body"].strip()
@@ -232,10 +250,16 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
                                 # "!", "?", ".", spaces, or newlines,
                                 # repeated any number of times
 
-                                if not cleaned_body or re.fullmatch(r'(\[URL\]([!?\.])*[\s\n]*)+', cleaned_body):
+                                if not cleaned_body or re.fullmatch(
+                                    r"(\[URL\]([!?\.])*[\s\n]*)+", cleaned_body
+                                ):
                                     # log comment and skip writing in output data
-                                    lf.write("\n=========== body: only [URL] placeholders ==========\n")
-                                    lf.write(json.dumps({"original": original_body}) + "\n")
+                                    lf.write(
+                                        "\n=========== body: only [URL] placeholders ==========\n"
+                                    )
+                                    lf.write(
+                                        json.dumps({"original": original_body}) + "\n"
+                                    )
                                     continue  # skip comment
 
                         # remove RemindMe bot invocations
@@ -249,8 +273,8 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
                         # newlines down to a single one
                         # this is done for all comments,
                         # regardless of other modifications
-                        obj["body"] = zero_width_space_regex.sub('', obj["body"])
-                        obj["body"] = newline_regex.sub('\n', obj["body"])
+                        obj["body"] = zero_width_space_regex.sub("", obj["body"])
+                        obj["body"] = newline_regex.sub("\n", obj["body"])
 
                         if body_changed:  # check if we got any modifications
                             # only log if applicable
@@ -260,19 +284,33 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
 
                                 # logging the changes if there are any
                                 if quote_changed:
-                                    lf.write("\n=========== body: contained quotation ==========\n")
-                                    lf.write(json.dumps({"original": original_body}) + "\n\n")
-                                    lf.write(json.dumps({"modified": obj["body"]}) + "\n")
+                                    lf.write(
+                                        "\n=========== body: contained quotation ==========\n"
+                                    )
+                                    lf.write(
+                                        json.dumps({"original": original_body}) + "\n\n"
+                                    )
+                                    lf.write(
+                                        json.dumps({"modified": obj["body"]}) + "\n"
+                                    )
                                 if url_changed:
-                                    lf.write("\n=========== body: URL (any type) ==========\n")
-                                    lf.write(json.dumps({"original": original_body}) + "\n\n")
-                                    lf.write(json.dumps({"modified": obj["body"]}) + "\n")
+                                    lf.write(
+                                        "\n=========== body: URL (any type) ==========\n"
+                                    )
+                                    lf.write(
+                                        json.dumps({"original": original_body}) + "\n\n"
+                                    )
+                                    lf.write(
+                                        json.dumps({"modified": obj["body"]}) + "\n"
+                                    )
 
                         # check if the comment is empty after all modifications
                         # and cleaning
                         if is_comment_empty(obj["body"]):
                             # logging empty and ignored comments
-                            lf.write("\n=========== body: empty or whitespace only ==========\n")
+                            lf.write(
+                                "\n=========== body: empty or whitespace only ==========\n"
+                            )
                             lf.write(json.dumps({"original": original_body}) + "\n")
                             # skip writing this comment to the output file
                             continue
@@ -283,24 +321,46 @@ def filter_comments(zst_file, authors, remove_deleted, remove_quotes,
                     except json.JSONDecodeError:
                         continue
 
-    return excluded_counts, deleted_count, quote_removal_count, \
-        remindme_count, url_removal_count, removed_url_only_comments_count
+    return (
+        excluded_counts,
+        deleted_count,
+        quote_removal_count,
+        remindme_count,
+        url_removal_count,
+        removed_url_only_comments_count,
+    )
 
 
-def process_comments(zst_file, remove_deleted=False, remove_quotes=False,
-                     remove_remindme=False, remove_urls=False):
+def process_comments(
+    zst_file,
+    remove_deleted=False,
+    remove_quotes=False,
+    remove_remindme=False,
+    remove_urls=False,
+):
     # read botlist
     authors = read_bot_list()
     # extract file name and path
     input_filename_without_path = os.path.basename(zst_file)
-    input_filename_without_extension = \
-        input_filename_without_path.rsplit('.', 1)[0]
+    input_filename_without_extension = input_filename_without_path.rsplit(".", 1)[0]
     log_filename = f"filtered_log_{input_filename_without_extension}.txt"
 
-    excluded_counts, deleted_count, quote_removal_count, remindme_count, \
-        url_removal_count, removed_url_only_comments_count = \
-        filter_comments(zst_file, authors, remove_deleted, remove_quotes,
-                        remove_remindme, remove_urls, log_filename)
+    (
+        excluded_counts,
+        deleted_count,
+        quote_removal_count,
+        remindme_count,
+        url_removal_count,
+        removed_url_only_comments_count,
+    ) = filter_comments(
+        zst_file,
+        authors,
+        remove_deleted,
+        remove_quotes,
+        remove_remindme,
+        remove_urls,
+        log_filename,
+    )
 
     for name, count in excluded_counts.items():
         if count > 0:

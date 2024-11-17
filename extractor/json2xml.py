@@ -179,6 +179,9 @@ def json2xml(
     comment_id=None,
     group_mode=True,
 ):
+    # ensure output directory exists before attempting to write files
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
     """converts Reddit JSON data into TEI XML."""
     # read JSON file
     with open(inputfile, "r", encoding="latin-1") as f:

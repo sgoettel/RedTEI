@@ -1,11 +1,16 @@
 import json
-import pytest
+import os
 import re
-import sys
+import tempfile
+
+import pytest
+
 from lxml import etree
-sys.path.append('../')
 
 from extractor.json2xml import json2xml
+
+TEST_DIR = os.path.abspath(os.path.dirname(__file__))
+
 
 def parse_xml_structure(xml_string):
     """Hilfsfunktion zur Normalisierung der XML-Struktur, um Whitespaces zu ignorieren."""
@@ -14,41 +19,52 @@ def parse_xml_structure(xml_string):
     # Entferne den Wrapper-Tag und canonicalisiere den XML-Inhalt für konsistenten Vergleich
     return etree.tostring(root[0], method="c14n")  # Canonical XML
 
+
 @pytest.fixture
 def grouped_example():
     """Dynamisches Beispiel JSON und XML für den `grouped` Modus."""
-    with open('files/grouped/14u42ly_flat.json') as f:
+    filename = os.path.join(TEST_DIR, "files/grouped/14u42ly_flat.json")
+    with open(filename, "r", encoding="utf-8") as f:
         json_data = json.load(f)
 
     # json2xml mit dynamischem Dateinamen
-    output_dir = 'files/tmp_output'
-    xml_output = json2xml('files/grouped/14u42ly_flat.json', output_dir=output_dir, group_mode=True)
-    with open(f"{output_dir}/14u42ly.xml", 'r') as xml_file:
+    output_dir = tempfile.TemporaryDirectory().name
+
+    filename = os.path.join(TEST_DIR, "files/grouped/14u42ly_flat.json")
+    xml_output = json2xml(filename, output_dir=output_dir, group_mode=True)
+    with open(f"{output_dir}/14u42ly.xml", "r", encoding="utf-8") as xml_file:
         xml_data = xml_file.read()
     return json_data, xml_data
+
 
 @pytest.fixture
 def nogroup_example():
     """Dynamisches Beispiel JSON und XML für den `nogroup` Modus."""
-    with open('files/nogroup/14t73le_jr1494w.json') as f:
+    filename = os.path.join(TEST_DIR, "files/nogroup/14t73le_jr1494w.json")
+    with open(filename, "r", encoding="utf-8") as f:
         json_data = json.load(f)
-        
+
     # Dynamisch link_id und comment_id ermitteln
     link_id = json_data[0]["link_id"].split("_")[1]
     comment_id = json_data[0]["id"]
 
     # json2xml mit dynamischem Dateinamen im `--no-group` Modus
-    output_dir = 'files/tmp_output'
+    output_dir = tempfile.TemporaryDirectory().name
+
+    filename = os.path.join(TEST_DIR, "files/nogroup/14t73le_jr1494w.json")
     xml_output = json2xml(
-        'files/nogroup/14t73le_jr1494w.json', 
-        output_dir=output_dir, 
-        group_mode=False, 
-        link_id=link_id, 
-        comment_id=comment_id
+        filename,
+        output_dir=output_dir,
+        group_mode=False,
+        link_id=link_id,
+        comment_id=comment_id,
     )
-    with open(f"{output_dir}/{link_id}_{comment_id}.xml", 'r') as xml_file:
+    with open(
+        f"{output_dir}/{link_id}_{comment_id}.xml", "r", encoding="utf-8"
+    ) as xml_file:
         xml_data = xml_file.read()
     return json_data, xml_data
+
 
 def test_grouped_header_structure(grouped_example):
     """Testet den Header für den `grouped` Modus strukturell."""
@@ -82,9 +98,8 @@ def test_grouped_header_structure(grouped_example):
     </profileDesc>
     """
     # Verwende den gesamten <teiHeader>-Tag
-    header = re.search(r'<teiHeader>(.*?)</teiHeader>', xml_data, re.DOTALL).group(1)
+    header = re.search(r"<teiHeader>(.*?)</teiHeader>", xml_data, re.DOTALL).group(1)
     assert parse_xml_structure(header) == parse_xml_structure(header_gold)
-
 
 
 def test_nogroup_header_structure(nogroup_example):
@@ -125,8 +140,5 @@ def test_nogroup_header_structure(nogroup_example):
     </profileDesc>
     """
     # Verwende den gesamten <teiHeader>-Tag
-    header = re.search(r'<teiHeader>(.*?)</teiHeader>', xml_data, re.DOTALL).group(1)
+    header = re.search(r"<teiHeader>(.*?)</teiHeader>", xml_data, re.DOTALL).group(1)
     assert parse_xml_structure(header) == parse_xml_structure(header_gold)
-
-
-

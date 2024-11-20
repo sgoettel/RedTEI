@@ -3,40 +3,28 @@ import os
 import argparse
 import zstandard as zstd
 
+from multiprocessing import Pool
+
+from extractor.utils import get_output_dir
 from extractor.trim_username_comments import process_comments
 from extractor.comment_tree import extract_comments
+from extractor.comment_processing import process_comment_batch, process_thread_batch
 from extractor.json2xml import json2xml
 from extractor.validate import load_schema, validate_directory
 
-MAX_FILES_PER_DIR = 1000  # max files each folder
+
 error_log = []  # error log for problematic JSON objects
 
 
-def get_output_dir(base_dir):
-    """finds or creates a subdirectory that contains less than MAX_FILES_PER_DIR files."""
-    subdirs = sorted(
-        [
-            d
-            for d in os.listdir(base_dir)
-            if os.path.isdir(os.path.join(base_dir, d)) and d.isdigit()
-        ],
-        key=lambda x: int(x),  # todo: test key=int
-    )
-    # create a new subdirectory if the last one is full
-    if (
-        not subdirs
-        or len(os.listdir(os.path.join(base_dir, subdirs[-1]))) >= MAX_FILES_PER_DIR
-    ):
-        next_subdir = str(int(subdirs[-1]) + 1).zfill(5) if subdirs else "00001"
-        new_dir = os.path.join(base_dir, next_subdir)
-        os.makedirs(new_dir, exist_ok=True)
-        return new_dir
-
-    return os.path.join(base_dir, subdirs[-1])
+def chunkify(lst, n):
+    """spliit list into n-sized chunks."""
+    if not lst:
+        print("Chunkify called with an empty list.")
+    for i in range(0, len(lst), n):
+        yield lst[i : i + n]
 
 
 def pipeline(zstfile, subreddit, no_group=False):
-    print(f'Processing subreddit: "{subreddit}".')
     base_dir = os.path.dirname(os.path.abspath(__file__))
     subreddits_dir = os.path.join(base_dir, "subreddits")
     os.makedirs(subreddits_dir, exist_ok=True)
@@ -53,7 +41,8 @@ def pipeline(zstfile, subreddit, no_group=False):
     os.makedirs(json_output_dir, exist_ok=True)
     os.makedirs(xml_output_dir, exist_ok=True)
 
-    # process comments in the zst file (apply filters)
+    # process comments in zst file (apply filters)
+    print(f"Filtering comments in {subreddit}...")
     process_comments(
         zstfile,
         remove_deleted=True,
@@ -61,32 +50,27 @@ def pipeline(zstfile, subreddit, no_group=False):
         remove_remindme=True,
         remove_urls=True,
     )
-    print("Extracting comments. This may take a while...")
-    comments = extract_comments(f"{zstfile.rsplit('.', 1)[0]}_filtered.zst")
 
+    filtered_zst_path = f"{zstfile.rsplit('.', 1)[0]}_filtered.zst"
+    
+    print(f"Extracting comments from {filtered_zst_path}. This may take a while...")
+    comments = extract_comments(filtered_zst_path)
+    print(f"Extracted {len(comments)} comments.")
+
+    # process based on mode
+    chunk_size = 100  # batch size
     if no_group:
-        # processing each comment individually in `no_group` mode
-        for comment in comments:
-            comment_id = comment["id"]
-            link_id = comment["link_id"].replace("t3_", "")
-            json_subdir = get_output_dir(json_output_dir)
-            json_filename = f"{json_subdir}/{link_id}_{comment_id}.json"
-            try:
-                # save each comment as a JSON file and convert it to XML
-                with open(json_filename, "w", encoding="utf-8") as outfile:
-                    json.dump([comment], outfile, indent=4)
-                xml_subdir = get_output_dir(xml_output_dir)
-                json2xml(
-                    json_filename,
-                    output_dir=xml_subdir,
-                    link_id=link_id,
-                    comment_id=comment_id,
-                    group_mode=not no_group,
-                )
-            except Exception as e:
-                error_log.append(f"Error in file {json_filename}: {e}")
+        unique_comments = {c["id"]: c for c in comments}  # eliminate duplicates
+        print(
+            f"Processing {len(unique_comments)} unique comments in 'no-group' mode..."
+        )
+        comment_batches = list(chunkify(list(unique_comments.values()), chunk_size))
+        with Pool(processes=os.cpu_count()) as pool:
+            pool.starmap(
+                process_comment_batch,
+                [(batch, json_output_dir, xml_output_dir) for batch in comment_batches],
+            )
     else:
-        # group coments by thread in grouped mode
         thread_comments = {}
         for comment in comments:
             thread_id = comment.get("link_id", "").replace("t3_", "")
@@ -94,19 +78,16 @@ def pipeline(zstfile, subreddit, no_group=False):
                 thread_comments[thread_id] = []
             thread_comments[thread_id].append(comment)
 
-        # save grouped comments per thread as JSON and convert to XML
-        for thread_id, comments_list in thread_comments.items():
-            json_subdir = get_output_dir(json_output_dir)
-            json_filename = f"{json_subdir}/{thread_id}_flat.json"
-            try:
-                with open(json_filename, "w", encoding="utf-8") as outfile:
-                    json.dump(comments_list, outfile, indent=4)
-                xml_subdir = get_output_dir(xml_output_dir)
-                json2xml(json_filename, output_dir=xml_subdir)
-            except Exception as e:
-                error_log.append(f"Error in file {json_filename}: {e}")
-
-    print("Validate XML files.")
+        print(f"Processing {len(thread_comments)} threads in 'grouped' mode...")
+        thread_batches = list(chunkify(list(thread_comments.items()), chunk_size))
+        with Pool(processes=os.cpu_count()) as pool:
+            pool.starmap(
+                process_thread_batch,
+                [(batch, json_output_dir, xml_output_dir) for batch in thread_batches],
+            )
+        thread_batches = list(chunkify(list(thread_comments.items()), chunk_size))
+        
+    print("Validating XML files...")
     TEI_RELAXNG = load_schema()
     validate_directory(xml_output_dir, TEI_RELAXNG)
 

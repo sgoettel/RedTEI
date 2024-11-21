@@ -1,8 +1,10 @@
 import os
 from collections import defaultdict
+from itertools import islice
 
 MAX_FILES_PER_DIR = 1000  # max files each folder
 directory_state = defaultdict(lambda: {"current_dir": None})
+
 
 def get_output_dir(base_dir):
     """ensures each directory contains exactly MAX_FILES_PER_DIR files before creating a new one."""
@@ -22,3 +24,11 @@ def get_output_dir(base_dir):
         state["current_dir"] = new_dir
 
     return state["current_dir"]
+
+
+def make_chunks(iterable, n):
+    """split list into n-sized chunks."""
+    # 3.12+: https://docs.python.org/3/library/itertools.html#itertools.batched
+    iterator = iter(iterable)
+    while batch := tuple(islice(iterator, n)):
+        yield batch

@@ -116,8 +116,9 @@ def test_nogroup_author(nogroup_example):
 def test_encoding():
     """Überprüft, dass Encoding-Fehler vermieden werden."""
     filename = os.path.join(TEST_DIR, "files/grouped/14u42ly_flat.json")
+    output_dir = tempfile.TemporaryDirectory().name
     try:
-        json2xml(filename, output_dir="files/tmp_output", group_mode=True)
+        json2xml(filename, output_dir=output_dir, group_mode=True)
     except Exception as e:
         raise AssertionError(f"Fehler aufgetreten: {e}")
     else:

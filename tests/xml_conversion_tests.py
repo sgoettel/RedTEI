@@ -5,7 +5,7 @@ import tempfile
 
 import pytest
 
-from extractor.json2xml import json2xml
+from extractor.json2xml import json2xml, pipeline_json2xml
 
 TEST_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -116,15 +116,39 @@ def test_nogroup_author(nogroup_example):
 def test_encoding():
     """Überprüft, dass Encoding-Fehler vermieden werden."""
     filename = os.path.join(TEST_DIR, "files/grouped/14u42ly_flat.json")
-    output_dir = tempfile.TemporaryDirectory().name
-    try:
-        json2xml(filename, output_dir=output_dir, group_mode=True)
-    except Exception as e:
-        raise AssertionError(f"Fehler aufgetreten: {e}")
-    else:
-        assert True
+
+    with tempfile.TemporaryDirectory() as tmp:
+        json2xml(filename, output_dir=tmp, group_mode=True)
+
+        output_file = os.path.join(tmp, "14u42ly.xml")
+        assert os.path.exists(output_file)
+        with open(output_file, "r", encoding="utf-8") as f:
+            content = f.read()
+            assert content.startswith("<TEI xmlns")
 
 
 def test_user_removal(grouped_example):
     """Testet die Entfernung von /u/ im `grouped` Modus."""
     assert not re.findall(r"/u/(\w+)", grouped_example[1])
+
+
+def test_pipeline_json2xml():
+    "Testet die ganze Pipeline zu XML-Konvertierung."
+    filename = os.path.join(TEST_DIR, "files/nogroup/14t73le_jr5508f.json")
+    with open(filename, "r", encoding="utf-8") as inputfile:
+        content = inputfile.read()
+
+    with tempfile.TemporaryDirectory() as tmp:
+        json_dir = os.path.join(tmp, "json")
+        os.makedirs(json_dir, exist_ok=True)
+        json_file = os.path.join(json_dir, "14t73le_jr5508f.json")
+        with open(json_file, "w", encoding="utf-8") as f:
+            f.write(content)
+
+        pipeline_json2xml(json_dir)
+
+        xml_output_dir = os.path.join(tmp, "xml")
+        assert os.path.exists(xml_output_dir) and os.path.isdir(xml_output_dir)
+
+        xml_file = os.path.join(xml_output_dir, "00001/14t73le.xml")
+        assert os.path.exists(xml_file) and os.path.isfile(xml_file)

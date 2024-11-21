@@ -12,6 +12,9 @@ import re
 
 from lxml.etree import Element, ElementTree, SubElement, tostring
 
+from .utils import get_output_dir
+from .validate import validate_directory
+
 
 def return_printables_and_spaces(char):
     """Return a character if it belongs to certain classes"""
@@ -256,6 +259,24 @@ def json2xml(
     )
     ElementTree(teidoc).write(filename, pretty_print=True, encoding="utf-8")
     return tei_str
+
+
+def pipeline_json2xml(dir_json):
+    """pipeline if the json files already exist: convert to XML, validate"""
+    xml_output_dir = dir_json.replace("json", "xml")
+    os.makedirs(xml_output_dir, exist_ok=True)
+    for inputfile in os.listdir(dir_json):
+        json_path = os.path.join(dir_json, inputfile)
+        if os.path.isfile(json_path):
+            link_id, comment_id = inputfile.replace(".json", "").split("_")
+            # select or create an XML subdirectory for output
+            xml_subdir = get_output_dir(xml_output_dir)
+            json2xml(
+                json_path, output_dir=xml_subdir, link_id=link_id, comment_id=comment_id
+            )
+
+    print("Validate XML files.")
+    validate_directory(xml_output_dir)
 
 
 def demo():

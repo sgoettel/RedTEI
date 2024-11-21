@@ -1,30 +1,23 @@
 import argparse
-import json
 import os
 
 from multiprocessing import Pool
 
 from extractor.comment_tree import extract_comments
 from extractor.comment_processing import process_comment_batch, process_thread_batch
-from extractor.json2xml import json2xml
+from extractor.json2xml import pipeline_json2xml
 from extractor.trim_username_comments import process_comments
-from extractor.utils import (
-    compare_json_counts,
-    count_json_objects_in_directory,
-    count_json_objects_in_zst,
-    get_output_dir,
-    make_chunks,
-)
+from extractor.utils import compare_json_counts, make_chunks
 from extractor.validate import validate_directory
 
 
-num_processes = max(os.cpu_count(), 32)
+NUM_PROCESSES = max(os.cpu_count(), 32)
 
 
 def run_multi_process(func, iterator, chunk_size, json_dir, xml_dir):
     "Run multiprocessing in batches."
     batches = make_chunks(iterator, chunk_size)
-    with Pool(processes=num_processes) as pool:
+    with Pool(processes=NUM_PROCESSES) as pool:
         pool.starmap(
             func,
             [(batch, json_dir, xml_dir) for batch in batches],
@@ -104,24 +97,6 @@ def pipeline(zstfile, subreddit, no_group=False):
         "Checking consistency of JSON object (comments) count between the filtered .zst file and JSON output directory..."
     )
     compare_json_counts(filtered_zst_path, json_output_dir)
-
-
-def pipeline_json2xml(dir_json):
-    """pipeline if the json files already exist: convert to XML, validate"""
-    xml_output_dir = dir_json.replace("json", "xml")
-    os.makedirs(xml_output_dir, exist_ok=True)
-    for inputfile in os.listdir(dir_json):
-        json_path = os.path.join(dir_json, inputfile)
-        if os.path.isfile(json_path):
-            link_id, comment_id = inputfile.replace(".json", "").split("_")
-            # select or create an XML subdirectory for output
-            xml_subdir = get_output_dir(xml_output_dir)
-            json2xml(
-                json_path, output_dir=xml_subdir, link_id=link_id, comment_id=comment_id
-            )
-
-    print("Validate XML files.")
-    validate_directory(xml_output_dir)
 
 
 if __name__ == "__main__":

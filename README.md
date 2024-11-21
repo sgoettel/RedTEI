@@ -30,7 +30,7 @@ For more details on how the filtering proccess etc. works see the [Wiki](https:/
 
 Run tests with ``pytest``.
 
-For [coverage](https://coverage.readthedocs.io/en/7.4.4/) analysis (currently 74%) use:
+For [coverage](https://coverage.readthedocs.io/en/7.4.4/) analysis (currently 79%) use:
 
 ```bash
 coverage run -m pytest

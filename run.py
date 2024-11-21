@@ -1,27 +1,31 @@
+import argparse
 import json
 import os
-import argparse
-import zstandard as zstd
 
 from multiprocessing import Pool
 
-from extractor.utils import get_output_dir
-from extractor.trim_username_comments import process_comments
+import zstandard as zstd
+
 from extractor.comment_tree import extract_comments
 from extractor.comment_processing import process_comment_batch, process_thread_batch
 from extractor.json2xml import json2xml
-from extractor.validate import load_schema, validate_directory
+from extractor.trim_username_comments import process_comments
+from extractor.utils import get_output_dir, make_chunks
+from extractor.validate import validate_directory
 
 
 error_log = []  # error log for problematic JSON objects
+num_processes = max(os.cpu_count(), 32)
 
 
-def chunkify(lst, n):
-    """spliit list into n-sized chunks."""
-    if not lst:
-        print("Chunkify called with an empty list.")
-    for i in range(0, len(lst), n):
-        yield lst[i : i + n]
+def run_multi_process(func, iterator, chunk_size, json_dir, xml_dir):
+    "Run multiprocessing in batches."
+    batches = make_chunks(iterator, chunk_size)
+    with Pool(processes=num_processes) as pool:
+        pool.starmap(
+            func,
+            [(batch, json_dir, xml_dir) for batch in batches],
+        )
 
 
 def pipeline(zstfile, subreddit, no_group=False):
@@ -52,7 +56,7 @@ def pipeline(zstfile, subreddit, no_group=False):
     )
 
     filtered_zst_path = f"{zstfile.rsplit('.', 1)[0]}_filtered.zst"
-    
+
     print(f"Extracting comments from {filtered_zst_path}. This may take a while...")
     comments = extract_comments(filtered_zst_path)
     print(f"Extracted {len(comments)} comments.")
@@ -64,12 +68,13 @@ def pipeline(zstfile, subreddit, no_group=False):
         print(
             f"Processing {len(unique_comments)} unique comments in 'no-group' mode..."
         )
-        comment_batches = list(chunkify(list(unique_comments.values()), chunk_size))
-        with Pool(processes=os.cpu_count()) as pool:
-            pool.starmap(
-                process_comment_batch,
-                [(batch, json_output_dir, xml_output_dir) for batch in comment_batches],
-            )
+        run_multi_process(
+            process_comment_batch,
+            unique_comments.values(),
+            chunk_size,
+            json_output_dir,
+            xml_output_dir,
+        )
     else:
         thread_comments = {}
         for comment in comments:
@@ -79,17 +84,16 @@ def pipeline(zstfile, subreddit, no_group=False):
             thread_comments[thread_id].append(comment)
 
         print(f"Processing {len(thread_comments)} threads in 'grouped' mode...")
-        thread_batches = list(chunkify(list(thread_comments.items()), chunk_size))
-        with Pool(processes=os.cpu_count()) as pool:
-            pool.starmap(
-                process_thread_batch,
-                [(batch, json_output_dir, xml_output_dir) for batch in thread_batches],
-            )
-        thread_batches = list(chunkify(list(thread_comments.items()), chunk_size))
-        
+        run_multi_process(
+            process_thread_batch,
+            thread_comments.items(),
+            chunk_size,
+            json_output_dir,
+            xml_output_dir,
+        )
+
     print("Validating XML files...")
-    TEI_RELAXNG = load_schema()
-    validate_directory(xml_output_dir, TEI_RELAXNG)
+    validate_directory(xml_output_dir)
 
     # JSON object count consistency between filtered zst file and JSON output directory
     filtered_zst_path = f"{zstfile.rsplit('.', 1)[0]}_filtered.zst"
@@ -114,8 +118,7 @@ def pipeline_json2xml(dir_json):
             )
 
     print("Validate XML files.")
-    TEI_RELAXNG = load_schema()
-    validate_directory(xml_output_dir, TEI_RELAXNG)
+    validate_directory(xml_output_dir)
 
 
 # count JSON objects in a .zst file with NDJSON content

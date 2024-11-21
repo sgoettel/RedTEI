@@ -28,18 +28,13 @@ For more details on how the filtering proccess etc. works see the [Wiki](https:/
 
 ## Testing
 
-Run tests with:
-```bash
-cd tests
-pytest
-```
+Run tests with ``pytest``.
 
-For [coverage](https://coverage.readthedocs.io/en/7.4.4/) analysis (currently 82%) use:
+For [coverage](https://coverage.readthedocs.io/en/7.4.4/) analysis (currently 74%) use:
 
 ```bash
-cd tests
 coverage run -m pytest
-coverage report -m
+coverage report -m --include="extractor/*"
 ```
 
 ## Examples

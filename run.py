@@ -4,17 +4,20 @@ import os
 
 from multiprocessing import Pool
 
-import zstandard as zstd
-
 from extractor.comment_tree import extract_comments
 from extractor.comment_processing import process_comment_batch, process_thread_batch
 from extractor.json2xml import json2xml
 from extractor.trim_username_comments import process_comments
-from extractor.utils import get_output_dir, make_chunks
+from extractor.utils import (
+    compare_json_counts,
+    count_json_objects_in_directory,
+    count_json_objects_in_zst,
+    get_output_dir,
+    make_chunks,
+)
 from extractor.validate import validate_directory
 
 
-error_log = []  # error log for problematic JSON objects
 num_processes = max(os.cpu_count(), 32)
 
 
@@ -119,62 +122,6 @@ def pipeline_json2xml(dir_json):
 
     print("Validate XML files.")
     validate_directory(xml_output_dir)
-
-
-# count JSON objects in a .zst file with NDJSON content
-def count_json_objects_in_zst(zst_path):
-    count = 0
-    with open(zst_path, "rb") as inputfile:
-        dctx = zstd.ZstdDecompressor()
-        with dctx.stream_reader(inputfile) as reader:
-            buffer = ""
-            while chunk := reader.read(16384):
-                buffer += chunk.decode(errors="ignore")
-                # count lines in the buffer that correspond to JSON objects
-                while "\n" in buffer:
-                    line, buffer = buffer.split("\n", 1)
-                    if line.strip():
-                        count += 1
-    return count
-
-
-# counts JSON objects in all JSON files within a directory
-def count_json_objects_in_directory(directory_path):
-    count = 0
-    for root, _, files in os.walk(directory_path):
-        for file_name in files:
-            if file_name.endswith(".json"):
-                file_path = os.path.join(root, file_name)
-                with open(file_path, "r", encoding="utf-8") as inputfile:
-                    try:
-                        for line in inputfile:
-                            json.loads(line)
-                            count += 1
-                    except json.JSONDecodeError:
-                        # handle JSON array format
-                        inputfile.seek(0)
-                        data = json.load(inputfile)
-                        if isinstance(data, list):
-                            count += len(data)
-    return count
-
-
-# compare the number of JSON objects in the filtered .zst file and the JSON output directory
-def compare_json_counts(filtered_zst_path, json_output_dir):
-    zst_count = count_json_objects_in_zst(filtered_zst_path)
-    json_count = count_json_objects_in_directory(json_output_dir)
-
-    print(f"Number of JSON objects in filtered .zst file: {zst_count}")
-    print(f"Number of JSON objects in JSON output directory: {json_count}")
-
-    if zst_count == json_count:
-        print("The number of JSON objects matches.")
-    else:
-        print(
-            "Note: number of JSON objects differ, likely due to comments containing null bytes or control characters that couldn't be processed."
-        )
-        if error_log:
-            print("Details on problematic objects are listed above.")
 
 
 if __name__ == "__main__":

@@ -19,7 +19,7 @@ TEST_DIR = os.path.abspath(os.path.dirname(__file__))
 def example_zst():
     # kleinste zst-Datei für den Test:
     filename = "files/GermanRap_comments_small/GermanRap_comments_small.zst"
-    comments = extract_comments(os.path.join(TEST_DIR, filename))
+    comments = list(extract_comments(os.path.join(TEST_DIR, filename)))
     return comments
 
 
@@ -40,7 +40,7 @@ def example_zst_filtered():
     )
 
     filename = "files/GermanRap_comments_small/GermanRap_comments_small_filtered.zst"
-    comments = extract_comments(os.path.join(TEST_DIR, filename))
+    comments = list(extract_comments(os.path.join(TEST_DIR, filename)))
     os.remove(os.path.join(TEST_DIR, filename))
     return comments
 

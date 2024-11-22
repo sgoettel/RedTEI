@@ -54,19 +54,18 @@ def pipeline(zstfile, subreddit, no_group=False):
     filtered_zst_path = f"{zstfile.rsplit('.', 1)[0]}_filtered.zst"
 
     print(f"Extracting comments from {filtered_zst_path}. This may take a while...")
-    comments = extract_comments(filtered_zst_path)
+    comments = list(extract_comments(filtered_zst_path))  # todo: nicht alle auf einmal im Speicher
     print(f"Extracted {len(comments)} comments.")
 
     # process based on mode
     chunk_size = 100  # batch size
     if no_group:
-        unique_comments = {c["id"]: c for c in comments}  # eliminate duplicates
         print(
             f"Processing {len(unique_comments)} unique comments in 'no-group' mode..."
         )
         run_multi_process(
             process_comment_batch,
-            unique_comments.values(),
+            comments,
             chunk_size,
             json_output_dir,
             xml_output_dir,

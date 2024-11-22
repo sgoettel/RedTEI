@@ -9,7 +9,7 @@ TEST_FILE = os.path.join(TEST_DIR, "files/GermanRap_comments_small/GermanRap_com
 
 
 def test_extraction():
-    comments = extract_comments(TEST_FILE)
+    comments = list(extract_comments(TEST_FILE))
     assert len(comments) == 1028
 
     first = comments[0]

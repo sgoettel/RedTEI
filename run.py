@@ -61,7 +61,7 @@ def pipeline(zstfile, subreddit, no_group=False):
     chunk_size = 100  # batch size
     if no_group:
         print(
-            f"Processing {len(unique_comments)} unique comments in 'no-group' mode..."
+            f"Processing {len(comments)} comments in 'no-group' mode..."
         )
         run_multi_process(
             process_comment_batch,

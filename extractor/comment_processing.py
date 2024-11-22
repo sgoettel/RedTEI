@@ -1,6 +1,8 @@
-from .utils import get_output_dir
-from .json2xml import json2xml
 import json
+
+from .json2xml import json2xml
+from .utils import get_output_dir
+
 
 def process_single_comment(comment, json_output_dir, xml_output_dir):
     """process single comment (--no-group)"""
@@ -20,6 +22,7 @@ def process_single_comment(comment, json_output_dir, xml_output_dir):
     except Exception as e:
         print(f"Error processing comment {comment_id}: {e}")
 
+
 def process_thread(thread_id, comments_list, json_output_dir, xml_output_dir):
     """process a single thread (group)"""
     try:
@@ -35,6 +38,7 @@ def process_thread(thread_id, comments_list, json_output_dir, xml_output_dir):
     except Exception as e:
         print(f"Error processing thread {thread_id}: {e}")
 
+
 def process_comment_batch(comment_batch, json_output_dir, xml_output_dir):
     """process a batch of comments, iterate through batch and processes each comment individually"""
     for comment in comment_batch:
@@ -49,4 +53,3 @@ def process_thread_batch(thread_batch, json_output_dir, xml_output_dir):
     except Exception as e:
         print(f"Error in process_thread_batch: {e}")
         print(f"Thread batch: {thread_batch}")
-

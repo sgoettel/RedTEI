@@ -4,11 +4,12 @@ Transform Reddit files in json format to TEI-XML
 Author: Lydia Körber, Sebastan Göttel 2024
 """
 
-from datetime import datetime
 import html
 import json
 import os
 import re
+
+from datetime import datetime, timezone
 
 from lxml.etree import Element, ElementTree, SubElement, tostring
 
@@ -81,9 +82,7 @@ def create_comment_element(parent_element, comment, base_info, element_type="ite
 
         # add <date> and <name> only in standard mode
         date_elem = SubElement(comment_elem, "date")
-        date_elem.text = str(
-            datetime.utcfromtimestamp(int(comment["created_utc"])).date()
-        )
+        date_elem.text = datetime.fromtimestamp(int(comment["created_utc"]), tz=timezone.utc).strftime("%Y-%m-%d")
         date_elem.tail = " "  # optional space after <date> (how should we handle this?)
 
         author_elem = SubElement(comment_elem, "name")
@@ -211,7 +210,7 @@ def json2xml(
     docmeta = {
         "post_id": post_id,
         "title": title,
-        "date": datetime.utcfromtimestamp(int(info["created_utc"])).date(),
+        "date": datetime.fromtimestamp(int(info["created_utc"]), tz=timezone.utc).date(),
         "subreddit": subreddit,
         "author": info.get("author", "Unknown Author"),
         "thread_url": thread_url,
@@ -220,13 +219,13 @@ def json2xml(
 
     # determine download date
     if "retrieved_on" in info:
-        retrieved_date = datetime.utcfromtimestamp(int(info["retrieved_on"]))
+        retrieved_date = datetime.fromtimestamp(int(info["retrieved_on"]), tz=timezone.utc)
     elif "retrieved_utc" in info:
-        retrieved_date = datetime.utcfromtimestamp(int(info["retrieved_utc"]))
+        retrieved_date = datetime.fromtimestamp(int(info["retrieved_utc"]), tz=timezone.utc)
     else:
         file_creation = os.path.getctime(inputfile)
         retrieved_date = datetime.fromtimestamp(file_creation)
-    retrieved_on = str(retrieved_date.date())
+    retrieved_on = retrieved_date.strftime("%Y-%m-%d")
 
     # create TEI root element and add header
     teidoc = Element("TEI", xmlns="http://www.tei-c.org/ns/1.0")

@@ -219,7 +219,7 @@ def json2xml(
 
     # determine download date
     if "retrieved_on" in info:
-        retrieved_date =datetime.fromtimestamp(int(info["retrieved_on"]), tz=timezone.utc)
+        retrieved_date = datetime.fromtimestamp(int(info["retrieved_on"]), tz=timezone.utc)
     elif "retrieved_utc" in info:
         retrieved_date = datetime.fromtimestamp(int(info["retrieved_utc"]), tz=timezone.utc)
     else:

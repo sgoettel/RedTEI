@@ -1,6 +1,7 @@
 import argparse
 import os
 
+from collections import defaultdict
 from multiprocessing import Pool
 
 from extractor.comment_tree import extract_comments
@@ -12,11 +13,12 @@ from extractor.validate import validate_directory
 
 
 NUM_PROCESSES = max(os.cpu_count(), 32)
+CHUNK_SIZE = 100  # batch size
 
 
-def run_multi_process(func, iterator, chunk_size, json_dir, xml_dir):
+def run_multi_process(func, iterator, json_dir, xml_dir):
     "Run multiprocessing in batches."
-    batches = make_chunks(iterator, chunk_size)
+    batches = make_chunks(iterator, CHUNK_SIZE)
     with Pool(processes=NUM_PROCESSES) as pool:
         pool.starmap(
             func,
@@ -54,35 +56,27 @@ def pipeline(zstfile, subreddit, no_group=False):
     filtered_zst_path = f"{zstfile.rsplit('.', 1)[0]}_filtered.zst"
 
     print(f"Extracting comments from {filtered_zst_path}. This may take a while...")
-    comments = list(extract_comments(filtered_zst_path))  # todo: nicht alle auf einmal im Speicher
-    print(f"Extracted {len(comments)} comments.")
 
     # process based on mode
-    chunk_size = 100  # batch size
     if no_group:
-        print(
-            f"Processing {len(comments)} comments in 'no-group' mode..."
-        )
+        print("Processing comments in 'no-group' mode...")
         run_multi_process(
             process_comment_batch,
-            comments,
-            chunk_size,
+            extract_comments(filtered_zst_path),
             json_output_dir,
             xml_output_dir,
         )
     else:
-        thread_comments = {}
-        for comment in comments:
+        thread_comments = defaultdict(list)
+
+        for comment in extract_comments(filtered_zst_path):
             thread_id = comment.get("link_id", "").replace("t3_", "")
-            if thread_id not in thread_comments:
-                thread_comments[thread_id] = []
             thread_comments[thread_id].append(comment)
 
         print(f"Processing {len(thread_comments)} threads in 'grouped' mode...")
         run_multi_process(
             process_thread_batch,
             thread_comments.items(),
-            chunk_size,
             json_output_dir,
             xml_output_dir,
         )

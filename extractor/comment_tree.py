@@ -74,6 +74,7 @@ UNWANTED_FIELDS = [
     "total_awards_received",
     "treatment_tags",
     "unrepliable_reason",
+    "updated_on",
     "ups",
     "user_reports",
 ]

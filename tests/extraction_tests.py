@@ -1,6 +1,5 @@
 import os
 
-
 from extractor.comment_tree import extract_comments
 
 
@@ -15,4 +14,4 @@ def test_extraction():
     first = comments[0]
     assert first.get("author") == "zer0deathserryone"
     assert first.get("permalink") == "/r/GermanRap/comments/176b4p3/ich_bin_coverartdesigner_und_möchte_ihnen_einige/k4kybh8/"
-    assert first.get("updated_on") == 1697128408
+    assert first.get("created_utc") == 1697128377.0

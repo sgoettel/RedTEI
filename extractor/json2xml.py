@@ -1,7 +1,7 @@
 """
 Transform Reddit files in json format to TEI-XML
 
-Author: Lydia Körber, Sebastan Göttel 2024
+Author: Lydia Körber, Sebastan Göttel 2025
 """
 
 import html
@@ -176,7 +176,6 @@ def json2xml(
     tree_structure=False,
     output_dir=None,
     filtered=True,
-    subreddit_loc="title",  # todo: unbenutzt
     link_id=None,
     comment_id=None,
     group_mode=True,
@@ -186,7 +185,7 @@ def json2xml(
         os.makedirs(output_dir, exist_ok=True)
     """converts Reddit JSON data into TEI XML."""
     # read JSON file
-    with open(inputfile, "r", encoding="latin-1") as f:
+    with open(inputfile, "r", encoding="utf-8", errors='replace') as f:
         txt = f.read()
     comments = json.loads(txt)
     if not comments:

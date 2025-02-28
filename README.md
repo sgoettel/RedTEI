@@ -6,9 +6,20 @@ This project provides a pipeline, orchestrated by `run.py`, to transform Reddit 
 
 ## Installation
 
-To set up the environment:
+To set up the environment, make sure you are using **Python 3.12+**:
 ```bash
-python3 -m venv .venv
+python3.12 --version
+```
+<!-- If python3.12 is not available, install it first:
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.12 python3.12-venv python3.12-dev
+-->
+
+Then create and activate the virtual environment:
+```bash
+python3 -m venv .venv # ensure Python 3.12+ is used
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt --no-cache-dir

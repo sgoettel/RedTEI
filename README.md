@@ -63,20 +63,18 @@ coverage report -m --include="extractor/*"
 
 # Table of Contents
 - [About the Project](#about-the-project)
-- [Datasets](#datasets)
 - [Data Structure](#data-structure)
-  - [Explanation of Key JSON Keys](#explanation-of-key-json-keys)
+  - [JSON Keys](#json-keys)
 - [Processing](#processing)
-  - [Processing Overview](#processing-overview)
+  - [Processing Modes](#processing-modes)
   - [1. Filtering JSON Objects](#1-filtering-json-objects)
   - [2. Extraction to JSON Files](#2-extraction-to-json-files)
   - [3. Conversion to XML](#3-conversion-to-xml)
-- [Usage / Application](#usage--application)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Execution](#execution)
-  - [Output Directory Structure](#output-directory-structure)
-
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Testing](#testing)
+- [Output Directory Structure](#output-directory-structure)
 
 ## About the Project
 

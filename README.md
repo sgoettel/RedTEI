@@ -19,10 +19,10 @@ The default mode groups all comments by thread (or "link") in a single JSON and 
 
 ### Supporting Scripts
 
--   [comment_tree.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/comment_tree.py): Extracts and organizes comments by thread.
--   [json2xml.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/json2xml.py): Converts JSON data into TEI-XML format.
--   [trim_username_comments.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/trim_username_comments.py): Filters and prepares comments by removing certain elements 
--   [validate.py](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/extractor/validate.py): Validates the XML output against a TEI schema.
+-   [comment_tree.py](https://github.com/sgoettel/RedTEI/blob/master/extractor/comment_tree.py): Extracts and organizes comments by thread.
+-   [json2xml.py](https://github.com/sgoettel/RedTEI/blob/master/extractor/json2xml.py): Converts JSON data into TEI-XML format.
+-   [trim_username_comments.py](https://github.com/sgoettel/RedTEI/blob/master/extractor/trim_username_comments.py): Filters and prepares comments by removing certain elements 
+-   [validate.py](https://github.com/sgoettel/RedTEI/blob/master/extractor/validate.py): Validates the XML output against a TEI schema.
 
 For more details on how the filtering proccess etc. works see the [Wiki](https://git.zdl.org/koerber/reddit-json2xml/wiki).
 
@@ -39,7 +39,7 @@ coverage report -m --include="extractor/*"
 
 ## Examples
 
-In the [examples/demo](https://git.zdl.org/koerber/reddit-json2xml/src/branch/master/examples) directory, you’ll find sample JSON files in two folders: `grouped` and `ungrouped`. To see the conversion process, run:
+In the [examples/demo](https://github.com/sgoettel/RedTEI/tree/master/examples/demo) directory, you’ll find sample JSON files in two folders: `grouped` and `ungrouped`. To see the conversion process, run:
 
 ```bash
 python extractor/json2xml.py

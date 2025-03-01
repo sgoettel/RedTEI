@@ -2,7 +2,7 @@
 
 This project provides a pipeline, orchestrated by `run.py`, to transform Reddit comments sourced from the Pushshift archive into TEI-XML format.
 
-**For detailed documentation, including in-depth descriptions of processing steps, data structure, and configuration options, please see the [RedTEI Wiki](https://github.com/sgoettel/RedTEI/wiki).**
+**For detailed documentation, including in-depth descriptions of processing steps, data structure, and configuration options, please see the [RedTEI Wiki](https://github.com/sgoettel/RedTEI/wiki/Introduction).**
 
 To set up the environment, make sure you are using **Python 3.12+**:
 ```bash

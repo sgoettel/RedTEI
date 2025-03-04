@@ -1,3 +1,5 @@
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue) ![License](https://img.shields.io/github/license/sgoettel/RedTEI) [![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.14944553-green)](https://doi.org/10.5281/zenodo.14944553) ![Coverage](https://img.shields.io/badge/Coverage-80%25-yellowgreen)  
+
 # RedTEI
 
 This project provides a pipeline, orchestrated by `run.py`, to transform Reddit comments sourced from the Pushshift archive into TEI-XML format.
